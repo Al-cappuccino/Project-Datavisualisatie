@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class Main_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,30 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataSet1 = new System.Data.DataSet();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "NewDataSet";
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            this.ResumeLayout(false);
-
+            this.Text = "Main_Form";
         }
 
         #endregion
-
-        private System.Data.DataSet dataSet1;
     }
 }
-
