@@ -35,11 +35,6 @@ namespace WindowsFormsApp1
             dataGridView1.DataSource = fug.Tables[0];
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void chart1_Click(object sender, EventArgs e)
         {
 
