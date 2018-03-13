@@ -31,6 +31,7 @@ namespace WindowsFormsApp1
             adapter.Fill(fug);
             con.Close();
             dataGridView1.DataSource = fug.Tables[0];
-        }
+            adapter = new OdbcDataAdapter("select Soort, aantal FROM [Misdrijven$]", con);
+            chart1.DataSource = fug.Tables[0];        }
     }
 }
