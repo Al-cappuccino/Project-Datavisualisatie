@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
-
+            //hoi
         }
 
         private void chart1_Click(object sender, EventArgs e)
