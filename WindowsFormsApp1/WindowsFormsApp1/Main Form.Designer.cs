@@ -29,28 +29,64 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea37 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend37 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series37 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea38 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend38 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series38 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea39 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend39 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series39 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea40 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend40 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series40 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea41 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend41 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series41 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea42 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend42 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series42 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.database1Diefstal = new WindowsFormsApp1.Database1Diefstal();
             this.diefstalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.diefstalTableAdapter = new WindowsFormsApp1.Database1DiefstalTableAdapters.DiefstalTableAdapter();
             this.diefstalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.FrontLeftPanel = new System.Windows.Forms.Panel();
+            this.AreaSearchbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LetselButton = new System.Windows.Forms.Button();
+            this.DiefstalButton = new System.Windows.Forms.Button();
+            this.ActivePanel = new System.Windows.Forms.Panel();
+            this.LetselPanel = new System.Windows.Forms.Panel();
+            this.DiefstalPanel = new System.Windows.Forms.Panel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1Diefstal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diefstalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diefstalBindingSource1)).BeginInit();
+            this.FrontLeftPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.LetselPanel.SuspendLayout();
+            this.DiefstalPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Location = new System.Drawing.Point(562, 260);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 1;
@@ -74,56 +110,1092 @@
             this.diefstalBindingSource1.DataMember = "Diefstal";
             this.diefstalBindingSource1.DataSource = this.database1Diefstal;
             // 
-            // chart1
+            // FrontLeftPanel
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.DataSource = this.diefstalBindingSource;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(808, 260);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.XValueMember = "Gemeente";
-            series1.YValueMembers = "TotaalDiefstal";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(300, 300);
-            this.chart1.TabIndex = 2;
-            this.chart1.Text = "Diefstal";
-            title1.Name = "Title1";
-            title1.Text = "Diefstal";
-            this.chart1.Titles.Add(title1);
+            this.FrontLeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.FrontLeftPanel.Controls.Add(this.DiefstalButton);
+            this.FrontLeftPanel.Controls.Add(this.LetselButton);
+            this.FrontLeftPanel.Controls.Add(this.label1);
+            this.FrontLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.FrontLeftPanel.Location = new System.Drawing.Point(0, 0);
+            this.FrontLeftPanel.Name = "FrontLeftPanel";
+            this.FrontLeftPanel.Size = new System.Drawing.Size(165, 701);
+            this.FrontLeftPanel.TabIndex = 5;
+            // 
+            // AreaSearchbox
+            // 
+            this.AreaSearchbox.AutoCompleteCustomSource.AddRange(new string[] {
+            "Aa en Hunze",
+            "Aalburg",
+            "Aalsmeer",
+            "Aalten",
+            "Achtkarspelen",
+            "Alblasserdam",
+            "Albrandswaard",
+            "Alkmaar",
+            "Almelo",
+            "Almere",
+            "Alphen aan den Rijn",
+            "Alphen-Chaam",
+            "Ameland",
+            "Amersfoort",
+            "Amstelveen",
+            "Amsterdam",
+            "Apeldoorn",
+            "Appingedam",
+            "Arnhem",
+            "Assen",
+            "Asten",
+            "Baarle-Nassau",
+            "Baarn",
+            "Barendrecht",
+            "Barneveld                     ",
+            "Bedum                         ",
+            "Beek                          ",
+            "Beemster                      ",
+            "Beesel                        ",
+            "Bellingwedde                  ",
+            "Berg en Dal                   ",
+            "Bergeijk                      ",
+            "Bergen (L.)                   ",
+            "Bergen (NH.)                  ",
+            "Bergen op Zoom                ",
+            "Berkelland                    ",
+            "Bernheze                      ",
+            "Best                          ",
+            "Beuningen                     ",
+            "Beverwijk                     ",
+            "het Bildt                     ",
+            "De Bilt                       ",
+            "Binnenmaas                    ",
+            "Bladel                        ",
+            "Blaricum                      ",
+            "Bloemendaal                   ",
+            "Bodegraven-Reeuwijk           ",
+            "Boekel                        ",
+            "Ten Boer                      ",
+            "Borger-Odoorn                 ",
+            "Borne                         ",
+            "Borsele                       ",
+            "Boxmeer                       ",
+            "Boxtel                        ",
+            "Breda                         ",
+            "Brielle                       ",
+            "Bronckhorst                   ",
+            "Brummen                       ",
+            "Brunssum                      ",
+            "Bunnik                        ",
+            "Bunschoten                    ",
+            "Buren                         ",
+            "Capelle aan den IJssel        ",
+            "Castricum                     ",
+            "Coevorden                     ",
+            "Cranendonck                   ",
+            "Cromstrijen                   ",
+            "Cuijk                         ",
+            "Culemborg                     ",
+            "Dalfsen                       ",
+            "Dantumadiel                   ",
+            "Delft                         ",
+            "Delfzijl                      ",
+            "Deurne                        ",
+            "Deventer                      ",
+            "Diemen                        ",
+            "Dinkelland                    ",
+            "Doesburg                      ",
+            "Doetinchem                    ",
+            "Dongen                        ",
+            "Dongeradeel                   ",
+            "Dordrecht                     ",
+            "Drechterland                  ",
+            "Drimmelen                     ",
+            "Dronten                       ",
+            "Druten                        ",
+            "Duiven                        ",
+            "Echt-Susteren                 ",
+            "Edam-Volendam                 ",
+            "Ede                           ",
+            "Eemnes                        ",
+            "Eemsmond                      ",
+            "Eersel                        ",
+            "Eijsden-Margraten             ",
+            "Eindhoven                     ",
+            "Elburg                        ",
+            "Emmen                         ",
+            "Enkhuizen                     ",
+            "Enschede                      ",
+            "Epe                           ",
+            "Ermelo                        ",
+            "Etten-Leur                    ",
+            "Ferwerderadiel                ",
+            "Franekeradeel                 ",
+            "De Fryske Marren              ",
+            "Geertruidenberg               ",
+            "Geldermalsen                  ",
+            "Geldrop-Mierlo                ",
+            "Gemert-Bakel                  ",
+            "Gennep                        ",
+            "Giessenlanden                 ",
+            "Gilze en Rijen                ",
+            "Goeree-Overflakkee            ",
+            "Goes                          ",
+            "Goirle                        ",
+            "Gooise Meren                  ",
+            "Gorinchem                     ",
+            "Gouda                         ",
+            "Grave                         ",
+            "\'s-Gravenhage                 ",
+            "Groningen                     ",
+            "Grootegast                    ",
+            "Gulpen-Wittem                 ",
+            "Haaksbergen                   ",
+            "Haaren                        ",
+            "Haarlem                       ",
+            "Haarlemmerliede en Spaarnwoude",
+            "Haarlemmermeer                ",
+            "Halderberge                   ",
+            "Hardenberg                    ",
+            "Harderwijk                    ",
+            "Hardinxveld-Giessendam        ",
+            "Haren                         ",
+            "Harlingen                     ",
+            "Hattem                        ",
+            "Heemskerk                     ",
+            "Heemstede                     ",
+            "Heerde                        ",
+            "Heerenveen                    ",
+            "Heerhugowaard                 ",
+            "Heerlen                       ",
+            "Heeze-Leende                  ",
+            "Heiloo                        ",
+            "Den Helder                    ",
+            "Hellendoorn                   ",
+            "Hellevoetsluis                ",
+            "Helmond                       ",
+            "Hendrik-Ido-Ambacht           ",
+            "Hengelo                       ",
+            "\'s-Hertogenbosch              ",
+            "Heumen                        ",
+            "Heusden                       ",
+            "Hillegom                      ",
+            "Hilvarenbeek                  ",
+            "Hilversum                     ",
+            "Hof van Twente                ",
+            "Hollands Kroon                ",
+            "Hoogeveen                     ",
+            "Hoogezand-Sappemeer           ",
+            "Hoorn                         ",
+            "Horst aan de Maas             ",
+            "Houten                        ",
+            "Huizen                        ",
+            "Hulst                         ",
+            "IJsselstein                   ",
+            "Kaag en Braassem              ",
+            "Kampen                        ",
+            "Kapelle                       ",
+            "Katwijk                       ",
+            "Kerkrade                      ",
+            "Koggenland                    ",
+            "Kollumerland en Nieuwkruisland",
+            "Korendijk                     ",
+            "Krimpen aan den IJssel        ",
+            "Krimpenerwaard                ",
+            "Laarbeek                      ",
+            "Landerd                       ",
+            "Landgraaf                     ",
+            "Landsmeer                     ",
+            "Langedijk                     ",
+            "Lansingerland                 ",
+            "Laren                         ",
+            "Leek                          ",
+            "Leerdam                       ",
+            "Leeuwarden                    ",
+            "Leeuwarderadeel               ",
+            "Leiden                        ",
+            "Leiderdorp                    ",
+            "Leidschendam-Voorburg         ",
+            "Lelystad                      ",
+            "Leudal                        ",
+            "Leusden                       ",
+            "Lingewaal                     ",
+            "Lingewaard                    ",
+            "Lisse                         ",
+            "Littenseradiel                ",
+            "Lochem                        ",
+            "Loon op Zand                  ",
+            "Lopik                         ",
+            "Loppersum                     ",
+            "Losser                        ",
+            "Maasdriel                     ",
+            "Maasgouw                      ",
+            "Maassluis                     ",
+            "Maastricht                    ",
+            "De Marne                      ",
+            "Marum                         ",
+            "Medemblik                     ",
+            "Meerssen                      ",
+            "Menameradiel                  ",
+            "Menterwolde                   ",
+            "Meppel                        ",
+            "Middelburg                    ",
+            "Midden-Delfland               ",
+            "Midden-Drenthe                ",
+            "Mill en Sint Hubert           ",
+            "Moerdijk                      ",
+            "Molenwaard                    ",
+            "Montferland                   ",
+            "Montfoort                     ",
+            "Mook en Middelaar             ",
+            "Neder-Betuwe                  ",
+            "Nederweert                    ",
+            "Neerijnen                     ",
+            "Nieuwegein                    ",
+            "Nieuwkoop                     ",
+            "Nijkerk                       ",
+            "Nijmegen                      ",
+            "Nissewaard                    ",
+            "Noord-Beveland                ",
+            "Noordenveld                   ",
+            "Noordoostpolder               ",
+            "Noordwijk                     ",
+            "Noordwijkerhout               ",
+            "Nuenen, Gerwen en Nederwetten ",
+            "Nunspeet                      ",
+            "Nuth                          ",
+            "Oegstgeest                    ",
+            "Oirschot                      ",
+            "Oisterwijk                    ",
+            "Oldambt                       ",
+            "Oldebroek                     ",
+            "Oldenzaal                     ",
+            "Olst-Wijhe                    ",
+            "Ommen                         ",
+            "Onderbanken                   ",
+            "Oost Gelre                    ",
+            "Oosterhout                    ",
+            "Ooststellingwerf              ",
+            "Oostzaan                      ",
+            "Opmeer                        ",
+            "Opsterland                    ",
+            "Oss                           ",
+            "Oud-Beijerland                ",
+            "Oude IJsselstreek             ",
+            "Ouder-Amstel                  ",
+            "Oudewater                     ",
+            "Overbetuwe                    ",
+            "Papendrecht                   ",
+            "Peel en Maas                  ",
+            "Pekela                        ",
+            "Pijnacker-Nootdorp            ",
+            "Purmerend                     ",
+            "Putten                        ",
+            "Raalte                        ",
+            "Reimerswaal                   ",
+            "Renkum                        ",
+            "Renswoude                     ",
+            "Reusel-De Mierden             ",
+            "Rheden                        ",
+            "Rhenen                        ",
+            "Ridderkerk                    ",
+            "Rijnwaarden                   ",
+            "Rijssen-Holten                ",
+            "Rijswijk                      ",
+            "Roerdalen                     ",
+            "Roermond                      ",
+            "De Ronde Venen                ",
+            "Roosendaal                    ",
+            "Rotterdam                     ",
+            "Rozendaal                     ",
+            "Rucphen                       ",
+            "Schagen                       ",
+            "Scherpenzeel                  ",
+            "Schiedam                      ",
+            "Schiermonnikoog               ",
+            "Schijndel                     ",
+            "Schinnen                      ",
+            "Schouwen-Duiveland            ",
+            "Simpelveld                    ",
+            "Sint Anthonis                 ",
+            "Sint-Michielsgestel           ",
+            "Sint-Oedenrode                ",
+            "Sittard-Geleen                ",
+            "Sliedrecht                    ",
+            "Slochteren                    ",
+            "Sluis                         ",
+            "Smallingerland                ",
+            "Soest                         ",
+            "Someren                       ",
+            "Son en Breugel                ",
+            "Stadskanaal                   ",
+            "Staphorst                     ",
+            "Stede Broec                   ",
+            "Steenbergen                   ",
+            "Steenwijkerland               ",
+            "Stein                         ",
+            "Stichtse Vecht                ",
+            "Strijen                       ",
+            "Súdwest-Fryslân               ",
+            "Terneuzen                     ",
+            "Terschelling                  ",
+            "Texel                         ",
+            "Teylingen                     ",
+            "Tholen                        ",
+            "Tiel                          ",
+            "Tilburg                       ",
+            "Tubbergen                     ",
+            "Twenterand                    ",
+            "Tynaarlo                      ",
+            "Tytsjerksteradiel             ",
+            "Uden                          ",
+            "Uitgeest                      ",
+            "Uithoorn                      ",
+            "Urk                           ",
+            "Utrecht                       ",
+            "Utrechtse Heuvelrug           ",
+            "Vaals                         ",
+            "Valkenburg aan de Geul        ",
+            "Valkenswaard                  ",
+            "Veendam                       ",
+            "Veenendaal                    ",
+            "Veere                         ",
+            "Veghel                        ",
+            "Veldhoven                     ",
+            "Velsen                        ",
+            "Venlo                         ",
+            "Venray                        ",
+            "Vianen                        ",
+            "Vlaardingen                   ",
+            "Vlagtwedde                    ",
+            "Vlieland                      ",
+            "Vlissingen                    ",
+            "Voerendaal                    ",
+            "Voorschoten                   ",
+            "Voorst                        ",
+            "Vught                         ",
+            "Waalre                        ",
+            "Waalwijk                      ",
+            "Waddinxveen                   ",
+            "Wageningen                    ",
+            "Wassenaar                     ",
+            "Waterland                     ",
+            "Weert                         ",
+            "Weesp                         ",
+            "Werkendam                     ",
+            "West Maas en Waal             ",
+            "Westerveld                    ",
+            "Westervoort                   ",
+            "Westland                      ",
+            "Weststellingwerf              ",
+            "Westvoorne                    ",
+            "Wierden                       ",
+            "Wijchen                       ",
+            "Wijdemeren                    ",
+            "Wijk bij Duurstede            ",
+            "Winsum                        ",
+            "Winterswijk                   ",
+            "Woensdrecht                   ",
+            "Woerden                       ",
+            "De Wolden                     ",
+            "Wormerland                    ",
+            "Woudenberg                    ",
+            "Woudrichem                    ",
+            "Zaanstad                      ",
+            "Zaltbommel                    ",
+            "Zandvoort                     ",
+            "Zederik                       ",
+            "Zeewolde                      ",
+            "Zeist                         ",
+            "Zevenaar                      ",
+            "Zoetermeer                    ",
+            "Zoeterwoude                   ",
+            "Zuidhorn                      ",
+            "Zuidplas                      ",
+            "Zundert                       ",
+            "Zutphen                       ",
+            "Zwartewaterland               ",
+            "Zwijndrecht                   ",
+            "Zwolle                        ",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""});
+            this.AreaSearchbox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.AreaSearchbox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.AreaSearchbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AreaSearchbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AreaSearchbox.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AreaSearchbox.ForeColor = System.Drawing.Color.Black;
+            this.AreaSearchbox.Location = new System.Drawing.Point(23, 21);
+            this.AreaSearchbox.Name = "AreaSearchbox";
+            this.AreaSearchbox.Size = new System.Drawing.Size(914, 53);
+            this.AreaSearchbox.TabIndex = 0;
+            this.AreaSearchbox.Text = "Voer plaatsnaam in...";
+            this.AreaSearchbox.UseWaitCursor = true;
+            this.AreaSearchbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.AreaSearchbox.Enter += new System.EventHandler(this.AreaSearchbox_Enter);
+            this.AreaSearchbox.Leave += new System.EventHandler(this.AreaSearchbox_Leave);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Controls.Add(this.AreaSearchbox);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(165, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(142, 572);
-            this.panel1.TabIndex = 3;
+            this.panel1.Size = new System.Drawing.Size(1205, 100);
+            this.panel1.TabIndex = 11;
             // 
-            // panel2
+            // label1
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(142, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1033, 100);
-            this.panel2.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 42);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "TDFNR";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // LetselButton
+            // 
+            this.LetselButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.LetselButton.FlatAppearance.BorderSize = 0;
+            this.LetselButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.LetselButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LetselButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LetselButton.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.LetselButton.Image = ((System.Drawing.Image)(resources.GetObject("LetselButton.Image")));
+            this.LetselButton.Location = new System.Drawing.Point(-1, 126);
+            this.LetselButton.Name = "LetselButton";
+            this.LetselButton.Size = new System.Drawing.Size(165, 128);
+            this.LetselButton.TabIndex = 1;
+            this.LetselButton.Text = "Letsel";
+            this.LetselButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.LetselButton.UseVisualStyleBackColor = true;
+            this.LetselButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // DiefstalButton
+            // 
+            this.DiefstalButton.FlatAppearance.BorderSize = 0;
+            this.DiefstalButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.DiefstalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DiefstalButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiefstalButton.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.DiefstalButton.Image = ((System.Drawing.Image)(resources.GetObject("DiefstalButton.Image")));
+            this.DiefstalButton.Location = new System.Drawing.Point(0, 288);
+            this.DiefstalButton.Name = "DiefstalButton";
+            this.DiefstalButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DiefstalButton.Size = new System.Drawing.Size(162, 128);
+            this.DiefstalButton.TabIndex = 2;
+            this.DiefstalButton.Text = "Diefstal";
+            this.DiefstalButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.DiefstalButton.UseVisualStyleBackColor = false;
+            this.DiefstalButton.Click += new System.EventHandler(this.DiefstalButton_Click);
+            // 
+            // ActivePanel
+            // 
+            this.ActivePanel.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.ActivePanel.Location = new System.Drawing.Point(165, 134);
+            this.ActivePanel.Name = "ActivePanel";
+            this.ActivePanel.Size = new System.Drawing.Size(17, 117);
+            this.ActivePanel.TabIndex = 12;
+            // 
+            // LetselPanel
+            // 
+            this.LetselPanel.Controls.Add(this.dataGridView1);
+            this.LetselPanel.Location = new System.Drawing.Point(188, 104);
+            this.LetselPanel.Name = "LetselPanel";
+            this.LetselPanel.Size = new System.Drawing.Size(1182, 597);
+            this.LetselPanel.TabIndex = 13;
+            // 
+            // DiefstalPanel
+            // 
+            this.DiefstalPanel.Controls.Add(this.chart6);
+            this.DiefstalPanel.Controls.Add(this.chart5);
+            this.DiefstalPanel.Controls.Add(this.chart4);
+            this.DiefstalPanel.Controls.Add(this.chart3);
+            this.DiefstalPanel.Controls.Add(this.chart2);
+            this.DiefstalPanel.Controls.Add(this.chart1);
+            this.DiefstalPanel.Location = new System.Drawing.Point(188, 104);
+            this.DiefstalPanel.Name = "DiefstalPanel";
+            this.DiefstalPanel.Size = new System.Drawing.Size(1182, 597);
+            this.DiefstalPanel.TabIndex = 14;
+            this.DiefstalPanel.Visible = false;
+            // 
+            // chart1
+            // 
+            chartArea37.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea37);
+            legend37.Name = "Legend1";
+            this.chart1.Legends.Add(legend37);
+            this.chart1.Location = new System.Drawing.Point(14, 12);
+            this.chart1.Name = "chart1";
+            series37.ChartArea = "ChartArea1";
+            series37.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series37.Legend = "Legend1";
+            series37.Name = "Series1";
+            this.chart1.Series.Add(series37);
+            this.chart1.Size = new System.Drawing.Size(332, 257);
+            this.chart1.TabIndex = 6;
+            this.chart1.Text = "chart1";
+            // 
+            // chart2
+            // 
+            chartArea38.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea38);
+            legend38.Name = "Legend1";
+            this.chart2.Legends.Add(legend38);
+            this.chart2.Location = new System.Drawing.Point(400, 12);
+            this.chart2.Name = "chart2";
+            series38.ChartArea = "ChartArea1";
+            series38.Legend = "Legend1";
+            series38.Name = "Series1";
+            this.chart2.Series.Add(series38);
+            this.chart2.Size = new System.Drawing.Size(332, 257);
+            this.chart2.TabIndex = 7;
+            this.chart2.Text = "chart2";
+            // 
+            // chart3
+            // 
+            chartArea39.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea39);
+            legend39.Name = "Legend1";
+            this.chart3.Legends.Add(legend39);
+            this.chart3.Location = new System.Drawing.Point(792, 12);
+            this.chart3.Name = "chart3";
+            series39.ChartArea = "ChartArea1";
+            series39.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series39.Legend = "Legend1";
+            series39.Name = "Series1";
+            series39.YValuesPerPoint = 2;
+            this.chart3.Series.Add(series39);
+            this.chart3.Size = new System.Drawing.Size(332, 257);
+            this.chart3.TabIndex = 8;
+            this.chart3.Text = "chart3";
+            // 
+            // chart4
+            // 
+            chartArea40.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea40);
+            legend40.Name = "Legend1";
+            this.chart4.Legends.Add(legend40);
+            this.chart4.Location = new System.Drawing.Point(14, 328);
+            this.chart4.Name = "chart4";
+            series40.ChartArea = "ChartArea1";
+            series40.Legend = "Legend1";
+            series40.Name = "Series1";
+            this.chart4.Series.Add(series40);
+            this.chart4.Size = new System.Drawing.Size(332, 257);
+            this.chart4.TabIndex = 9;
+            this.chart4.Text = "chart4";
+            // 
+            // chart5
+            // 
+            chartArea41.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea41);
+            legend41.Name = "Legend1";
+            this.chart5.Legends.Add(legend41);
+            this.chart5.Location = new System.Drawing.Point(400, 328);
+            this.chart5.Name = "chart5";
+            series41.ChartArea = "ChartArea1";
+            series41.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series41.Legend = "Legend1";
+            series41.Name = "Series1";
+            this.chart5.Series.Add(series41);
+            this.chart5.Size = new System.Drawing.Size(332, 257);
+            this.chart5.TabIndex = 10;
+            this.chart5.Text = "chart5";
+            // 
+            // chart6
+            // 
+            chartArea42.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea42);
+            legend42.Name = "Legend1";
+            this.chart6.Legends.Add(legend42);
+            this.chart6.Location = new System.Drawing.Point(792, 328);
+            this.chart6.Name = "chart6";
+            series42.ChartArea = "ChartArea1";
+            series42.Legend = "Legend1";
+            series42.Name = "Series1";
+            this.chart6.Series.Add(series42);
+            this.chart6.Size = new System.Drawing.Size(332, 257);
+            this.chart6.TabIndex = 11;
+            this.chart6.Text = "chart6";
             // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 572);
-            this.Controls.Add(this.panel2);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(1370, 701);
+            this.Controls.Add(this.DiefstalPanel);
+            this.Controls.Add(this.LetselPanel);
+            this.Controls.Add(this.ActivePanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.FrontLeftPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main_Form";
             this.Text = "Main_Form";
@@ -132,7 +1204,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.database1Diefstal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diefstalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diefstalBindingSource1)).EndInit();
+            this.FrontLeftPanel.ResumeLayout(false);
+            this.FrontLeftPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.LetselPanel.ResumeLayout(false);
+            this.DiefstalPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -144,8 +1227,20 @@
         private System.Windows.Forms.BindingSource diefstalBindingSource;
         private Database1DiefstalTableAdapters.DiefstalTableAdapter diefstalTableAdapter;
         private System.Windows.Forms.BindingSource diefstalBindingSource1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Panel FrontLeftPanel;
+        private System.Windows.Forms.TextBox AreaSearchbox;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button DiefstalButton;
+        private System.Windows.Forms.Panel ActivePanel;
+        private System.Windows.Forms.Button LetselButton;
+        private System.Windows.Forms.Panel LetselPanel;
+        private System.Windows.Forms.Panel DiefstalPanel;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart6;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

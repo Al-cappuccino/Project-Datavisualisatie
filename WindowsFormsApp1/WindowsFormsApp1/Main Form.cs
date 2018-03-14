@@ -49,5 +49,44 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AreaSearchbox_Enter(object sender, EventArgs e)
+        {
+            if (AreaSearchbox.Text == "Voer plaatsnaam in...")
+                AreaSearchbox.Text = "";
+            AreaSearchbox.ForeColor = Color.Black;
+        }
+
+        private void AreaSearchbox_Leave(object sender, EventArgs e)
+        {
+            AreaSearchbox.Text = "Voer plaatsnaam in...";
+            AreaSearchbox.ForeColor = Color.Black;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ActivePanel.Height = LetselButton.Height;
+            ActivePanel.Top = LetselButton.Top;
+            LetselPanel.Visible = true;
+            DiefstalPanel.Visible = false;
+        }
+
+        private void DiefstalButton_Click(object sender, EventArgs e)
+        {
+            ActivePanel.Height = DiefstalButton.Height;
+            ActivePanel.Top = DiefstalButton.Top;
+            DiefstalPanel.Visible = true;
+            LetselPanel.Visible = false;
+        }
     }
 }
