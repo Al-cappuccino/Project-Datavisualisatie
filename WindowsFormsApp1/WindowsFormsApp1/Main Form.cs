@@ -70,6 +70,10 @@ namespace WindowsFormsApp1
             ActivePanel.Top = LetselButton.Top;
             LetselPanel.Visible = true;
             DiefstalPanel.Visible = false;
+
+ 
+            
+            
         }
 
         private void DiefstalButton_Click(object sender, EventArgs e)
@@ -78,6 +82,13 @@ namespace WindowsFormsApp1
             ActivePanel.Top = DiefstalButton.Top;
             DiefstalPanel.Visible = true;
             LetselPanel.Visible = false;
+            
+            
+        }
+
+        private void LetselPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
