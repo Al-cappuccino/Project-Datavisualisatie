@@ -30,24 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.database1Diefstal = new WindowsFormsApp1.Database1Diefstal();
             this.diefstalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.diefstalTableAdapter = new WindowsFormsApp1.Database1DiefstalTableAdapters.DiefstalTableAdapter();
@@ -61,13 +61,16 @@
             this.ActivePanel = new System.Windows.Forms.Panel();
             this.LetselPanel = new System.Windows.Forms.Panel();
             this.DiefstalPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label2 = new System.Windows.Forms.Label();
+            this.diefstalDataSet = new WindowsFormsApp1.DiefstalDataSet();
+            this.diefstalBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.diefstalTableAdapter1 = new WindowsFormsApp1.DiefstalDataSetTableAdapters.DiefstalTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.database1Diefstal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diefstalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diefstalBindingSource1)).BeginInit();
@@ -75,11 +78,13 @@
             this.panel1.SuspendLayout();
             this.DiefstalPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diefstalDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diefstalBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // database1Diefstal
@@ -1026,7 +1031,7 @@
             this.AreaSearchbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AreaSearchbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AreaSearchbox.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AreaSearchbox.ForeColor = System.Drawing.Color.Black;
+            this.AreaSearchbox.ForeColor = System.Drawing.Color.White;
             this.AreaSearchbox.Location = new System.Drawing.Point(22, 21);
             this.AreaSearchbox.Name = "AreaSearchbox";
             this.AreaSearchbox.Size = new System.Drawing.Size(914, 53);
@@ -1063,18 +1068,122 @@
             // 
             // DiefstalPanel
             // 
-            this.DiefstalPanel.Controls.Add(this.label2);
             this.DiefstalPanel.Controls.Add(this.chart1);
-            this.DiefstalPanel.Controls.Add(this.chart6);
-            this.DiefstalPanel.Controls.Add(this.chart5);
             this.DiefstalPanel.Controls.Add(this.chart4);
+            this.DiefstalPanel.Controls.Add(this.chart5);
+            this.DiefstalPanel.Controls.Add(this.chart6);
             this.DiefstalPanel.Controls.Add(this.chart3);
             this.DiefstalPanel.Controls.Add(this.chart2);
+            this.DiefstalPanel.Controls.Add(this.label2);
             this.DiefstalPanel.Location = new System.Drawing.Point(197, 106);
             this.DiefstalPanel.Name = "DiefstalPanel";
             this.DiefstalPanel.Size = new System.Drawing.Size(1182, 596);
             this.DiefstalPanel.TabIndex = 14;
             this.DiefstalPanel.Visible = false;
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.DataSource = this.diefstalBindingSource2;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(14, 11);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.XValueMember = "AantalInwoners";
+            series1.YValueMembers = "DiefstalOverigeVervoermiddelen";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(332, 257);
+            this.chart1.TabIndex = 6;
+            this.chart1.Text = "chart1";
+            // 
+            // chart4
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart4.Legends.Add(legend2);
+            this.chart4.Location = new System.Drawing.Point(14, 328);
+            this.chart4.Name = "chart4";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart4.Series.Add(series2);
+            this.chart4.Size = new System.Drawing.Size(332, 257);
+            this.chart4.TabIndex = 9;
+            this.chart4.Text = "chart4";
+            // 
+            // chart5
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart5.Legends.Add(legend3);
+            this.chart5.Location = new System.Drawing.Point(400, 328);
+            this.chart5.Name = "chart5";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart5.Series.Add(series3);
+            this.chart5.Size = new System.Drawing.Size(332, 257);
+            this.chart5.TabIndex = 10;
+            this.chart5.Text = "chart5";
+            // 
+            // chart6
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart6.Legends.Add(legend4);
+            this.chart6.Location = new System.Drawing.Point(792, 328);
+            this.chart6.Name = "chart6";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart6.Series.Add(series4);
+            this.chart6.Size = new System.Drawing.Size(332, 257);
+            this.chart6.TabIndex = 11;
+            this.chart6.Text = "chart6";
+            // 
+            // chart3
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart3.Legends.Add(legend5);
+            this.chart3.Location = new System.Drawing.Point(792, 11);
+            this.chart3.Name = "chart3";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            series5.YValuesPerPoint = 2;
+            this.chart3.Series.Add(series5);
+            this.chart3.Size = new System.Drawing.Size(332, 257);
+            this.chart3.TabIndex = 8;
+            this.chart3.Text = "chart3";
+            // 
+            // chart2
+            // 
+            chartArea6.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart2.Legends.Add(legend6);
+            this.chart2.Location = new System.Drawing.Point(400, 11);
+            this.chart2.Name = "chart2";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart2.Series.Add(series6);
+            this.chart2.Size = new System.Drawing.Size(332, 257);
+            this.chart2.TabIndex = 7;
+            this.chart2.Text = "chart2";
             // 
             // label2
             // 
@@ -1086,105 +1195,19 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "EDITED";
             // 
-            // chart1
+            // diefstalDataSet
             // 
-            chartArea13.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea13);
-            legend13.Name = "Legend1";
-            this.chart1.Legends.Add(legend13);
-            this.chart1.Location = new System.Drawing.Point(14, 11);
-            this.chart1.Name = "chart1";
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series13.Legend = "Legend1";
-            series13.Name = "Series1";
-            this.chart1.Series.Add(series13);
-            this.chart1.Size = new System.Drawing.Size(332, 257);
-            this.chart1.TabIndex = 6;
-            this.chart1.Text = "chart1";
+            this.diefstalDataSet.DataSetName = "DiefstalDataSet";
+            this.diefstalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // chart6
+            // diefstalBindingSource2
             // 
-            chartArea14.Name = "ChartArea1";
-            this.chart6.ChartAreas.Add(chartArea14);
-            legend14.Name = "Legend1";
-            this.chart6.Legends.Add(legend14);
-            this.chart6.Location = new System.Drawing.Point(792, 328);
-            this.chart6.Name = "chart6";
-            series14.ChartArea = "ChartArea1";
-            series14.Legend = "Legend1";
-            series14.Name = "Series1";
-            this.chart6.Series.Add(series14);
-            this.chart6.Size = new System.Drawing.Size(332, 257);
-            this.chart6.TabIndex = 11;
-            this.chart6.Text = "chart6";
+            this.diefstalBindingSource2.DataMember = "Diefstal";
+            this.diefstalBindingSource2.DataSource = this.diefstalDataSet;
             // 
-            // chart5
+            // diefstalTableAdapter1
             // 
-            chartArea15.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea15);
-            legend15.Name = "Legend1";
-            this.chart5.Legends.Add(legend15);
-            this.chart5.Location = new System.Drawing.Point(400, 328);
-            this.chart5.Name = "chart5";
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series15.Legend = "Legend1";
-            series15.Name = "Series1";
-            this.chart5.Series.Add(series15);
-            this.chart5.Size = new System.Drawing.Size(332, 257);
-            this.chart5.TabIndex = 10;
-            this.chart5.Text = "chart5";
-            // 
-            // chart4
-            // 
-            chartArea16.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea16);
-            legend16.Name = "Legend1";
-            this.chart4.Legends.Add(legend16);
-            this.chart4.Location = new System.Drawing.Point(14, 328);
-            this.chart4.Name = "chart4";
-            series16.ChartArea = "ChartArea1";
-            series16.Legend = "Legend1";
-            series16.Name = "Series1";
-            this.chart4.Series.Add(series16);
-            this.chart4.Size = new System.Drawing.Size(332, 257);
-            this.chart4.TabIndex = 9;
-            this.chart4.Text = "chart4";
-            // 
-            // chart3
-            // 
-            chartArea17.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea17);
-            legend17.Name = "Legend1";
-            this.chart3.Legends.Add(legend17);
-            this.chart3.Location = new System.Drawing.Point(792, 11);
-            this.chart3.Name = "chart3";
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series17.Legend = "Legend1";
-            series17.Name = "Series1";
-            series17.YValuesPerPoint = 2;
-            this.chart3.Series.Add(series17);
-            this.chart3.Size = new System.Drawing.Size(332, 257);
-            this.chart3.TabIndex = 8;
-            this.chart3.Text = "chart3";
-            // 
-            // chart2
-            // 
-            chartArea18.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea18);
-            legend18.Name = "Legend1";
-            this.chart2.Legends.Add(legend18);
-            this.chart2.Location = new System.Drawing.Point(400, 11);
-            this.chart2.Name = "chart2";
-            series18.ChartArea = "ChartArea1";
-            series18.Legend = "Legend1";
-            series18.Name = "Series1";
-            this.chart2.Series.Add(series18);
-            this.chart2.Size = new System.Drawing.Size(332, 257);
-            this.chart2.TabIndex = 7;
-            this.chart2.Text = "chart2";
+            this.diefstalTableAdapter1.ClearBeforeFill = true;
             // 
             // Main_Form
             // 
@@ -1211,11 +1234,13 @@
             this.DiefstalPanel.ResumeLayout(false);
             this.DiefstalPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diefstalDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diefstalBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1241,5 +1266,8 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label2;
+        private DiefstalDataSet diefstalDataSet;
+        private System.Windows.Forms.BindingSource diefstalBindingSource2;
+        private DiefstalDataSetTableAdapters.DiefstalTableAdapter diefstalTableAdapter1;
     }
 }

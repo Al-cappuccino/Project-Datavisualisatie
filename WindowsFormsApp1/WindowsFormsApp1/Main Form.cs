@@ -23,6 +23,8 @@ namespace WindowsFormsApp1
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'diefstalDataSet.Diefstal' table. You can move, or remove it, as needed.
+            this.diefstalTableAdapter1.Fill(this.diefstalDataSet.Diefstal);
             //hoi
         }
 
