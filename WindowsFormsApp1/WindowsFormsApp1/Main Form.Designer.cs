@@ -30,24 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.database1Diefstal = new WindowsFormsApp1.Database1Diefstal();
             this.diefstalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.diefstalTableAdapter = new WindowsFormsApp1.Database1DiefstalTableAdapters.DiefstalTableAdapter();
@@ -109,8 +109,9 @@
             this.FrontLeftPanel.Controls.Add(this.label1);
             this.FrontLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.FrontLeftPanel.Location = new System.Drawing.Point(0, 0);
+            this.FrontLeftPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FrontLeftPanel.Name = "FrontLeftPanel";
-            this.FrontLeftPanel.Size = new System.Drawing.Size(165, 701);
+            this.FrontLeftPanel.Size = new System.Drawing.Size(248, 1078);
             this.FrontLeftPanel.TabIndex = 5;
             // 
             // DiefstalButton
@@ -121,10 +122,11 @@
             this.DiefstalButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiefstalButton.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.DiefstalButton.Image = ((System.Drawing.Image)(resources.GetObject("DiefstalButton.Image")));
-            this.DiefstalButton.Location = new System.Drawing.Point(0, 288);
+            this.DiefstalButton.Location = new System.Drawing.Point(0, 443);
+            this.DiefstalButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DiefstalButton.Name = "DiefstalButton";
             this.DiefstalButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DiefstalButton.Size = new System.Drawing.Size(162, 128);
+            this.DiefstalButton.Size = new System.Drawing.Size(243, 197);
             this.DiefstalButton.TabIndex = 2;
             this.DiefstalButton.Text = "Diefstal";
             this.DiefstalButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -140,9 +142,10 @@
             this.LetselButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LetselButton.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.LetselButton.Image = ((System.Drawing.Image)(resources.GetObject("LetselButton.Image")));
-            this.LetselButton.Location = new System.Drawing.Point(-1, 126);
+            this.LetselButton.Location = new System.Drawing.Point(-2, 194);
+            this.LetselButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LetselButton.Name = "LetselButton";
-            this.LetselButton.Size = new System.Drawing.Size(165, 128);
+            this.LetselButton.Size = new System.Drawing.Size(248, 197);
             this.LetselButton.TabIndex = 1;
             this.LetselButton.Text = "Letsel";
             this.LetselButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -155,9 +158,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(22, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 42);
+            this.label1.Size = new System.Drawing.Size(182, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = "TDFNR";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -1027,9 +1031,10 @@
             this.AreaSearchbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AreaSearchbox.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AreaSearchbox.ForeColor = System.Drawing.Color.Black;
-            this.AreaSearchbox.Location = new System.Drawing.Point(23, 21);
+            this.AreaSearchbox.Location = new System.Drawing.Point(34, 32);
+            this.AreaSearchbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AreaSearchbox.Name = "AreaSearchbox";
-            this.AreaSearchbox.Size = new System.Drawing.Size(914, 53);
+            this.AreaSearchbox.Size = new System.Drawing.Size(1370, 76);
             this.AreaSearchbox.TabIndex = 0;
             this.AreaSearchbox.Text = "Voer plaatsnaam in...";
             this.AreaSearchbox.UseWaitCursor = true;
@@ -1041,25 +1046,28 @@
             // 
             this.panel1.Controls.Add(this.AreaSearchbox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(165, 0);
+            this.panel1.Location = new System.Drawing.Point(248, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1205, 100);
+            this.panel1.Size = new System.Drawing.Size(1698, 154);
             this.panel1.TabIndex = 11;
             // 
             // ActivePanel
             // 
             this.ActivePanel.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ActivePanel.Location = new System.Drawing.Point(165, 134);
+            this.ActivePanel.Location = new System.Drawing.Point(248, 206);
+            this.ActivePanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ActivePanel.Name = "ActivePanel";
-            this.ActivePanel.Size = new System.Drawing.Size(17, 117);
+            this.ActivePanel.Size = new System.Drawing.Size(26, 180);
             this.ActivePanel.TabIndex = 12;
             // 
             // LetselPanel
             // 
             this.LetselPanel.Controls.Add(this.DiefstalPanel);
-            this.LetselPanel.Location = new System.Drawing.Point(188, 104);
+            this.LetselPanel.Location = new System.Drawing.Point(282, 160);
+            this.LetselPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LetselPanel.Name = "LetselPanel";
-            this.LetselPanel.Size = new System.Drawing.Size(1182, 597);
+            this.LetselPanel.Size = new System.Drawing.Size(1773, 918);
             this.LetselPanel.TabIndex = 13;
             // 
             // DiefstalPanel
@@ -1070,123 +1078,131 @@
             this.DiefstalPanel.Controls.Add(this.chart3);
             this.DiefstalPanel.Controls.Add(this.chart2);
             this.DiefstalPanel.Controls.Add(this.chart1);
-            this.DiefstalPanel.Location = new System.Drawing.Point(0, 2);
+            this.DiefstalPanel.Location = new System.Drawing.Point(0, 3);
+            this.DiefstalPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DiefstalPanel.Name = "DiefstalPanel";
-            this.DiefstalPanel.Size = new System.Drawing.Size(1182, 597);
+            this.DiefstalPanel.Size = new System.Drawing.Size(1773, 918);
             this.DiefstalPanel.TabIndex = 14;
             this.DiefstalPanel.Visible = false;
             // 
             // chart6
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart6.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart6.Legends.Add(legend1);
-            this.chart6.Location = new System.Drawing.Point(792, 328);
+            chartArea7.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart6.Legends.Add(legend7);
+            this.chart6.Location = new System.Drawing.Point(1188, 505);
+            this.chart6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart6.Name = "chart6";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart6.Series.Add(series1);
-            this.chart6.Size = new System.Drawing.Size(332, 257);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chart6.Series.Add(series7);
+            this.chart6.Size = new System.Drawing.Size(498, 395);
             this.chart6.TabIndex = 11;
             this.chart6.Text = "chart6";
             // 
             // chart5
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart5.Legends.Add(legend2);
-            this.chart5.Location = new System.Drawing.Point(400, 328);
+            chartArea8.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chart5.Legends.Add(legend8);
+            this.chart5.Location = new System.Drawing.Point(600, 505);
+            this.chart5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart5.Name = "chart5";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart5.Series.Add(series2);
-            this.chart5.Size = new System.Drawing.Size(332, 257);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chart5.Series.Add(series8);
+            this.chart5.Size = new System.Drawing.Size(498, 395);
             this.chart5.TabIndex = 10;
             this.chart5.Text = "chart5";
             // 
             // chart4
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart4.Legends.Add(legend3);
-            this.chart4.Location = new System.Drawing.Point(14, 328);
+            chartArea9.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chart4.Legends.Add(legend9);
+            this.chart4.Location = new System.Drawing.Point(21, 505);
+            this.chart4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart4.Name = "chart4";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart4.Series.Add(series3);
-            this.chart4.Size = new System.Drawing.Size(332, 257);
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.chart4.Series.Add(series9);
+            this.chart4.Size = new System.Drawing.Size(498, 395);
             this.chart4.TabIndex = 9;
             this.chart4.Text = "chart4";
             // 
             // chart3
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart3.Legends.Add(legend4);
-            this.chart3.Location = new System.Drawing.Point(792, 12);
+            chartArea10.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chart3.Legends.Add(legend10);
+            this.chart3.Location = new System.Drawing.Point(1188, 18);
+            this.chart3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart3.Name = "chart3";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            series4.YValuesPerPoint = 2;
-            this.chart3.Series.Add(series4);
-            this.chart3.Size = new System.Drawing.Size(332, 257);
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            series10.YValuesPerPoint = 2;
+            this.chart3.Series.Add(series10);
+            this.chart3.Size = new System.Drawing.Size(498, 395);
             this.chart3.TabIndex = 8;
             this.chart3.Text = "chart3";
             // 
             // chart2
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart2.Legends.Add(legend5);
-            this.chart2.Location = new System.Drawing.Point(400, 12);
+            chartArea11.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chart2.Legends.Add(legend11);
+            this.chart2.Location = new System.Drawing.Point(600, 18);
+            this.chart2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart2.Name = "chart2";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart2.Series.Add(series5);
-            this.chart2.Size = new System.Drawing.Size(332, 257);
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Series1";
+            this.chart2.Series.Add(series11);
+            this.chart2.Size = new System.Drawing.Size(498, 395);
             this.chart2.TabIndex = 7;
             this.chart2.Text = "chart2";
             // 
             // chart1
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
-            this.chart1.Location = new System.Drawing.Point(14, 12);
+            chartArea12.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chart1.Legends.Add(legend12);
+            this.chart1.Location = new System.Drawing.Point(21, 18);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart1.Name = "chart1";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
-            this.chart1.Size = new System.Drawing.Size(332, 257);
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series12.Legend = "Legend1";
+            series12.Name = "Series1";
+            this.chart1.Series.Add(series12);
+            this.chart1.Size = new System.Drawing.Size(498, 395);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
             // 
             // Main_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1370, 701);
+            this.ClientSize = new System.Drawing.Size(1946, 1078);
             this.Controls.Add(this.LetselPanel);
             this.Controls.Add(this.ActivePanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.FrontLeftPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main_Form";
             this.Text = "Main_Form";
             this.Load += new System.EventHandler(this.Main_Form_Load);
