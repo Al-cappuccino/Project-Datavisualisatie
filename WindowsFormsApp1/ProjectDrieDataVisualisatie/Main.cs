@@ -82,6 +82,7 @@ namespace ProjectDrieDataVisualisatie
             chart4.Visible = true;
             chart5.Visible = true;
             testPieChart.Visible = true;
+            pictureBox1.Visible = false;
         }
 
         private void gemeenteInputTextbox_Enter(object sender, EventArgs e)
@@ -99,6 +100,7 @@ namespace ProjectDrieDataVisualisatie
             chart4.Visible = true;
             chart5.Visible = true;
             testPieChart.Visible = true;
+            pictureBox1.Visible = false;
         }
 
         private void Kaart_click(object sender, EventArgs e)
@@ -109,6 +111,7 @@ namespace ProjectDrieDataVisualisatie
             chart4.Visible = false;
             chart5.Visible = false;
             testPieChart.Visible = false;
+            pictureBox1.Visible = true;
         }
     }
 }
