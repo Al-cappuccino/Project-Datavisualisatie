@@ -76,7 +76,12 @@ namespace ProjectDrieDataVisualisatie
 
         private void LetselButton_Click(object sender, EventArgs e)
         {
-
+            chart1.Visible = true;
+            chart2.Visible = true;
+            chart3.Visible = true;
+            chart4.Visible = true;
+            chart5.Visible = true;
+            testPieChart.Visible = true;
         }
 
         private void gemeenteInputTextbox_Enter(object sender, EventArgs e)
@@ -88,7 +93,12 @@ namespace ProjectDrieDataVisualisatie
 
         private void DiefstalButton_Click(object sender, EventArgs e)
         {
-
+            chart1.Visible = true;
+            chart2.Visible = true;
+            chart3.Visible = true;
+            chart4.Visible = true;
+            chart5.Visible = true;
+            testPieChart.Visible = true;
         }
 
         private void Kaart_click(object sender, EventArgs e)
