@@ -85,5 +85,20 @@ namespace ProjectDrieDataVisualisatie
                 gemeenteInputTextbox.Text = "";
             gemeenteInputTextbox.ForeColor = Color.White;
         }
+
+        private void DiefstalButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Kaart_click(object sender, EventArgs e)
+        {
+            chart1.Visible = false;
+            chart2.Visible = false;
+            chart3.Visible = false;
+            chart4.Visible = false;
+            chart5.Visible = false;
+            testPieChart.Visible = false;
+        }
     }
 }
