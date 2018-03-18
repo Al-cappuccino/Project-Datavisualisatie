@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DiefstalDataSet" targetNamespace="http://tempuri.org/DiefstalDataSet.xsd" xmlns:mstns="http://tempuri.org/DiefstalDataSet.xsd" xmlns="http://tempuri.org/DiefstalDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="Database1DataSet" targetNamespace="http://tempuri.org/Database1DataSet.xsd" xmlns:mstns="http://tempuri.org/Database1DataSet.xsd" xmlns="http://tempuri.org/Database1DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Database1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.Database1ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Database1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectDrieDataVisualisatie.Properties.Settings.GlobalReference.Default.Database1ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DiefstalTableAdapter" GeneratorDataComponentClassName="DiefstalTableAdapter" Name="Diefstal" UserDataComponentName="DiefstalTableAdapter">
@@ -118,7 +118,7 @@ SELECT Gemeente, AantalInwoners, TotaalDiefstal, Fietsendiefstal, DiefstalOverig
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DiefstalDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DiefstalDataSet" msprop:Generator_UserDSName="DiefstalDataSet">
+  <xs:element name="Database1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Database1DataSet" msprop:Generator_UserDSName="Database1DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Diefstal" msprop:Generator_TableClassName="DiefstalDataTable" msprop:Generator_TableVarName="tableDiefstal" msprop:Generator_TablePropName="Diefstal" msprop:Generator_RowDeletingName="DiefstalRowDeleting" msprop:Generator_RowChangingName="DiefstalRowChanging" msprop:Generator_RowEvHandlerName="DiefstalRowChangeEventHandler" msprop:Generator_RowDeletedName="DiefstalRowDeleted" msprop:Generator_UserTableName="Diefstal" msprop:Generator_RowChangedName="DiefstalRowChanged" msprop:Generator_RowEvArgName="DiefstalRowChangeEvent" msprop:Generator_RowClassName="DiefstalRow">

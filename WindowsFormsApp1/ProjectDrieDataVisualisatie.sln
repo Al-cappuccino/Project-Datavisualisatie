@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectDrieDataVisualisatie", "ProjectDrieDataVisualisatie\ProjectDrieDataVisualisatie.csproj", "{CEE6A738-9C13-494F-8CCE-6D8849DB38B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEE6A738-9C13-494F-8CCE-6D8849DB38B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEE6A738-9C13-494F-8CCE-6D8849DB38B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEE6A738-9C13-494F-8CCE-6D8849DB38B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEE6A738-9C13-494F-8CCE-6D8849DB38B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1BB40FD-B3FE-41D2-A7C3-BD9EA32FE752}
+	EndGlobalSection
+EndGlobal
