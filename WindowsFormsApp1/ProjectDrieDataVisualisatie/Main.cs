@@ -61,6 +61,7 @@ namespace ProjectDrieDataVisualisatie
                         {
                            
                             testPieChart.Series["Serie 1"].Points.AddXY(columnName, dr[columnName]);
+                            testPieChart.ChartAreas[0].RecalculateAxesScale();
                         }
                         
                     }
@@ -84,6 +85,16 @@ namespace ProjectDrieDataVisualisatie
             if (gemeenteInputTextbox.Text == "Voer plaatsnaam in...")
                 gemeenteInputTextbox.Text = "";
             gemeenteInputTextbox.ForeColor = Color.White;
+        }
+
+        private void Diefstal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void testPieChart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

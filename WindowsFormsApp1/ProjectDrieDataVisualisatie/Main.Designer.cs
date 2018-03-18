@@ -158,6 +158,7 @@
             this.Diefstal.Name = "Diefstal";
             this.Diefstal.Size = new System.Drawing.Size(1150, 710);
             this.Diefstal.TabIndex = 1;
+            this.Diefstal.Paint += new System.Windows.Forms.PaintEventHandler(this.Diefstal_Paint);
             // 
             // chart5
             // 
@@ -262,6 +263,7 @@
             this.testPieChart.Size = new System.Drawing.Size(225, 244);
             this.testPieChart.TabIndex = 3;
             this.testPieChart.Text = "chart1";
+            this.testPieChart.Click += new System.EventHandler(this.testPieChart_Click);
             // 
             // viewingLabel
             // 
