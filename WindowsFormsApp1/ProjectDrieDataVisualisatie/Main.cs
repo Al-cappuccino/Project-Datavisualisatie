@@ -39,7 +39,6 @@ namespace ProjectDrieDataVisualisatie
 
                 testPieChart.Series.Add("Serie 1");
                 testPieChart.Series["Serie 1"].ChartType = SeriesChartType.Column;
-
                 List<String> columns = new List<string>();
                 bool added = false;
 
@@ -61,6 +60,7 @@ namespace ProjectDrieDataVisualisatie
                         {
                            
                             testPieChart.Series["Serie 1"].Points.AddXY(columnName, dr[columnName]);
+                            testPieChart.ChartAreas[0].RecalculateAxesScale();
                         }
                         
                     }
