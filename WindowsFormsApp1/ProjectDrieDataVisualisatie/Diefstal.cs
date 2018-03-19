@@ -37,44 +37,51 @@ namespace ProjectDrieDataVisualisatie
         private void submitGemeenteInputBtn_Click_1(object sender, EventArgs e)
         {
             string selected = this.filterBox.GetItemText(this.filterBox.SelectedItem);
-            if (testPieChart.Series.Count > 0)
-                testPieChart.Series.RemoveAt(0);
-
-            using (connection = new SqlConnection(conString))
-            using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT "+ selected +" FROM Diefstal WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
+            if (selected == "")
             {
-                DataTable Test = new DataTable();
-                adapter.Fill(Test);
+                MessageBox.Show("Kies een geldige filter");
+            }
+            else
+            {
+                if (testPieChart.Series.Count > 0)
+                    testPieChart.Series.RemoveAt(0);
 
-
-                testPieChart.Series.Add("Serie 1");
-                testPieChart.Series["Serie 1"].ChartType = SeriesChartType.Column;
-                List<String> columns = new List<string>();
-                bool added = false;
-
-                foreach (DataRow dr in Test.Rows)
+                using (connection = new SqlConnection(conString))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT " + selected + " FROM Diefstal WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
                 {
-                    if (!added)
-                    {
-                        foreach (DataColumn dc in dr.Table.Columns)
-                        {
-                            string columnName = dc.ColumnName.ToString();
-                            columns.Add(columnName);
-                            added = true;
-                        }
-                    }
+                    DataTable Test = new DataTable();
+                    adapter.Fill(Test);
 
-                    foreach (string columnName in columns)
+
+                    testPieChart.Series.Add("Serie 1");
+                    testPieChart.Series["Serie 1"].ChartType = SeriesChartType.Column;
+                    List<String> columns = new List<string>();
+                    bool added = false;
+
+                    foreach (DataRow dr in Test.Rows)
                     {
+                        if (!added)
+                        {
+                            foreach (DataColumn dc in dr.Table.Columns)
+                            {
+                                string columnName = dc.ColumnName.ToString();
+                                columns.Add(columnName);
+                                added = true;
+                            }
+                        }
+
+                        foreach (string columnName in columns)
+                        {
 
 
                             testPieChart.Series["Serie 1"].Points.AddXY(columnName, dr[columnName]);
                             testPieChart.ChartAreas[0].RecalculateAxesScale();
-                        
 
+
+                        }
                     }
-                }
 
+                }
             }
         }
 
