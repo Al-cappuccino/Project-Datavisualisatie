@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.gemeenteInputTextbox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
             this.testPieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.filterBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.testPieChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -456,22 +457,41 @@
             // 
             // testPieChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.testPieChart.ChartAreas.Add(chartArea1);
+            chartArea7.Name = "ChartArea1";
+            this.testPieChart.ChartAreas.Add(chartArea7);
             this.testPieChart.Location = new System.Drawing.Point(307, 82);
             this.testPieChart.Margin = new System.Windows.Forms.Padding(2);
             this.testPieChart.Name = "testPieChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Name = "Series1";
-            this.testPieChart.Series.Add(series1);
+            series7.ChartArea = "ChartArea1";
+            series7.Name = "Series1";
+            this.testPieChart.Series.Add(series7);
             this.testPieChart.Size = new System.Drawing.Size(835, 631);
             this.testPieChart.TabIndex = 8;
             this.testPieChart.Text = "chart1";
+            // 
+            // filterBox
+            // 
+            this.filterBox.FormattingEnabled = true;
+            this.filterBox.Items.AddRange(new object[] {
+            "AantalInwoners",
+            "TotaalDiefstal",
+            "FietsenDiefstal",
+            "DiefstalOverigeVervoermiddelen",
+            "DiefstalVervoermiddelen",
+            "StraatrovenenZakkenrollerij",
+            "WoningDiefstal",
+            "DiefstaluitnietResidentieleGebouwen",
+            "OverigeDiefstalenInbraak"});
+            this.filterBox.Location = new System.Drawing.Point(19, 104);
+            this.filterBox.Name = "filterBox";
+            this.filterBox.Size = new System.Drawing.Size(197, 21);
+            this.filterBox.TabIndex = 9;
             // 
             // Diefstal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.filterBox);
             this.Controls.Add(this.testPieChart);
             this.Controls.Add(this.submitGemeenteInputBtn);
             this.Controls.Add(this.gemeenteInputTextbox);
@@ -488,5 +508,6 @@
         private System.Windows.Forms.TextBox gemeenteInputTextbox;
         private System.Windows.Forms.Button submitGemeenteInputBtn;
         private System.Windows.Forms.DataVisualization.Charting.Chart testPieChart;
+        private System.Windows.Forms.ComboBox filterBox;
     }
 }

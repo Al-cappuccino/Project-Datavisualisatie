@@ -36,11 +36,12 @@ namespace ProjectDrieDataVisualisatie
 
         private void submitGemeenteInputBtn_Click_1(object sender, EventArgs e)
         {
+            string selected = this.filterBox.GetItemText(this.filterBox.SelectedItem);
             if (testPieChart.Series.Count > 0)
                 testPieChart.Series.RemoveAt(0);
 
             using (connection = new SqlConnection(conString))
-            using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Diefstal WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
+            using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT "+ selected +" FROM Diefstal WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
             {
                 DataTable Test = new DataTable();
                 adapter.Fill(Test);
@@ -65,12 +66,11 @@ namespace ProjectDrieDataVisualisatie
 
                     foreach (string columnName in columns)
                     {
-                        if (columnName != "Gemeente" && columnName != "AantalInwoners" && columnName != "TotaalDiefstal")
-                        {
+
 
                             testPieChart.Series["Serie 1"].Points.AddXY(columnName, dr[columnName]);
                             testPieChart.ChartAreas[0].RecalculateAxesScale();
-                        }
+                        
 
                     }
                 }
@@ -85,6 +85,7 @@ namespace ProjectDrieDataVisualisatie
                 gemeenteInputTextbox.Text = "";
             gemeenteInputTextbox.ForeColor = Color.White;
         }
+
     }
 
 }
