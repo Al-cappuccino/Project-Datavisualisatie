@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.gemeenteInputTextbox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
             this.testPieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -457,14 +458,22 @@
             // 
             // testPieChart
             // 
-            chartArea7.Name = "ChartArea1";
-            this.testPieChart.ChartAreas.Add(chartArea7);
+            this.testPieChart.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.testPieChart.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.Name = "Legend1";
+            this.testPieChart.Legends.Add(legend1);
             this.testPieChart.Location = new System.Drawing.Point(307, 82);
             this.testPieChart.Margin = new System.Windows.Forms.Padding(2);
             this.testPieChart.Name = "testPieChart";
-            series7.ChartArea = "ChartArea1";
-            series7.Name = "Series1";
-            this.testPieChart.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.testPieChart.Series.Add(series1);
             this.testPieChart.Size = new System.Drawing.Size(835, 631);
             this.testPieChart.TabIndex = 8;
             this.testPieChart.Text = "chart1";

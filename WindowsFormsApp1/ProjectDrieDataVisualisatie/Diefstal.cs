@@ -53,8 +53,8 @@ namespace ProjectDrieDataVisualisatie
                     adapter.Fill(Test);
 
 
-                    testPieChart.Series.Add("Serie 1");
-                    testPieChart.Series["Serie 1"].ChartType = SeriesChartType.Column;
+                    testPieChart.Series.Add(selected);
+                    testPieChart.Series[selected].ChartType = SeriesChartType.Column;
                     List<String> columns = new List<string>();
                     bool added = false;
 
@@ -74,7 +74,7 @@ namespace ProjectDrieDataVisualisatie
                         {
 
 
-                            testPieChart.Series["Serie 1"].Points.AddXY(columnName, dr[columnName]);
+                            testPieChart.Series[selected].Points.AddXY(columnName, dr[columnName]);
                             testPieChart.ChartAreas[0].RecalculateAxesScale();
 
 
