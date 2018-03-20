@@ -40,19 +40,20 @@ namespace ProjectDrieDataVisualisatie
             string selected2 = this.filterDiefstal2.GetItemText(this.filterDiefstal2.SelectedItem);
             string selected3 = this.filterDiefstal3.GetItemText(this.filterDiefstal3.SelectedItem);
             string selected4 = this.filterDiefstal4.GetItemText(this.filterDiefstal4.SelectedItem);
+
             if (selected1 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
             }
-            if (filterDiefstal2.Visible == true && selected2 == "")
+            else if (filterDiefstal2.Visible == true && selected2 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
             }
-            if (filterDiefstal3.Visible == true && selected3 == "")
+            else if (filterDiefstal3.Visible == true && selected3 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
             }
-            if (filterDiefstal4.Visible == true && selected4 == "")
+            else if (filterDiefstal4.Visible == true && selected4 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
             }
@@ -64,12 +65,12 @@ namespace ProjectDrieDataVisualisatie
                 using (connection = new SqlConnection(conString))
                 using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT " + selected1 + " FROM Diefstal WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
                 {
-                    
                     DataTable Test = new DataTable();
                     adapter.Fill(Test);
 
-                    testPieChart.Series.Add(selected1);
-                    testPieChart.Series[selected1].ChartType = SeriesChartType.Column;
+
+                    testPieChart.Series.Add("Serie 1");
+                    testPieChart.Series["Serie 1"].ChartType = SeriesChartType.Column;
                     List<String> columns = new List<string>();
                     bool added = false;
 
@@ -89,12 +90,13 @@ namespace ProjectDrieDataVisualisatie
                         {
 
 
-                            testPieChart.Series[selected1].Points.AddXY(columnName, dr[columnName]);
+                            testPieChart.Series["Serie 1"].Points.AddXY(columnName, dr[columnName]);
                             testPieChart.ChartAreas[0].RecalculateAxesScale();
 
 
                         }
                     }
+
                 }
             }
         }
