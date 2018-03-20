@@ -28,13 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.gemeenteInputTextbox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
             this.testPieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.filterBox = new System.Windows.Forms.ComboBox();
+            this.filterDiefstal1 = new System.Windows.Forms.ComboBox();
+            this.adddiefstalfilter = new System.Windows.Forms.Button();
+            this.filterDiefstal2 = new System.Windows.Forms.ComboBox();
+            this.filterDiefstal3 = new System.Windows.Forms.ComboBox();
+            this.filterDiefstal4 = new System.Windows.Forms.ComboBox();
+            this.deletediefstalFilter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.testPieChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -459,29 +464,29 @@
             // testPieChart
             // 
             this.testPieChart.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.testPieChart.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.Transparent;
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.Name = "Legend1";
-            this.testPieChart.Legends.Add(legend1);
+            chartArea3.BackColor = System.Drawing.Color.Transparent;
+            chartArea3.Name = "ChartArea1";
+            this.testPieChart.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.Transparent;
+            legend3.ForeColor = System.Drawing.Color.White;
+            legend3.Name = "Legend1";
+            this.testPieChart.Legends.Add(legend3);
             this.testPieChart.Location = new System.Drawing.Point(307, 82);
             this.testPieChart.Margin = new System.Windows.Forms.Padding(2);
             this.testPieChart.Name = "testPieChart";
-            series1.ChartArea = "ChartArea1";
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.testPieChart.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.IsVisibleInLegend = false;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.testPieChart.Series.Add(series3);
             this.testPieChart.Size = new System.Drawing.Size(835, 631);
             this.testPieChart.TabIndex = 8;
             this.testPieChart.Text = "chart1";
             // 
-            // filterBox
+            // filterDiefstal1
             // 
-            this.filterBox.FormattingEnabled = true;
-            this.filterBox.Items.AddRange(new object[] {
+            this.filterDiefstal1.FormattingEnabled = true;
+            this.filterDiefstal1.Items.AddRange(new object[] {
             "AantalInwoners",
             "TotaalDiefstal",
             "FietsenDiefstal",
@@ -491,16 +496,98 @@
             "WoningDiefstal",
             "DiefstaluitnietResidentieleGebouwen",
             "OverigeDiefstalenInbraak"});
-            this.filterBox.Location = new System.Drawing.Point(19, 104);
-            this.filterBox.Name = "filterBox";
-            this.filterBox.Size = new System.Drawing.Size(197, 21);
-            this.filterBox.TabIndex = 9;
+            this.filterDiefstal1.Location = new System.Drawing.Point(19, 104);
+            this.filterDiefstal1.Name = "filterDiefstal1";
+            this.filterDiefstal1.Size = new System.Drawing.Size(197, 21);
+            this.filterDiefstal1.TabIndex = 9;
+            // 
+            // adddiefstalfilter
+            // 
+            this.adddiefstalfilter.Location = new System.Drawing.Point(19, 230);
+            this.adddiefstalfilter.Name = "adddiefstalfilter";
+            this.adddiefstalfilter.Size = new System.Drawing.Size(98, 27);
+            this.adddiefstalfilter.TabIndex = 10;
+            this.adddiefstalfilter.Text = "Voeg Filter toe...";
+            this.adddiefstalfilter.UseVisualStyleBackColor = true;
+            this.adddiefstalfilter.Click += new System.EventHandler(this.adddiefstalfilter_Click);
+            // 
+            // filterDiefstal2
+            // 
+            this.filterDiefstal2.FormattingEnabled = true;
+            this.filterDiefstal2.Items.AddRange(new object[] {
+            "AantalInwoners",
+            "TotaalDiefstal",
+            "FietsenDiefstal",
+            "DiefstalOverigeVervoermiddelen",
+            "DiefstalVervoermiddelen",
+            "StraatrovenenZakkenrollerij",
+            "WoningDiefstal",
+            "DiefstaluitnietResidentieleGebouwen",
+            "OverigeDiefstalenInbraak"});
+            this.filterDiefstal2.Location = new System.Drawing.Point(19, 131);
+            this.filterDiefstal2.Name = "filterDiefstal2";
+            this.filterDiefstal2.Size = new System.Drawing.Size(197, 21);
+            this.filterDiefstal2.TabIndex = 9;
+            this.filterDiefstal2.Visible = false;
+            // 
+            // filterDiefstal3
+            // 
+            this.filterDiefstal3.FormattingEnabled = true;
+            this.filterDiefstal3.Items.AddRange(new object[] {
+            "AantalInwoners",
+            "TotaalDiefstal",
+            "FietsenDiefstal",
+            "DiefstalOverigeVervoermiddelen",
+            "DiefstalVervoermiddelen",
+            "StraatrovenenZakkenrollerij",
+            "WoningDiefstal",
+            "DiefstaluitnietResidentieleGebouwen",
+            "OverigeDiefstalenInbraak"});
+            this.filterDiefstal3.Location = new System.Drawing.Point(19, 158);
+            this.filterDiefstal3.Name = "filterDiefstal3";
+            this.filterDiefstal3.Size = new System.Drawing.Size(197, 21);
+            this.filterDiefstal3.TabIndex = 9;
+            this.filterDiefstal3.Visible = false;
+            // 
+            // filterDiefstal4
+            // 
+            this.filterDiefstal4.FormattingEnabled = true;
+            this.filterDiefstal4.Items.AddRange(new object[] {
+            "AantalInwoners",
+            "TotaalDiefstal",
+            "FietsenDiefstal",
+            "DiefstalOverigeVervoermiddelen",
+            "DiefstalVervoermiddelen",
+            "StraatrovenenZakkenrollerij",
+            "WoningDiefstal",
+            "DiefstaluitnietResidentieleGebouwen",
+            "OverigeDiefstalenInbraak"});
+            this.filterDiefstal4.Location = new System.Drawing.Point(19, 185);
+            this.filterDiefstal4.Name = "filterDiefstal4";
+            this.filterDiefstal4.Size = new System.Drawing.Size(197, 21);
+            this.filterDiefstal4.TabIndex = 9;
+            this.filterDiefstal4.Visible = false;
+            // 
+            // deletediefstalFilter
+            // 
+            this.deletediefstalFilter.Location = new System.Drawing.Point(123, 230);
+            this.deletediefstalFilter.Name = "deletediefstalFilter";
+            this.deletediefstalFilter.Size = new System.Drawing.Size(98, 27);
+            this.deletediefstalFilter.TabIndex = 10;
+            this.deletediefstalFilter.Text = "Verwijder Filter";
+            this.deletediefstalFilter.UseVisualStyleBackColor = true;
+            this.deletediefstalFilter.Click += new System.EventHandler(this.deletediefstalFilter_Click);
             // 
             // Diefstal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.filterBox);
+            this.Controls.Add(this.deletediefstalFilter);
+            this.Controls.Add(this.adddiefstalfilter);
+            this.Controls.Add(this.filterDiefstal4);
+            this.Controls.Add(this.filterDiefstal3);
+            this.Controls.Add(this.filterDiefstal2);
+            this.Controls.Add(this.filterDiefstal1);
             this.Controls.Add(this.testPieChart);
             this.Controls.Add(this.submitGemeenteInputBtn);
             this.Controls.Add(this.gemeenteInputTextbox);
@@ -517,6 +604,11 @@
         private System.Windows.Forms.TextBox gemeenteInputTextbox;
         private System.Windows.Forms.Button submitGemeenteInputBtn;
         private System.Windows.Forms.DataVisualization.Charting.Chart testPieChart;
-        private System.Windows.Forms.ComboBox filterBox;
+        private System.Windows.Forms.ComboBox filterDiefstal1;
+        private System.Windows.Forms.Button adddiefstalfilter;
+        private System.Windows.Forms.ComboBox filterDiefstal2;
+        private System.Windows.Forms.ComboBox filterDiefstal3;
+        private System.Windows.Forms.ComboBox filterDiefstal4;
+        private System.Windows.Forms.Button deletediefstalFilter;
     }
 }

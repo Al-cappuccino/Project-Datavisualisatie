@@ -36,8 +36,23 @@ namespace ProjectDrieDataVisualisatie
 
         private void submitGemeenteInputBtn_Click_1(object sender, EventArgs e)
         {
-            string selected = this.filterBox.GetItemText(this.filterBox.SelectedItem);
-            if (selected == "")
+            string selected1 = this.filterDiefstal1.GetItemText(this.filterDiefstal1.SelectedItem);
+            string selected2 = this.filterDiefstal2.GetItemText(this.filterDiefstal2.SelectedItem);
+            string selected3 = this.filterDiefstal3.GetItemText(this.filterDiefstal3.SelectedItem);
+            string selected4 = this.filterDiefstal4.GetItemText(this.filterDiefstal4.SelectedItem);
+            if (selected1 == "")
+            {
+                MessageBox.Show("Kies een geldige filter");
+            }
+            if (filterDiefstal2.Visible == true && selected2 == "")
+            {
+                MessageBox.Show("Kies een geldige filter");
+            }
+            if (filterDiefstal3.Visible == true && selected3 == "")
+            {
+                MessageBox.Show("Kies een geldige filter");
+            }
+            if (filterDiefstal4.Visible == true && selected4 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
             }
@@ -47,14 +62,14 @@ namespace ProjectDrieDataVisualisatie
                     testPieChart.Series.RemoveAt(0);
 
                 using (connection = new SqlConnection(conString))
-                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT " + selected + " FROM Diefstal WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT " + selected1 + " FROM Diefstal WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
                 {
+                    
                     DataTable Test = new DataTable();
                     adapter.Fill(Test);
 
-
-                    testPieChart.Series.Add(selected);
-                    testPieChart.Series[selected].ChartType = SeriesChartType.Column;
+                    testPieChart.Series.Add(selected1);
+                    testPieChart.Series[selected1].ChartType = SeriesChartType.Column;
                     List<String> columns = new List<string>();
                     bool added = false;
 
@@ -74,13 +89,12 @@ namespace ProjectDrieDataVisualisatie
                         {
 
 
-                            testPieChart.Series[selected].Points.AddXY(columnName, dr[columnName]);
+                            testPieChart.Series[selected1].Points.AddXY(columnName, dr[columnName]);
                             testPieChart.ChartAreas[0].RecalculateAxesScale();
 
 
                         }
                     }
-
                 }
             }
         }
@@ -93,6 +107,44 @@ namespace ProjectDrieDataVisualisatie
             gemeenteInputTextbox.ForeColor = Color.White;
         }
 
+        private void adddiefstalfilter_Click(object sender, EventArgs e)
+        {
+            if (filterDiefstal2.Visible == false)
+            {
+                filterDiefstal2.Visible = true;
+            
+            }
+            else if (filterDiefstal3.Visible == false && filterDiefstal2.Visible == true)
+            {
+                filterDiefstal3.Visible = true;
+
+            }
+            else if (filterDiefstal4.Visible == false && filterDiefstal3.Visible == true)
+            {
+                filterDiefstal4.Visible = true;
+            }
+        }
+
+        private void deletediefstalFilter_Click(object sender, EventArgs e)
+        {
+            if (filterDiefstal4.Visible == true)
+            {
+                filterDiefstal4.Visible = false;
+                filterDiefstal4.Text = "";
+
+            }
+            else if (filterDiefstal3.Visible == true)
+            {
+                filterDiefstal3.Visible = false;
+                filterDiefstal3.Text = "";
+
+            }
+            else if (filterDiefstal2.Visible == true)
+            {
+                filterDiefstal2.Visible = false;
+                filterDiefstal2.Text = "";
+            }
+        }
     }
 
 }
