@@ -31,6 +31,7 @@ namespace ProjectDrieDataVisualisatie
 
         private void LetselButton_Click(object sender, EventArgs e)
         {
+            mainpanelTop.Visible = false;
             if (!mainPanel.Controls.Contains(letsel.Instance))
             {
                 mainPanel.Controls.Add(letsel.Instance);
@@ -46,6 +47,7 @@ namespace ProjectDrieDataVisualisatie
 
         private void DiefstalButton_Click(object sender, EventArgs e)
         {
+            mainpanelTop.Visible = false;
             if (!mainPanel.Controls.Contains(Diefstal.Instance))
             {
                 mainPanel.Controls.Add(Diefstal.Instance);
@@ -68,18 +70,10 @@ namespace ProjectDrieDataVisualisatie
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+        private void homeButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
+            mainpanelTop.Visible = true;
             if (mainPanel.Controls.Contains(Diefstal.Instance))
             {
                 mainPanel.Controls.Remove(Diefstal.Instance);
