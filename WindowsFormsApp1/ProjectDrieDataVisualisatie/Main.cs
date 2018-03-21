@@ -40,12 +40,7 @@ namespace ProjectDrieDataVisualisatie
 
 
             }
-            chart1.Visible = true;
-            chart2.Visible = true;
-            chart3.Visible = true;
-            chart4.Visible = true;
-            chart5.Visible = true;
-            pictureBox1.Visible = false;
+
         }
 
 
@@ -70,12 +65,30 @@ namespace ProjectDrieDataVisualisatie
             {
                 mainPanel.Controls.Remove(Diefstal.Instance);
             }
-            chart1.Visible = false;
-            chart2.Visible = false;
-            chart3.Visible = false;
-            chart4.Visible = false;
-            chart5.Visible = false;
-            pictureBox1.Visible = true;
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (mainPanel.Controls.Contains(Diefstal.Instance))
+            {
+                mainPanel.Controls.Remove(Diefstal.Instance);
+            }
+
+            if (mainPanel.Controls.Contains(letsel.Instance))
+            {
+                mainPanel.Controls.Remove(letsel.Instance);
+            }
         }
     }
 }

@@ -84,14 +84,14 @@ namespace ProjectDrieDataVisualisatie
                     testPieChart.Series.RemoveAt(0);
 
                 using (connection = new SqlConnection(conString))
-                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT " + selected + " FROM Diefstal WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT " + selected + " FROM Diefstal WHERE Gemeente LIKE '%" + gemeenteInputTextbox1.Text + "%'", connection))
                 {
                     DataTable Test = new DataTable();
                     adapter.Fill(Test);
 
 
-                    testPieChart.Series.Add(gemeenteInputTextbox.Text);
-                    testPieChart.Series[gemeenteInputTextbox.Text].ChartType = SeriesChartType.Column;
+                    testPieChart.Series.Add(gemeenteInputTextbox1.Text);
+                    testPieChart.Series[gemeenteInputTextbox1.Text].ChartType = SeriesChartType.Column;
                     List<String> columns = new List<string>();
                     bool added = false;
 
@@ -111,7 +111,7 @@ namespace ProjectDrieDataVisualisatie
                         {
 
 
-                            testPieChart.Series[gemeenteInputTextbox.Text].Points.AddXY(columnName, dr[columnName]);
+                            testPieChart.Series[gemeenteInputTextbox1.Text].Points.AddXY(columnName, dr[columnName]);
                             testPieChart.ChartAreas[0].RecalculateAxesScale();
 
 
@@ -125,9 +125,16 @@ namespace ProjectDrieDataVisualisatie
 
         private void gemeenteInputTextbox_MouseDown(object sender, MouseEventArgs e)
         {
-            if (gemeenteInputTextbox.Text == "Voer plaatsnaam in...")
-                gemeenteInputTextbox.Text = "";
-            gemeenteInputTextbox.ForeColor = Color.White;
+            if (gemeenteInputTextbox1.Text == "Voer plaatsnaam in...")
+                gemeenteInputTextbox1.Text = "";
+            gemeenteInputTextbox1.ForeColor = Color.White;
+        }
+
+        private void gemeenteInputTextbox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (gemeenteInputTextBox2.Text == "Voer plaatsnaam in...")
+                gemeenteInputTextBox2.Text = "";
+            gemeenteInputTextBox2.ForeColor = Color.White;
         }
 
         private void adddiefstalfilter_Click(object sender, EventArgs e)
@@ -167,6 +174,28 @@ namespace ProjectDrieDataVisualisatie
                 filterDiefstal2.Visible = false;
                 filterDiefstal2.Text = "";
             }
+        }
+
+        private void gemeenteInputTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gemeenteInputTextbox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gemeenteInputTextBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void gemeenteInputTextBox2_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            if (gemeenteInputTextBox2.Text == "Voer plaatsnaam in...")
+                gemeenteInputTextBox2.Text = "";
+            gemeenteInputTextBox2.ForeColor = Color.White;
         }
     }
 

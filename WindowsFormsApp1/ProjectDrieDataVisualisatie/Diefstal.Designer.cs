@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.gemeenteInputTextbox = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.gemeenteInputTextbox1 = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
             this.testPieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.filterDiefstal1 = new System.Windows.Forms.ComboBox();
@@ -40,12 +43,16 @@
             this.filterDiefstal3 = new System.Windows.Forms.ComboBox();
             this.filterDiefstal4 = new System.Windows.Forms.ComboBox();
             this.deletediefstalFilter = new System.Windows.Forms.Button();
+            this.gemeenteInputTextBox2 = new System.Windows.Forms.TextBox();
+            this.testPieChart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.testPieChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testPieChart2)).BeginInit();
             this.SuspendLayout();
             // 
-            // gemeenteInputTextbox
+            // gemeenteInputTextbox1
             // 
-            this.gemeenteInputTextbox.AutoCompleteCustomSource.AddRange(new string[] {
+            this.gemeenteInputTextbox1.AutoCompleteCustomSource.AddRange(new string[] {
             "Aa en Hunze",
             "Aalburg",
             "Aalsmeer",
@@ -436,50 +443,53 @@
             "Zwartewaterland",
             "Zwijndrecht",
             "Zwolle"});
-            this.gemeenteInputTextbox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.gemeenteInputTextbox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.gemeenteInputTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gemeenteInputTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gemeenteInputTextbox.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gemeenteInputTextbox.ForeColor = System.Drawing.Color.White;
-            this.gemeenteInputTextbox.Location = new System.Drawing.Point(19, 16);
-            this.gemeenteInputTextbox.Name = "gemeenteInputTextbox";
-            this.gemeenteInputTextbox.Size = new System.Drawing.Size(594, 53);
-            this.gemeenteInputTextbox.TabIndex = 6;
-            this.gemeenteInputTextbox.Text = "Voer plaatsnaam in...";
-            this.gemeenteInputTextbox.UseWaitCursor = true;
-            this.gemeenteInputTextbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gemeenteInputTextbox_MouseDown);
+            this.gemeenteInputTextbox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.gemeenteInputTextbox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.gemeenteInputTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gemeenteInputTextbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gemeenteInputTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gemeenteInputTextbox1.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gemeenteInputTextbox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.gemeenteInputTextbox1.Location = new System.Drawing.Point(28, 25);
+            this.gemeenteInputTextbox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gemeenteInputTextbox1.Name = "gemeenteInputTextbox1";
+            this.gemeenteInputTextbox1.Size = new System.Drawing.Size(890, 76);
+            this.gemeenteInputTextbox1.TabIndex = 6;
+            this.gemeenteInputTextbox1.Text = "Voer plaatsnaam in...";
+            this.gemeenteInputTextbox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gemeenteInputTextbox_MouseDown);
             // 
             // submitGemeenteInputBtn
             // 
-            this.submitGemeenteInputBtn.Location = new System.Drawing.Point(618, 16);
-            this.submitGemeenteInputBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.submitGemeenteInputBtn.Location = new System.Drawing.Point(943, 25);
             this.submitGemeenteInputBtn.Name = "submitGemeenteInputBtn";
-            this.submitGemeenteInputBtn.Size = new System.Drawing.Size(104, 53);
+            this.submitGemeenteInputBtn.Size = new System.Drawing.Size(157, 76);
             this.submitGemeenteInputBtn.TabIndex = 7;
-            this.submitGemeenteInputBtn.Text = "Filter";
+            this.submitGemeenteInputBtn.Text = "Ga";
             this.submitGemeenteInputBtn.UseVisualStyleBackColor = true;
             this.submitGemeenteInputBtn.Click += new System.EventHandler(this.submitGemeenteInputBtn_Click_1);
             // 
             // testPieChart
             // 
             this.testPieChart.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.testPieChart.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.Transparent;
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.Name = "Legend1";
-            this.testPieChart.Legends.Add(legend1);
-            this.testPieChart.Location = new System.Drawing.Point(307, 82);
-            this.testPieChart.Margin = new System.Windows.Forms.Padding(2);
+            this.testPieChart.BorderSkin.BackColor = System.Drawing.Color.White;
+            this.testPieChart.BorderSkin.BackImageTransparentColor = System.Drawing.Color.White;
+            this.testPieChart.BorderSkin.BackSecondaryColor = System.Drawing.Color.White;
+            this.testPieChart.BorderSkin.BorderColor = System.Drawing.Color.White;
+            chartArea3.BackColor = System.Drawing.Color.Transparent;
+            chartArea3.Name = "ChartArea1";
+            this.testPieChart.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.Transparent;
+            legend3.ForeColor = System.Drawing.Color.White;
+            legend3.Name = "Legend1";
+            this.testPieChart.Legends.Add(legend3);
+            this.testPieChart.Location = new System.Drawing.Point(0, 389);
             this.testPieChart.Name = "testPieChart";
-            series1.ChartArea = "ChartArea1";
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.testPieChart.Series.Add(series1);
-            this.testPieChart.Size = new System.Drawing.Size(835, 631);
+            series3.ChartArea = "ChartArea1";
+            series3.IsVisibleInLegend = false;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.testPieChart.Series.Add(series3);
+            this.testPieChart.Size = new System.Drawing.Size(825, 605);
             this.testPieChart.TabIndex = 8;
             this.testPieChart.Text = "chart1";
             // 
@@ -496,16 +506,19 @@
             "WoningDiefstal",
             "DiefstaluitnietResidentieleGebouwen",
             "OverigeDiefstalenInbraak"});
-            this.filterDiefstal1.Location = new System.Drawing.Point(19, 104);
+            this.filterDiefstal1.Location = new System.Drawing.Point(1206, 25);
+            this.filterDiefstal1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.filterDiefstal1.Name = "filterDiefstal1";
-            this.filterDiefstal1.Size = new System.Drawing.Size(197, 21);
+            this.filterDiefstal1.Size = new System.Drawing.Size(294, 28);
             this.filterDiefstal1.TabIndex = 9;
+            this.filterDiefstal1.Text = "Selecteer filter..";
             // 
             // adddiefstalfilter
             // 
-            this.adddiefstalfilter.Location = new System.Drawing.Point(19, 230);
+            this.adddiefstalfilter.Location = new System.Drawing.Point(1206, 179);
+            this.adddiefstalfilter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.adddiefstalfilter.Name = "adddiefstalfilter";
-            this.adddiefstalfilter.Size = new System.Drawing.Size(98, 27);
+            this.adddiefstalfilter.Size = new System.Drawing.Size(143, 42);
             this.adddiefstalfilter.TabIndex = 10;
             this.adddiefstalfilter.Text = "Voeg Filter toe...";
             this.adddiefstalfilter.UseVisualStyleBackColor = true;
@@ -524,10 +537,12 @@
             "WoningDiefstal",
             "DiefstaluitnietResidentieleGebouwen",
             "OverigeDiefstalenInbraak"});
-            this.filterDiefstal2.Location = new System.Drawing.Point(19, 131);
+            this.filterDiefstal2.Location = new System.Drawing.Point(1206, 65);
+            this.filterDiefstal2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.filterDiefstal2.Name = "filterDiefstal2";
-            this.filterDiefstal2.Size = new System.Drawing.Size(197, 21);
+            this.filterDiefstal2.Size = new System.Drawing.Size(294, 28);
             this.filterDiefstal2.TabIndex = 9;
+            this.filterDiefstal2.Text = "Selecteer filter..";
             this.filterDiefstal2.Visible = false;
             // 
             // filterDiefstal3
@@ -543,10 +558,12 @@
             "WoningDiefstal",
             "DiefstaluitnietResidentieleGebouwen",
             "OverigeDiefstalenInbraak"});
-            this.filterDiefstal3.Location = new System.Drawing.Point(19, 158);
+            this.filterDiefstal3.Location = new System.Drawing.Point(1206, 103);
+            this.filterDiefstal3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.filterDiefstal3.Name = "filterDiefstal3";
-            this.filterDiefstal3.Size = new System.Drawing.Size(197, 21);
+            this.filterDiefstal3.Size = new System.Drawing.Size(294, 28);
             this.filterDiefstal3.TabIndex = 9;
+            this.filterDiefstal3.Text = "Selecteer filter..";
             this.filterDiefstal3.Visible = false;
             // 
             // filterDiefstal4
@@ -562,26 +579,76 @@
             "WoningDiefstal",
             "DiefstaluitnietResidentieleGebouwen",
             "OverigeDiefstalenInbraak"});
-            this.filterDiefstal4.Location = new System.Drawing.Point(19, 185);
+            this.filterDiefstal4.Location = new System.Drawing.Point(1206, 141);
+            this.filterDiefstal4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.filterDiefstal4.Name = "filterDiefstal4";
-            this.filterDiefstal4.Size = new System.Drawing.Size(197, 21);
+            this.filterDiefstal4.Size = new System.Drawing.Size(294, 28);
             this.filterDiefstal4.TabIndex = 9;
+            this.filterDiefstal4.Text = "Selecteer filter..";
             this.filterDiefstal4.Visible = false;
             // 
             // deletediefstalFilter
             // 
-            this.deletediefstalFilter.Location = new System.Drawing.Point(123, 230);
+            this.deletediefstalFilter.Location = new System.Drawing.Point(1359, 179);
+            this.deletediefstalFilter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.deletediefstalFilter.Name = "deletediefstalFilter";
-            this.deletediefstalFilter.Size = new System.Drawing.Size(98, 27);
+            this.deletediefstalFilter.Size = new System.Drawing.Size(141, 42);
             this.deletediefstalFilter.TabIndex = 10;
             this.deletediefstalFilter.Text = "Verwijder Filter";
             this.deletediefstalFilter.UseVisualStyleBackColor = true;
             this.deletediefstalFilter.Click += new System.EventHandler(this.deletediefstalFilter_Click);
             // 
+            // gemeenteInputTextBox2
+            // 
+            this.gemeenteInputTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gemeenteInputTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gemeenteInputTextBox2.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gemeenteInputTextBox2.ForeColor = System.Drawing.SystemColors.Window;
+            this.gemeenteInputTextBox2.Location = new System.Drawing.Point(28, 109);
+            this.gemeenteInputTextBox2.Name = "gemeenteInputTextBox2";
+            this.gemeenteInputTextBox2.Size = new System.Drawing.Size(890, 76);
+            this.gemeenteInputTextBox2.TabIndex = 11;
+            this.gemeenteInputTextBox2.Text = "Voer plaatsnaam in...";
+            this.gemeenteInputTextBox2.TextChanged += new System.EventHandler(this.gemeenteInputTextBox2_TextChanged);
+            this.gemeenteInputTextBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gemeenteInputTextBox2_MouseDown_1);
+            // 
+            // testPieChart2
+            // 
+            this.testPieChart2.BackColor = System.Drawing.Color.Transparent;
+            chartArea4.BackColor = System.Drawing.Color.Transparent;
+            chartArea4.Name = "ChartArea1";
+            this.testPieChart2.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.Transparent;
+            legend4.ForeColor = System.Drawing.Color.White;
+            legend4.Name = "Legend1";
+            this.testPieChart2.Legends.Add(legend4);
+            this.testPieChart2.Location = new System.Drawing.Point(831, 389);
+            this.testPieChart2.Name = "testPieChart2";
+            series4.ChartArea = "ChartArea1";
+            series4.IsVisibleInLegend = false;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.testPieChart2.Series.Add(series4);
+            this.testPieChart2.Size = new System.Drawing.Size(816, 605);
+            this.testPieChart2.TabIndex = 12;
+            this.testPieChart2.Text = "chart1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(943, 109);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 76);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Vergelijk";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Diefstal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.testPieChart2);
+            this.Controls.Add(this.gemeenteInputTextBox2);
             this.Controls.Add(this.deletediefstalFilter);
             this.Controls.Add(this.adddiefstalfilter);
             this.Controls.Add(this.filterDiefstal4);
@@ -590,10 +657,12 @@
             this.Controls.Add(this.filterDiefstal1);
             this.Controls.Add(this.testPieChart);
             this.Controls.Add(this.submitGemeenteInputBtn);
-            this.Controls.Add(this.gemeenteInputTextbox);
+            this.Controls.Add(this.gemeenteInputTextbox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Diefstal";
-            this.Size = new System.Drawing.Size(1159, 720);
+            this.Size = new System.Drawing.Size(1738, 1108);
             ((System.ComponentModel.ISupportInitialize)(this.testPieChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testPieChart2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -601,7 +670,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox gemeenteInputTextbox;
+        private System.Windows.Forms.TextBox gemeenteInputTextbox1;
         private System.Windows.Forms.Button submitGemeenteInputBtn;
         private System.Windows.Forms.DataVisualization.Charting.Chart testPieChart;
         private System.Windows.Forms.ComboBox filterDiefstal1;
@@ -610,5 +679,8 @@
         private System.Windows.Forms.ComboBox filterDiefstal3;
         private System.Windows.Forms.ComboBox filterDiefstal4;
         private System.Windows.Forms.Button deletediefstalFilter;
+        private System.Windows.Forms.TextBox gemeenteInputTextBox2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart testPieChart2;
+        private System.Windows.Forms.Button button1;
     }
 }
