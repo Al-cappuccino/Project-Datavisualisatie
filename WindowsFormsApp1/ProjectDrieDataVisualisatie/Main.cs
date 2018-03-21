@@ -38,8 +38,9 @@ namespace ProjectDrieDataVisualisatie
                 mainPanel.Controls.Remove(Diefstal.Instance);
                 letsel.Instance.Dock = DockStyle.Fill;
                 letsel.Instance.BringToFront();
-
-
+                ActivePanel1.Visible = false;
+                ActivePanel2.Visible = true;
+                ActivePanel3.Visible = false;
             }
 
         }
@@ -57,8 +58,9 @@ namespace ProjectDrieDataVisualisatie
             }
             else
                 Diefstal.Instance.BringToFront();
-
-
+            ActivePanel1.Visible = false;
+            ActivePanel2.Visible = false;
+            ActivePanel3.Visible = true;
         }
 
         private void Kaart_click(object sender, EventArgs e)
@@ -83,6 +85,9 @@ namespace ProjectDrieDataVisualisatie
             {
                 mainPanel.Controls.Remove(letsel.Instance);
             }
+            ActivePanel1.Visible = true;
+            ActivePanel2.Visible = false;
+            ActivePanel3.Visible = false;
         }
     }
 }
