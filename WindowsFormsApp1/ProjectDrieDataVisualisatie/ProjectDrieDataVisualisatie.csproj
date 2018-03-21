@@ -73,6 +73,12 @@
     <Compile Include="Diefstal.Designer.cs">
       <DependentUpon>Diefstal.cs</DependentUpon>
     </Compile>
+    <Compile Include="letsel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="letsel.Designer.cs">
+      <DependentUpon>letsel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Diefstal.resx">
       <DependentUpon>Diefstal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="letsel.resx">
+      <DependentUpon>letsel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

@@ -31,9 +31,14 @@ namespace ProjectDrieDataVisualisatie
 
         private void LetselButton_Click(object sender, EventArgs e)
         {
-            if (mainPanel.Controls.Contains(Diefstal.Instance))
+            if (!mainPanel.Controls.Contains(letsel.Instance))
             {
+                mainPanel.Controls.Add(letsel.Instance);
                 mainPanel.Controls.Remove(Diefstal.Instance);
+                letsel.Instance.Dock = DockStyle.Fill;
+                letsel.Instance.BringToFront();
+
+
             }
             chart1.Visible = true;
             chart2.Visible = true;
@@ -49,6 +54,7 @@ namespace ProjectDrieDataVisualisatie
             if (!mainPanel.Controls.Contains(Diefstal.Instance))
             {
                 mainPanel.Controls.Add(Diefstal.Instance);
+                mainPanel.Controls.Remove(letsel.Instance);
                 Diefstal.Instance.Dock = DockStyle.Fill;
                 Diefstal.Instance.BringToFront();
             }
