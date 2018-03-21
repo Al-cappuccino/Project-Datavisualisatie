@@ -36,23 +36,46 @@ namespace ProjectDrieDataVisualisatie
 
         private void submitGemeenteInputBtn_Click(object sender, EventArgs e)
         {
+
             string selected1 = this.filterDiefstal1.GetItemText(this.filterDiefstal1.SelectedItem);
-            string selected = selected1;
+            string selected2 = this.filterDiefstal2.GetItemText(this.filterDiefstal2.SelectedItem);
+            string selected3 = this.filterDiefstal3.GetItemText(this.filterDiefstal3.SelectedItem);
+            string selected = selected1 + ", " + selected2 + ", " + selected3;
             if (selected1 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
+                selected = selected1;
             }
+            else if (filterDiefstal2.Visible == true && selected2 == "")
+            {
+                MessageBox.Show("Kies een geldige filter");
+                selected = selected1 + ", " + selected2;
+            }
+            else if (filterDiefstal3.Visible == true && selected3 == "")
+            {
+                MessageBox.Show("Kies een geldige filter");
+                selected = selected1 + ", " + selected2 + ", " + selected3;
+            }
+
             else
-                if (filterDiefstal1.Visible)
+            {
+                if (filterDiefstal3.Visible)
+                {
+                    selected = selected1 + ", " + selected2 + ", " + selected3;
+                }
+                else if (filterDiefstal2.Visible)
+                {
+                    selected = selected1 + ", " + selected2;
+                }
+                else if (filterDiefstal1.Visible)
                 {
                     selected = selected1;
                 }
-
                 if (testPieChart.Series.Count > 0)
                     testPieChart.Series.RemoveAt(0);
 
                 using (connection = new SqlConnection(conString))
-                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Letsel WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT " + selected + "  FROM Letsel WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
                 {
                     DataTable Test = new DataTable();
                     adapter.Fill(Test);
@@ -87,7 +110,42 @@ namespace ProjectDrieDataVisualisatie
                     }
 
                 }
+
+            }
+        }
+
+        private void adddiefstalfilter_Click(object sender, EventArgs e)
+        {
+            if (filterDiefstal2.Visible == false)
+            {
+                filterDiefstal2.Visible = true;
+
+            }
+            else if (filterDiefstal3.Visible == false && filterDiefstal2.Visible == true)
+            {
+                filterDiefstal3.Visible = true;
+
+            }
+        }
+
+        private void filterDiefstal3_SelectedIndexChanged(object sender, EventArgs e)
+        {
             
+        }
+
+        private void deletediefstalFilter_Click(object sender, EventArgs e)
+        {
+            if (filterDiefstal3.Visible == true)
+            {
+                filterDiefstal3.Visible = false;
+                filterDiefstal3.Text = "";
+
+            }
+            else if (filterDiefstal2.Visible == true)
+            {
+                filterDiefstal2.Visible = false;
+                filterDiefstal2.Text = "";
+            }
         }
     }
 }
