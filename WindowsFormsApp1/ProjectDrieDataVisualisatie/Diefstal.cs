@@ -40,37 +40,58 @@ namespace ProjectDrieDataVisualisatie
             string selected2 = this.filterDiefstal2.GetItemText(this.filterDiefstal2.SelectedItem);
             string selected3 = this.filterDiefstal3.GetItemText(this.filterDiefstal3.SelectedItem);
             string selected4 = this.filterDiefstal4.GetItemText(this.filterDiefstal4.SelectedItem);
-
+            string selected = selected1 + ", " + selected2 + ", " + selected3 + ", " + selected4;
             if (selected1 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
+                selected = selected1;
             }
             else if (filterDiefstal2.Visible == true && selected2 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
+                selected = selected1 + ", " + selected2;
             }
             else if (filterDiefstal3.Visible == true && selected3 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
+                selected = selected1 + ", " + selected2 + ", " + selected3;
             }
             else if (filterDiefstal4.Visible == true && selected4 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
+                selected = selected1 + ", " + selected2 + ", " + selected3 + ", " + selected4;
             }
             else
             {
+                if (filterDiefstal4.Visible)
+                {
+                    selected = selected1 + ", " + selected2 + ", " + selected3 + ", " + selected4;
+                }
+                else if (filterDiefstal3.Visible)
+                {
+                    selected = selected1 + ", " + selected2 + ", " + selected3;
+                }
+                else if (filterDiefstal2.Visible)
+                {
+                    selected = selected1 + ", " + selected2;
+                }
+                else if (filterDiefstal1.Visible)
+                {
+                    selected = selected1;
+                }
+
                 if (testPieChart.Series.Count > 0)
                     testPieChart.Series.RemoveAt(0);
 
                 using (connection = new SqlConnection(conString))
-                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT " + selected1 + " FROM Diefstal WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT " + selected + " FROM Diefstal WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
                 {
                     DataTable Test = new DataTable();
                     adapter.Fill(Test);
 
 
-                    testPieChart.Series.Add("Serie 1");
-                    testPieChart.Series["Serie 1"].ChartType = SeriesChartType.Column;
+                    testPieChart.Series.Add(gemeenteInputTextbox.Text);
+                    testPieChart.Series[gemeenteInputTextbox.Text].ChartType = SeriesChartType.Column;
                     List<String> columns = new List<string>();
                     bool added = false;
 
@@ -90,7 +111,7 @@ namespace ProjectDrieDataVisualisatie
                         {
 
 
-                            testPieChart.Series["Serie 1"].Points.AddXY(columnName, dr[columnName]);
+                            testPieChart.Series[gemeenteInputTextbox.Text].Points.AddXY(columnName, dr[columnName]);
                             testPieChart.ChartAreas[0].RecalculateAxesScale();
 
 
