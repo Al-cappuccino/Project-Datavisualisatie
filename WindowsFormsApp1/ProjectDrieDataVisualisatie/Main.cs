@@ -31,14 +31,16 @@ namespace ProjectDrieDataVisualisatie
 
         private void LetselButton_Click(object sender, EventArgs e)
         {
+            mainpanelTop.Visible = false;
             if (!mainPanel.Controls.Contains(letsel.Instance))
             {
                 mainPanel.Controls.Add(letsel.Instance);
                 mainPanel.Controls.Remove(Diefstal.Instance);
                 letsel.Instance.Dock = DockStyle.Fill;
                 letsel.Instance.BringToFront();
-
-
+                ActivePanel1.Visible = false;
+                ActivePanel2.Visible = true;
+                ActivePanel3.Visible = false;
             }
 
         }
@@ -46,6 +48,7 @@ namespace ProjectDrieDataVisualisatie
 
         private void DiefstalButton_Click(object sender, EventArgs e)
         {
+            mainpanelTop.Visible = false;
             if (!mainPanel.Controls.Contains(Diefstal.Instance))
             {
                 mainPanel.Controls.Add(Diefstal.Instance);
@@ -55,8 +58,9 @@ namespace ProjectDrieDataVisualisatie
             }
             else
                 Diefstal.Instance.BringToFront();
-
-
+            ActivePanel1.Visible = false;
+            ActivePanel2.Visible = false;
+            ActivePanel3.Visible = true;
         }
 
         private void Kaart_click(object sender, EventArgs e)
@@ -68,18 +72,10 @@ namespace ProjectDrieDataVisualisatie
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+        private void homeButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
+            mainpanelTop.Visible = true;
             if (mainPanel.Controls.Contains(Diefstal.Instance))
             {
                 mainPanel.Controls.Remove(Diefstal.Instance);
@@ -89,6 +85,9 @@ namespace ProjectDrieDataVisualisatie
             {
                 mainPanel.Controls.Remove(letsel.Instance);
             }
+            ActivePanel1.Visible = true;
+            ActivePanel2.Visible = false;
+            ActivePanel3.Visible = false;
         }
     }
 }
