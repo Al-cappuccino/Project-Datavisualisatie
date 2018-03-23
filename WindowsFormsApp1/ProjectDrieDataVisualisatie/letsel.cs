@@ -154,7 +154,7 @@ namespace ProjectDrieDataVisualisatie
             
         }
 
-        private void dataSelectionCheckBox_ItemCheck(object sender, EventArgs e)
+        private void dataSelectionCheckBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             if (dataSelectionCheckBox.GetItemChecked(0) && dataSelectionCheckBox.GetItemChecked(1) && dataSelectionCheckBox.GetItemChecked(2))
             {
