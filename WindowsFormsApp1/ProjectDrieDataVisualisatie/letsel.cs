@@ -37,21 +37,21 @@ namespace ProjectDrieDataVisualisatie
         private void submitGemeenteInputBtn_Click(object sender, EventArgs e)
         {
 
-            string selected1 = this.filterDiefstal1.GetItemText(this.filterDiefstal1.SelectedItem);
-            string selected2 = this.filterDiefstal2.GetItemText(this.filterDiefstal2.SelectedItem);
-            string selected3 = this.filterDiefstal3.GetItemText(this.filterDiefstal3.SelectedItem);
+            string selected1 = this.filterLetsel1.GetItemText(this.filterLetsel1.SelectedItem);
+            string selected2 = this.filterLetsel2.GetItemText(this.filterLetsel2.SelectedItem);
+            string selected3 = this.filterLetsel3.GetItemText(this.filterLetsel3.SelectedItem);
             string selected = selected1 + ", " + selected2 + ", " + selected3;
             if (selected1 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
                 selected = selected1;
             }
-            else if (filterDiefstal2.Visible == true && selected2 == "")
+            else if (filterLetsel2.Visible == true && selected2 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
                 selected = selected1 + ", " + selected2;
             }
-            else if (filterDiefstal3.Visible == true && selected3 == "")
+            else if (filterLetsel3.Visible == true && selected3 == "")
             {
                 MessageBox.Show("Kies een geldige filter");
                 selected = selected1 + ", " + selected2 + ", " + selected3;
@@ -59,15 +59,15 @@ namespace ProjectDrieDataVisualisatie
 
             else
             {
-                if (filterDiefstal3.Visible)
+                if (filterLetsel3.Visible)
                 {
                     selected = selected1 + ", " + selected2 + ", " + selected3;
                 }
-                else if (filterDiefstal2.Visible)
+                else if (filterLetsel2.Visible)
                 {
                     selected = selected1 + ", " + selected2;
                 }
-                else if (filterDiefstal1.Visible)
+                else if (filterLetsel1.Visible)
                 {
                     selected = selected1;
                 }
@@ -114,20 +114,35 @@ namespace ProjectDrieDataVisualisatie
             }
         }
 
-        private void adddiefstalfilter_Click(object sender, EventArgs e)
+        private void addLetselFilter_Click(object sender, EventArgs e)
         {
-            if (filterDiefstal2.Visible == false)
+            if (filterLetsel2.Visible == false)
             {
-                filterDiefstal2.Visible = true;
+                filterLetsel2.Visible = true;
 
             }
-            else if (filterDiefstal3.Visible == false && filterDiefstal2.Visible == true)
+            else if (filterLetsel3.Visible == false && filterLetsel2.Visible == true)
             {
-                filterDiefstal3.Visible = true;
-
+                filterLetsel3.Visible = true;
             }
         }
 
+        private void deleteLetselFilter_Click(object sender, EventArgs e)
+        {
+            if (filterLetsel3.Visible == true)
+            {
+                filterLetsel3.Visible = false;
+                filterLetsel3.Text = "";
+
+            }
+            else if (filterLetsel2.Visible == true)
+            {
+                filterLetsel2.Visible = false;
+                filterLetsel2.Text = "";
+            }
+        }
+
+        //accidental clicks but you can't delete them -_-
         private void filterDiefstal3_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -135,17 +150,17 @@ namespace ProjectDrieDataVisualisatie
 
         private void deletediefstalFilter_Click(object sender, EventArgs e)
         {
-            if (filterDiefstal3.Visible == true)
-            {
-                filterDiefstal3.Visible = false;
-                filterDiefstal3.Text = "";
+            
+        }
 
-            }
-            else if (filterDiefstal2.Visible == true)
-            {
-                filterDiefstal2.Visible = false;
-                filterDiefstal2.Text = "";
-            }
+        private void testPieChart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adddiefstalfilter_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

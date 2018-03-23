@@ -447,6 +447,7 @@
             this.gemeenteTextbox.TabIndex = 6;
             this.gemeenteTextbox.Text = "Voer plaatsnaam in...";
             this.gemeenteTextbox.Click += new System.EventHandler(this.gemeenteTextbox_Click);
+            this.gemeenteTextbox.TextChanged += new System.EventHandler(this.gemeenteTextbox_TextChanged);
             // 
             // addGemeenteButton
             // 
