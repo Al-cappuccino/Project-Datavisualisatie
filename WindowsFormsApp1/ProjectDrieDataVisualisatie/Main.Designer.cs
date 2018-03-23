@@ -307,7 +307,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(356, 40);
             this.textBox4.TabIndex = 3;
-            this.textBox4.Text = "Nathan, Floor en Rene.";
+            this.textBox4.Text = "Floor, Nathan en Rene.";
             // 
             // textBox3
             // 
@@ -320,7 +320,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(871, 40);
             this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "data wordt gevisualiseerd. TDNFR staat voor Thijs, Dave, ";
+            this.textBox3.Text = "data wordt gevisualiseerd. TDFNR staat voor Thijs, Dave, ";
             // 
             // textBox2
             // 

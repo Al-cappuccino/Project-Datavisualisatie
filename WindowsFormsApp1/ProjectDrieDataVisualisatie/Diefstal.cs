@@ -108,6 +108,11 @@ namespace ProjectDrieDataVisualisatie
                 }
             }
         }
+
+        private void gemeenteTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

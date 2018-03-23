@@ -447,11 +447,12 @@
             this.gemeenteTextbox.TabIndex = 6;
             this.gemeenteTextbox.Text = "Voer plaatsnaam in...";
             this.gemeenteTextbox.Click += new System.EventHandler(this.gemeenteTextbox_Click);
+            this.gemeenteTextbox.TextChanged += new System.EventHandler(this.gemeenteTextbox_TextChanged);
             // 
             // addGemeenteButton
             // 
             this.addGemeenteButton.Location = new System.Drawing.Point(628, 16);
-            this.addGemeenteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addGemeenteButton.Margin = new System.Windows.Forms.Padding(2);
             this.addGemeenteButton.Name = "addGemeenteButton";
             this.addGemeenteButton.Size = new System.Drawing.Size(105, 50);
             this.addGemeenteButton.TabIndex = 7;
@@ -463,7 +464,7 @@
             // 
             this.selectGemeenteComboBox.FormattingEnabled = true;
             this.selectGemeenteComboBox.Location = new System.Drawing.Point(19, 132);
-            this.selectGemeenteComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.selectGemeenteComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.selectGemeenteComboBox.Name = "selectGemeenteComboBox";
             this.selectGemeenteComboBox.Size = new System.Drawing.Size(197, 21);
             this.selectGemeenteComboBox.TabIndex = 14;
@@ -483,7 +484,7 @@
             "DiefstalUitNietResidentieleGebouwen",
             "OverigeDiefstalInbraak"});
             this.dataSelectionCheckBox.Location = new System.Drawing.Point(19, 156);
-            this.dataSelectionCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataSelectionCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.dataSelectionCheckBox.Name = "dataSelectionCheckBox";
             this.dataSelectionCheckBox.Size = new System.Drawing.Size(197, 184);
             this.dataSelectionCheckBox.TabIndex = 15;
@@ -491,7 +492,7 @@
             // submitSeletedDataButton
             // 
             this.submitSeletedDataButton.Location = new System.Drawing.Point(219, 132);
-            this.submitSeletedDataButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.submitSeletedDataButton.Margin = new System.Windows.Forms.Padding(2);
             this.submitSeletedDataButton.Name = "submitSeletedDataButton";
             this.submitSeletedDataButton.Size = new System.Drawing.Size(56, 19);
             this.submitSeletedDataButton.TabIndex = 16;
