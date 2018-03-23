@@ -1,4 +1,6 @@
-﻿namespace ProjectDrieDataVisualisatie
+﻿using System.Windows.Forms;
+
+namespace ProjectDrieDataVisualisatie
 {
     partial class Letsel
     {
@@ -28,14 +30,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.gemeenteTextBox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
             this.selectGemeenteComboBox = new System.Windows.Forms.ComboBox();
             this.dataSelectionCheckBox = new System.Windows.Forms.CheckedListBox();
-            this.submitSeletedDataButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.renderGraphsButton = new System.Windows.Forms.Button();
             this.dataChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).BeginInit();
@@ -446,6 +446,7 @@
             this.gemeenteTextBox.TabIndex = 7;
             this.gemeenteTextBox.Text = "Voer plaatsnaam in...";
             this.gemeenteTextBox.Click += new System.EventHandler(this.gemeenteTextBox_Click);
+            this.gemeenteTextBox.TextChanged += new System.EventHandler(this.gemeenteTextBox_TextChanged);
             // 
             // submitGemeenteInputBtn
             // 
@@ -466,6 +467,7 @@
             this.selectGemeenteComboBox.Name = "selectGemeenteComboBox";
             this.selectGemeenteComboBox.Size = new System.Drawing.Size(197, 21);
             this.selectGemeenteComboBox.TabIndex = 15;
+            this.selectGemeenteComboBox.SelectedIndexChanged += new System.EventHandler(this.selectGemeenteComboBox_SelectedIndexChanged);
             // 
             // dataSelectionCheckBox
             // 
@@ -479,27 +481,8 @@
             this.dataSelectionCheckBox.Name = "dataSelectionCheckBox";
             this.dataSelectionCheckBox.Size = new System.Drawing.Size(197, 184);
             this.dataSelectionCheckBox.TabIndex = 16;
-            // 
-            // submitSeletedDataButton
-            // 
-            this.submitSeletedDataButton.Location = new System.Drawing.Point(217, 114);
-            this.submitSeletedDataButton.Margin = new System.Windows.Forms.Padding(2);
-            this.submitSeletedDataButton.Name = "submitSeletedDataButton";
-            this.submitSeletedDataButton.Size = new System.Drawing.Size(56, 19);
-            this.submitSeletedDataButton.TabIndex = 17;
-            this.submitSeletedDataButton.Text = "submit";
-            this.submitSeletedDataButton.UseVisualStyleBackColor = true;
-            this.submitSeletedDataButton.Click += new System.EventHandler(this.submitSeletedDataButton_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(337, 139);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "label1";
+            this.dataSelectionCheckBox.SelectedIndexChanged += new System.EventHandler(this.dataSelectionCheckBox_SelectedIndexChanged);
+            this.dataSelectionCheckBox.ItemCheck += new ItemCheckEventHandler(this.dataSelectionCheckBox_ItemCheck);
             // 
             // renderGraphsButton
             // 
@@ -513,10 +496,12 @@
             // 
             // dataChart
             // 
-            chartArea10.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.dataChart.Legends.Add(legend10);
+            this.dataChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dataChart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            chartArea2.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.dataChart.Legends.Add(legend2);
             this.dataChart.Location = new System.Drawing.Point(340, 285);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(674, 300);
@@ -529,8 +514,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataChart);
             this.Controls.Add(this.renderGraphsButton);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.submitSeletedDataButton);
             this.Controls.Add(this.dataSelectionCheckBox);
             this.Controls.Add(this.selectGemeenteComboBox);
             this.Controls.Add(this.submitGemeenteInputBtn);
@@ -549,8 +532,6 @@
         private System.Windows.Forms.Button submitGemeenteInputBtn;
         private System.Windows.Forms.ComboBox selectGemeenteComboBox;
         private System.Windows.Forms.CheckedListBox dataSelectionCheckBox;
-        private System.Windows.Forms.Button submitSeletedDataButton;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button renderGraphsButton;
         private System.Windows.Forms.DataVisualization.Charting.Chart dataChart;
     }

@@ -16,7 +16,6 @@ namespace ProjectDrieDataVisualisatie
     public partial class Main : Form
     {
 
-
         public Main()
         {   
             InitializeComponent();
@@ -40,7 +39,7 @@ namespace ProjectDrieDataVisualisatie
                 Letsel.Instance.BringToFront();
                 ActivePanel1.Visible = false;
                 ActivePanel2.Visible = true;
-                ActivePanel3.Visible = false;
+                ActivePanel3.Visible = false;                
             }
 
         }
