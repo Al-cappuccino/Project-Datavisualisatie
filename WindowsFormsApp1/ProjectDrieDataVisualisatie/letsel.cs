@@ -13,154 +13,83 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ProjectDrieDataVisualisatie
 {
-    public partial class letsel : UserControl
+    //establish connection to database
+    public partial class Letsel : UserControl
     {
-        SqlConnection connection;
-        string conString;
-        private static letsel _Instance;
-        public static letsel Instance
+        private List<string> SelectedGemeentes = new List<string>();
+        private Dictionary<string, List<string>> SelectedData = new Dictionary<string, List<string>>();
+        private static Letsel _Instance;
+        public static Letsel Instance
         {
             get
             {
                 if (_Instance == null)
-                    _Instance = new letsel();
+                    _Instance = new Letsel();
                 return _Instance;
             }
         }
-        public letsel()
+        SqlConnection connection;
+        string conString;
+        public Letsel()
         {
             InitializeComponent();
             conString = ConfigurationManager.ConnectionStrings["ProjectDrieDataVisualisatie.Properties.Settings.Database1ConnectionString"].ConnectionString;
-
         }
 
-        private void submitGemeenteInputBtn_Click(object sender, EventArgs e)
+
+        //wipe Text box contents if clicked
+        private void gemeenteTextBox_Click(object sender, EventArgs e)
         {
+            gemeenteTextBox.Text = null;
+        }
 
-            string selected1 = this.filterLetsel1.GetItemText(this.filterLetsel1.SelectedItem);
-            string selected2 = this.filterLetsel2.GetItemText(this.filterLetsel2.SelectedItem);
-            string selected3 = this.filterLetsel3.GetItemText(this.filterLetsel3.SelectedItem);
-            string selected = selected1 + ", " + selected2 + ", " + selected3;
-            if (selected1 == "")
-            {
-                MessageBox.Show("Kies een geldige filter");
-                selected = selected1;
-            }
-            else if (filterLetsel2.Visible == true && selected2 == "")
-            {
-                MessageBox.Show("Kies een geldige filter");
-                selected = selected1 + ", " + selected2;
-            }
-            else if (filterLetsel3.Visible == true && selected3 == "")
-            {
-                MessageBox.Show("Kies een geldige filter");
-                selected = selected1 + ", " + selected2 + ", " + selected3;
-            }
 
-            else
+        //Create the string to find data
+        private string createQueryString(string gemeente, List<string> dataRequest)
+        {
+            string s = "SELECT ";
+            int count = 0;
+            foreach (string request in dataRequest)
             {
-                if (filterLetsel3.Visible)
+                if (count == dataRequest.Count() - 1)
                 {
-                    selected = selected1 + ", " + selected2 + ", " + selected3;
+                    s += request + " FROM Diefstal WHERE Gemeente = '" + gemeente + "'";
                 }
-                else if (filterLetsel2.Visible)
+                else
                 {
-                    selected = selected1 + ", " + selected2;
+                    s += request + ",";
                 }
-                else if (filterLetsel1.Visible)
+                count++;
+            }
+            label1.Text = s;
+            return s;
+        }
+
+
+        //Add a gemeente to the ComboBox
+        private void addGemeenteButton_Click(object sender, EventArgs e)
+        {
+            if (gemeenteTextBox.Text != "")
+            {
+                if (!SelectedGemeentes.Contains(gemeenteTextBox.Text))
                 {
-                    selected = selected1;
+                    SelectedGemeentes.Add(gemeenteTextBox.Text);
+                    SelectedData.Add(gemeenteTextBox.Text, new List<string>());
+                    selectGemeenteComboBox.Items.Add(gemeenteTextBox.Text);
                 }
-                if (testPieChart.Series.Count > 0)
-                    testPieChart.Series.RemoveAt(0);
+            }
+        }
 
-                using (connection = new SqlConnection(conString))
-                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT " + selected + "  FROM Letsel WHERE Gemeente LIKE '%" + gemeenteInputTextbox.Text + "%'", connection))
+        //Submits selected filters
+        private void submitSeletedDataButton_Click(object sender, EventArgs e)
+        {
+            if (selectGemeenteComboBox.Text != "")
+            {
+                foreach (string item in dataSelectionCheckBox.CheckedItems)
                 {
-                    DataTable Test = new DataTable();
-                    adapter.Fill(Test);
-
-
-                    testPieChart.Series.Add(gemeenteInputTextbox.Text);
-                    testPieChart.Series[gemeenteInputTextbox.Text].ChartType = SeriesChartType.Column;
-                    List<String> columns = new List<string>();
-                    bool added = false;
-
-                    foreach (DataRow dr in Test.Rows)
-                    {
-                        if (!added)
-                        {
-                            foreach (DataColumn dc in dr.Table.Columns)
-                            {
-                                string columnName = dc.ColumnName.ToString();
-                                columns.Add(columnName);
-                                added = true;
-                            }
-                        }
-
-                        foreach (string columnName in columns)
-                        {
-
-
-                            testPieChart.Series[gemeenteInputTextbox.Text].Points.AddXY(columnName, dr[columnName]);
-                            testPieChart.ChartAreas[0].RecalculateAxesScale();
-
-
-                        }
-                    }
-
+                    SelectedData[selectGemeenteComboBox.Text].Add(item);
                 }
-
             }
-        }
-
-        private void addLetselFilter_Click(object sender, EventArgs e)
-        {
-            if (filterLetsel2.Visible == false)
-            {
-                filterLetsel2.Visible = true;
-
-            }
-            else if (filterLetsel3.Visible == false && filterLetsel2.Visible == true)
-            {
-                filterLetsel3.Visible = true;
-            }
-        }
-
-        private void deleteLetselFilter_Click(object sender, EventArgs e)
-        {
-            if (filterLetsel3.Visible == true)
-            {
-                filterLetsel3.Visible = false;
-                filterLetsel3.Text = "";
-
-            }
-            else if (filterLetsel2.Visible == true)
-            {
-                filterLetsel2.Visible = false;
-                filterLetsel2.Text = "";
-            }
-        }
-
-        //accidental clicks but you can't delete them -_-
-        private void filterDiefstal3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void deletediefstalFilter_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void testPieChart_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void adddiefstalfilter_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
