@@ -80,6 +80,7 @@ namespace ProjectDrieDataVisualisatie
             }
         }
 
+
         //Submits selected filters
         private void submitSeletedDataButton_Click(object sender, EventArgs e)
         {
@@ -90,6 +91,31 @@ namespace ProjectDrieDataVisualisatie
                     SelectedData[selectGemeenteComboBox.Text].Add(item);
                 }
             }
+        }
+
+
+        //Renders the graph
+        private void renderGraphsButton_Click(object sender, EventArgs e)
+        {
+            if (dataChart.Series.Count > 0)
+                dataChart.Series.RemoveAt(0);
+
+            foreach (KeyValuePair<string, List<string>> dataRequest in SelectedData)
+            {
+                dataChart.Series.Add(dataRequest.Key);
+                createQueryString(dataRequest.Key, dataRequest.Value);
+                using (connection = new SqlConnection(conString))
+                using (SqlDataAdapter adapter = new SqlDataAdapter(createQueryString(dataRequest.Key, dataRequest.Value), connection))
+                {
+                    DataTable result = new DataTable();
+                    adapter.Fill(result);
+                    foreach (string column in dataRequest.Value)
+                    {
+                        dataChart.Series[dataRequest.Key].Points.AddXY(column, result.Rows[0][column]);
+                    }
+                }
+            }
+
         }
     }
 }
