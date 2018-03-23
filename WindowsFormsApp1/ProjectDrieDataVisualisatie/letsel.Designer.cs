@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.gemeenteTextBox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
             this.selectGemeenteComboBox = new System.Windows.Forms.ComboBox();
@@ -513,10 +513,10 @@
             // 
             // dataChart
             // 
-            chartArea8.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.dataChart.Legends.Add(legend8);
+            chartArea10.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.dataChart.Legends.Add(legend10);
             this.dataChart.Location = new System.Drawing.Point(340, 285);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(674, 300);
