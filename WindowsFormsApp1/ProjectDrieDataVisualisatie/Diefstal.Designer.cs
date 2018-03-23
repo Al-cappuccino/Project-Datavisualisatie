@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.gemeenteTextbox = new System.Windows.Forms.TextBox();
             this.addGemeenteButton = new System.Windows.Forms.Button();
             this.selectGemeenteComboBox = new System.Windows.Forms.ComboBox();
@@ -451,7 +451,7 @@
             // addGemeenteButton
             // 
             this.addGemeenteButton.Location = new System.Drawing.Point(628, 16);
-            this.addGemeenteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addGemeenteButton.Margin = new System.Windows.Forms.Padding(2);
             this.addGemeenteButton.Name = "addGemeenteButton";
             this.addGemeenteButton.Size = new System.Drawing.Size(105, 50);
             this.addGemeenteButton.TabIndex = 7;
@@ -463,7 +463,7 @@
             // 
             this.selectGemeenteComboBox.FormattingEnabled = true;
             this.selectGemeenteComboBox.Location = new System.Drawing.Point(19, 132);
-            this.selectGemeenteComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.selectGemeenteComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.selectGemeenteComboBox.Name = "selectGemeenteComboBox";
             this.selectGemeenteComboBox.Size = new System.Drawing.Size(197, 21);
             this.selectGemeenteComboBox.TabIndex = 14;
@@ -477,13 +477,13 @@
             "TotaalDiefstal",
             "Fietsendiefstal",
             "DiefstalOverigeVervoermiddelen",
-            "DiefstalUitVanafVervoermiddelen",
-            "ZakkenrollerijStraatroofEnBeroving",
-            "TotaalDiefstalUitWoningSchuurED",
-            "DiefstalUitNietResidentieleGebouwen",
-            "OverigeDiefstalInbraak"});
+            "DiefstalVervoermiddelen",
+            "StraatrovenenZakkenrollerij",
+            "WoningDiefstal",
+            "DiefstaluitnietResidentieleGebouwen",
+            "OverigeDiefstalenInbraak"});
             this.dataSelectionCheckBox.Location = new System.Drawing.Point(19, 156);
-            this.dataSelectionCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataSelectionCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.dataSelectionCheckBox.Name = "dataSelectionCheckBox";
             this.dataSelectionCheckBox.Size = new System.Drawing.Size(197, 184);
             this.dataSelectionCheckBox.TabIndex = 15;
@@ -491,7 +491,7 @@
             // submitSeletedDataButton
             // 
             this.submitSeletedDataButton.Location = new System.Drawing.Point(219, 132);
-            this.submitSeletedDataButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.submitSeletedDataButton.Margin = new System.Windows.Forms.Padding(2);
             this.submitSeletedDataButton.Name = "submitSeletedDataButton";
             this.submitSeletedDataButton.Size = new System.Drawing.Size(56, 19);
             this.submitSeletedDataButton.TabIndex = 16;
@@ -511,7 +511,7 @@
             // 
             // renderGraphsButton
             // 
-            this.renderGraphsButton.Location = new System.Drawing.Point(834, 152);
+            this.renderGraphsButton.Location = new System.Drawing.Point(835, 88);
             this.renderGraphsButton.Name = "renderGraphsButton";
             this.renderGraphsButton.Size = new System.Drawing.Size(173, 23);
             this.renderGraphsButton.TabIndex = 18;
@@ -521,10 +521,10 @@
             // 
             // dataChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.dataChart.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.dataChart.Legends.Add(legend2);
             this.dataChart.Location = new System.Drawing.Point(302, 256);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(674, 300);

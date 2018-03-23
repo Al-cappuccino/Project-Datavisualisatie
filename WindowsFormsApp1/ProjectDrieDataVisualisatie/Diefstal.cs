@@ -58,6 +58,7 @@ namespace ProjectDrieDataVisualisatie
                 }
                 count++;
             }
+            label1.Text = s;
             return s;
         }
         private void addGemeenteButton_Click(object sender, EventArgs e)
@@ -95,13 +96,13 @@ namespace ProjectDrieDataVisualisatie
             foreach(KeyValuePair<string, List<string>> dataRequest in SelectedData)
             {
                 dataChart.Series.Add(dataRequest.Key);
+                createQueryString(dataRequest.Key, dataRequest.Value);
                 using (connection = new SqlConnection(conString))
                 using (SqlDataAdapter adapter = new SqlDataAdapter(createQueryString(dataRequest.Key, dataRequest.Value), connection))
                 {
                     DataTable result = new DataTable();
                     adapter.Fill(result);
-
-                    foreach(string column in dataRequest.Value)
+                    foreach (string column in dataRequest.Value)
                     {
                         dataChart.Series[dataRequest.Key].Points.AddXY(column, result.Rows[0][column]);
                     }
