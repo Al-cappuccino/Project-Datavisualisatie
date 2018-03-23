@@ -93,7 +93,10 @@ namespace ProjectDrieDataVisualisatie
 
         private void renderGraphsButton_Click(object sender, EventArgs e)
         {
-            foreach(KeyValuePair<string, List<string>> dataRequest in SelectedData)
+            if (dataChart.Series.Count > 0)
+                dataChart.Series.RemoveAt(0);
+
+            foreach (KeyValuePair<string, List<string>> dataRequest in SelectedData)
             {
                 dataChart.Series.Add(dataRequest.Key);
                 createQueryString(dataRequest.Key, dataRequest.Value);
