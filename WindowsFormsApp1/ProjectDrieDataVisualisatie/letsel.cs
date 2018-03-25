@@ -17,33 +17,25 @@ namespace ProjectDrieDataVisualisatie
         private static Letsel _instance;
         private bool _check;
         private bool _check2;
+        private bool _check3;
         private int _columnNum;
-        private string[] _oldquery = new string[6];
-        private int _selectindex;
+        private string[] _oldquery = new string[12];
+        private int[] _selectindex = new int[3];
 
-        public static Letsel Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new Letsel();
-                return _instance;
-            }
-        }
+        public static Letsel Instance => _instance ?? (_instance = new Letsel());
+
         public Letsel()
         {
             InitializeComponent();
             var conString = ConfigurationManager.ConnectionStrings["ProjectDrieDataVisualisatie.Properties.Settings.Database1ConnectionString"].ConnectionString;
             _connection = new SqlConnection(conString);
-            //fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", "global");
 
             selectGemeenteComboBox.Items.Add("Nederland");
             selectGemeenteComboBox.SelectedIndex = 0;
             comboBox1.Items.Add("Nederland");
             comboBox3.Items.Add("Nederland");
-            comboBox1.SelectedIndex = 0;
+            comboBox4.Items.Add("Nederland");
             comboBox2.SelectedIndex = 0;
-            comboBox3.SelectedIndex = 0;
         }
 
         private void gemeenteTextBox_Click(object sender, EventArgs e)
@@ -60,6 +52,7 @@ namespace ProjectDrieDataVisualisatie
                 selectGemeenteComboBox.SelectedIndex = selectGemeenteComboBox.Items.Count - 1;
                 comboBox1.Items.Add(_gemeentenaam);
                 comboBox3.Items.Add(_gemeentenaam);
+                comboBox4.Items.Add(_gemeentenaam);
             }
         }
 
@@ -73,8 +66,10 @@ namespace ProjectDrieDataVisualisatie
 
                 for (int a = 0; a <= _result.Columns.Count - 1; a++)
                 {
-                    _result.Columns[a].ColumnName = _result.Columns[a].ColumnName + "1";
-
+                    if (_result.Columns[a].ColumnName == "Column1" || _result.Columns[a].ColumnName == "Column2" || _result.Columns[a].ColumnName == "Column3")
+                    {
+                        _result.Columns[a].ColumnName = _result.Columns[a].ColumnName + "1";
+                    }
                 }
 
                 SqlDataAdapter adapter = new SqlDataAdapter(query, _connection);
@@ -97,6 +92,9 @@ namespace ProjectDrieDataVisualisatie
             }
             else if (compare == 2)
             {
+                _oldquery[6] = query;
+                _oldquery[7] = columnNum.ToString();
+                _oldquery[8] = name.ToString();
                 for (int a = 0; a <= _result.Columns.Count - 1; a++)
                 {
                     if (_result.Columns[a].ColumnName == "Column1" || _result.Columns[a].ColumnName == "Column2" || _result.Columns[a].ColumnName == "Column3")
@@ -123,6 +121,44 @@ namespace ProjectDrieDataVisualisatie
                     }
 
                     if (_result.Columns[a].ColumnName == "Column311")
+                    {
+                        _columnNum = a + 1;
+                    }
+                }
+            }
+            else if (compare == 3)
+            {
+                _oldquery[9] = query;
+                _oldquery[10] = columnNum.ToString();
+                _oldquery[11] = name.ToString();
+
+                for (int a = 0; a <= _result.Columns.Count - 1; a++)
+                {
+                    if (_result.Columns[a].ColumnName == "Column1" || _result.Columns[a].ColumnName == "Column2" || _result.Columns[a].ColumnName == "Column3")
+                    {
+                        _result.Columns[a].ColumnName = _result.Columns[a].ColumnName + "1";
+                    }
+                }
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, _connection);
+                adapter.Fill(_result);
+
+                for (int a = 0; a <= _result.Columns.Count - 1; a++)
+                {
+                    if (_result.Columns[a].ColumnName == "Column1" || _result.Columns[a].ColumnName == "Column2" || _result.Columns[a].ColumnName == "Column3")
+                    {
+                        _result.Columns[a].ColumnName = _result.Columns[a].ColumnName + "1111";
+                    }
+                }
+
+                for (int a = 0; a <= _result.Columns.Count - 1; a++)
+                {
+                    if (_result.Columns[a].ColumnName == "Column11" || _result.Columns[a].ColumnName == "Column21" || _result.Columns[a].ColumnName == "Column31")
+                    {
+                        _result.Columns[a].ColumnName = _result.Columns[a].ColumnName.Remove(_result.Columns[a].ColumnName.Length - 1);
+                    }
+
+                    if (_result.Columns[a].ColumnName == "Column3111")
                     {
                         _columnNum = a + 1;
                     }
@@ -205,7 +241,12 @@ namespace ProjectDrieDataVisualisatie
 
         private void selectGemeenteComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (selectGemeenteComboBox.SelectedIndex != 0 && selectGemeenteComboBox.SelectedIndex != -1)
+            Check1();
+        }
+
+        private void Check1()
+        {
+            if (selectGemeenteComboBox.SelectedIndex != 0 && selectGemeenteComboBox.SelectedIndex != -1 && selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text && selectGemeenteComboBox.Text != comboBox4.Text)
             {
                 if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
                 {
@@ -240,45 +281,43 @@ namespace ProjectDrieDataVisualisatie
                     dataChart.Series.Clear();
                 }
             }
-            else if (selectGemeenteComboBox.SelectedIndex == 0)
+            else if (selectGemeenteComboBox.SelectedIndex == 0 && selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text && selectGemeenteComboBox.Text != comboBox4.Text)
             {
                 Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", selectGemeenteComboBox.Text, 3, 1, 0);
             }
+
+            if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex != -1 && selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text && selectGemeenteComboBox.Text != comboBox4.Text)
+            {
+                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
+                Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
+                Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
+                Fillchart(_oldquery[9], comboBox4.Text, Convert.ToInt16(_oldquery[10]), Convert.ToInt16(_oldquery[11]), 3);
+            }
+            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex == -1 && selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text)
+            {
+                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
+                Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
+                Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
+            }
+            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1 && selectGemeenteComboBox.Text != comboBox1.Text)
+            {
+                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
+                Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
+            }
         }
 
-        private void gemeenteTextBox_TextChanged(object sender, EventArgs e)
+        private void Check2()
         {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox1.SelectedIndex != 0 && selectGemeenteComboBox.Text != comboBox1.Text && comboBox1.SelectedIndex != -1)
+            if (comboBox1.SelectedIndex != 0 && comboBox1.Text != selectGemeenteComboBox.Text && comboBox1.SelectedIndex != -1 && comboBox1.Text != comboBox3.Text && comboBox1.Text != comboBox4.Text)
             {
                 for (int a = 0; a <= _result.Columns.Count - 1; a++)
                 {
-                    if (_result.Columns[a].ColumnName != "Column1" && _result.Columns[a].ColumnName != "Column2" && _result.Columns[a].ColumnName != "Column3")
+                    if (_result.Columns[a].ColumnName == "Column111" || _result.Columns[a].ColumnName == "Column211" || _result.Columns[a].ColumnName == "Column311")
                     {
                         _result.Columns.Remove(_result.Columns[a]);
                         a = a - 1;
                     }
                 }
-                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
                 {
                     Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 3, 4, 1);
@@ -312,7 +351,7 @@ namespace ProjectDrieDataVisualisatie
                     dataChart.Series.Clear();
                 }
             }
-            else if (comboBox1.SelectedIndex == 0 && selectGemeenteComboBox.Text != comboBox1.Text && comboBox1.SelectedIndex != -1)
+            else if (comboBox1.SelectedIndex == 0 && selectGemeenteComboBox.Text != comboBox1.Text && comboBox1.Text != comboBox3.Text && comboBox1.Text != comboBox4.Text)
             {
                 for (int a = 0; a <= _result.Columns.Count - 1; a++)
                 {
@@ -325,76 +364,25 @@ namespace ProjectDrieDataVisualisatie
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", comboBox1.Text, 3, 4, 1);
             }
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (_check)
-            {
-                _check = false;
-            }
-            else
-            {
-                _check = true;
-            }
-
-            if (_check)
-            {
-                comboBox1.Visible = true;
-                button2.Visible = true;
-            }
-            else
-            {
-                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
-                comboBox1.Visible = false;
-                button2.Visible = false;
-            }
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox2.SelectedIndex == 1)
-            {
-                for (int a = 0; a <= dataChart.Series.Count - 1; a++)
-                {
-                    dataChart.Series[a].ChartType = SeriesChartType.StackedColumn;
-                }
-            }
-            if (comboBox2.SelectedIndex == 0)
-            {
-                for (int a = 0; a <= dataChart.Series.Count - 1; a++)
-                {
-                    dataChart.Series[a].ChartType = SeriesChartType.Column;
-                }
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (_check2)
-            {
-                _check2 = false;
-            }
-            else
-            {
-                _check2 = true;
-            }
-
-            if (_check2)
-            {
-                comboBox3.Visible = true;
-            }
-            else
+            if (comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex != -1 && comboBox1.Text != comboBox3.Text && comboBox1.Text != comboBox4.Text)
             {
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
-                comboBox3.Visible = false;
+                Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
+                Fillchart(_oldquery[9], comboBox4.Text, Convert.ToInt16(_oldquery[10]), Convert.ToInt16(_oldquery[11]), 3);
+            }
+            else if (comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex == -1 && comboBox1.Text != comboBox3.Text)
+            {
+                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
+                Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
+                Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
             }
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void Check3()
         {
-            if (comboBox3.SelectedIndex != 0 && selectGemeenteComboBox.Text != comboBox3.Text && comboBox3.SelectedIndex != -1)
+            if (comboBox3.SelectedIndex != 0 && selectGemeenteComboBox.Text != comboBox3.Text && comboBox3.SelectedIndex != -1 && comboBox3.Text != comboBox1.Text && comboBox3.Text != comboBox4.Text)
             {
                 for (int a = 0; a <= _result.Columns.Count - 1; a++)
                 {
@@ -439,7 +427,7 @@ namespace ProjectDrieDataVisualisatie
                     dataChart.Series.Clear();
                 }
             }
-            else if (comboBox3.SelectedIndex == 0 && selectGemeenteComboBox.Text != comboBox3.Text && comboBox3.SelectedIndex != -1)
+            else if (comboBox3.SelectedIndex == 0 && selectGemeenteComboBox.Text != comboBox3.Text && comboBox3.SelectedIndex != -1 && comboBox3.Text != comboBox1.Text && comboBox3.Text != comboBox4.Text)
             {
                 for (int a = 0; a <= _result.Columns.Count - 1; a++)
                 {
@@ -453,6 +441,210 @@ namespace ProjectDrieDataVisualisatie
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", comboBox3.Text, 3, 8, 2);
             }
+
+            if (comboBox4.SelectedIndex != -1 && comboBox3.Text != selectGemeenteComboBox.Text && comboBox3.Text != comboBox1.Text && comboBox3.Text != comboBox4.Text)
+            {
+                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
+                Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
+                Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
+                Fillchart(_oldquery[9], comboBox4.Text, Convert.ToInt16(_oldquery[10]), Convert.ToInt16(_oldquery[11]), 3);
+            }
+        }
+
+        private void Check4()
+        {
+            if (comboBox4.SelectedIndex != 0 && selectGemeenteComboBox.Text != comboBox4.Text && comboBox4.SelectedIndex != -1)
+            {
+                for (int a = 0; a <= _result.Columns.Count - 1; a++)
+                {
+                    if (_result.Columns[a].ColumnName == "Column11111" || _result.Columns[a].ColumnName == "Column21111" || _result.Columns[a].ColumnName == "Column31111")
+                    {
+                        _result.Columns.Remove(_result.Columns[a]);
+                        a = a - 1;
+                    }
+                }
+                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
+                Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
+                Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
+                if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
+                {
+                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 3, 8, 3);
+                }
+                else if (checkBox3.Checked && checkBox2.Checked && checkBox1.Checked == false)
+                {
+                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 2, 8, 3);
+                }
+                else if (checkBox3.Checked && checkBox1.Checked && checkBox2.Checked == false)
+                {
+                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 4, 8, 3);
+                }
+                else if (checkBox2.Checked && checkBox1.Checked && checkBox3.Checked == false)
+                {
+                    Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 5, 8, 3);
+                }
+                else if (checkBox3.Checked && checkBox2.Checked == false && checkBox1.Checked == false)
+                {
+                    Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 1, 8, 3);
+                }
+                else if (checkBox2.Checked && checkBox3.Checked == false && checkBox1.Checked == false)
+                {
+                    Fillchart("select sum(Mishandeling) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 6, 8, 3);
+                }
+                else if (checkBox1.Checked && checkBox3.Checked == false && checkBox2.Checked == false)
+                {
+                    Fillchart("select sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 7, 8, 3);
+                }
+                else if (checkBox1.Checked == false && checkBox3.Checked == false && checkBox2.Checked == false)
+                {
+                    dataChart.Series.Clear();
+                }
+            }
+            else if (comboBox4.SelectedIndex == 0 && selectGemeenteComboBox.Text != comboBox4.Text)
+            {
+                for (int a = 0; a <= _result.Columns.Count - 1; a++)
+                {
+                    if (_result.Columns[a].ColumnName == "Column11111" || _result.Columns[a].ColumnName == "Column21111" || _result.Columns[a].ColumnName == "Column31111")
+                    {
+                        _result.Columns.Remove(_result.Columns[a]);
+                        a = a - 1;
+                    }
+                }
+                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
+                Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
+                Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
+                Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", comboBox4.Text, 3, 8, 3);
+            }
+        }
+
+        private void gemeenteTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Check2();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (_check)
+            {
+                _check = false;
+            }
+            else
+            {
+                _check = true;
+            }
+
+            if (_check)
+            {
+                comboBox1.Visible = true;
+                button2.Visible = true;
+            }
+            else
+            {
+                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
+                comboBox1.Visible = false;
+                comboBox1.SelectedIndex = -1;
+                button2.Visible = false;
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedIndex == 1)
+            {
+                for (int a = 0; a <= dataChart.Series.Count - 1; a++)
+                {
+                    dataChart.Series[a].ChartType = SeriesChartType.StackedColumn;
+                }
+            }
+            if (comboBox2.SelectedIndex == 0)
+            {
+                for (int a = 0; a <= dataChart.Series.Count - 1; a++)
+                {
+                    dataChart.Series[a].ChartType = SeriesChartType.Column;
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (_check2)
+            {
+                _check2 = false;
+            }
+            else
+            {
+                _check2 = true;
+            }
+
+            if (_check2)
+            {
+                comboBox3.Visible = true;
+                button3.Visible = true;
+            }
+            else
+            {
+                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
+                Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
+                comboBox3.Visible = false;
+                comboBox3.SelectedIndex = -1;
+                button3.Visible = false;
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Check3();
+        }
+
+        private void Letsel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (_check3)
+            {
+                _check3 = false;
+            }
+            else
+            {
+                _check3 = true;
+            }
+
+            if (_check3)
+            {
+                comboBox4.Visible = true;
+            }
+            else
+            {
+                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
+                Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
+                Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
+                comboBox4.Visible = false;
+                comboBox4.SelectedIndex = -1;
+            }
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Check4();
         }
     }
 }
