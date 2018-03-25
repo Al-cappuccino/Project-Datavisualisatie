@@ -280,10 +280,10 @@ namespace ProjectDrieDataVisualisatie
             {
                 if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
                 {
-                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
-                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-holland" ||
                         selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
-                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"zuid-holland" ||
                         selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
                         selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
                         selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
@@ -298,10 +298,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked == false)
                 {
-                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
-                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-holland" ||
                         selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
-                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"zuid-holland" ||
                         selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
                         selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
                         selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
@@ -317,10 +317,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox1.Checked && checkBox3.Checked && checkBox2.Checked == false)
                 {
-                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
-                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-holland" ||
                         selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
-                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"zuid-holland" ||
                         selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
                         selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
                         selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
@@ -335,10 +335,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox2.Checked && checkBox3.Checked && checkBox1.Checked == false)
                 {
-                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
-                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-holland" ||
                         selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
-                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"zuid-holland" ||
                         selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
                         selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
                         selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
@@ -353,10 +353,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox1.Checked && checkBox2.Checked == false && checkBox3.Checked == false)
                 {
-                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
-                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-holland" ||
                         selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
-                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"zuid-holland" ||
                         selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
                         selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
                         selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
@@ -371,10 +371,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox2.Checked && checkBox1.Checked == false && checkBox3.Checked == false)
                 {
-                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
-                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-holland" ||
                         selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
-                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"zuid-holland" ||
                         selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
                         selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
                         selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
@@ -389,10 +389,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox3.Checked && checkBox1.Checked == false && checkBox2.Checked == false)
                 {
-                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
-                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-holland" ||
                         selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
-                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"zuid-holland" ||
                         selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
                         selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
                         selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
@@ -439,20 +439,13 @@ namespace ProjectDrieDataVisualisatie
         {
             if (comboBox1.SelectedIndex != 0 && comboBox1.Text != selectGemeenteComboBox.Text && comboBox1.SelectedIndex != -1 && comboBox1.Text != comboBox3.Text && comboBox1.Text != comboBox4.Text)
             {
-                for (int a = 0; a <= _result.Columns.Count - 1; a++)
-                {
-                    if (_result.Columns[a].ColumnName == "Column111" || _result.Columns[a].ColumnName == "Column211" || _result.Columns[a].ColumnName == "Column311")
-                    {
-                        _result.Columns.Remove(_result.Columns[a]);
-                        a = a - 1;
-                    }
-                }
+                Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
                 {
-                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
-                        comboBox1.Text == @"noord-Holland" ||
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-brabant" ||
+                        comboBox1.Text == @"noord-holland" ||
                         comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
-                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"zuid-holland" ||
                         comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
                         comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
@@ -467,10 +460,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox3.Checked && checkBox2.Checked && checkBox1.Checked == false)
                 {
-                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
-                        comboBox1.Text == @"noord-Holland" ||
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-brabant" ||
+                        comboBox1.Text == @"noord-holland" ||
                         comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
-                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"zuid-holland" ||
                         comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
                         comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
@@ -485,10 +478,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox3.Checked && checkBox1.Checked && checkBox2.Checked == false)
                 {
-                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
-                        comboBox1.Text == @"noord-Holland" ||
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-brabant" ||
+                        comboBox1.Text == @"noord-holland" ||
                         comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
-                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"zuid-holland" ||
                         comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
                         comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
@@ -503,10 +496,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox2.Checked && checkBox1.Checked && checkBox3.Checked == false)
                 {
-                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
-                        comboBox1.Text == @"noord-Holland" ||
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-brabant" ||
+                        comboBox1.Text == @"noord-holland" ||
                         comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
-                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"zuid-holland" ||
                         comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
                         comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
@@ -521,10 +514,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox3.Checked && checkBox2.Checked == false && checkBox1.Checked == false)
                 {
-                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
-                        comboBox1.Text == @"noord-Holland" ||
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-brabant" ||
+                        comboBox1.Text == @"noord-holland" ||
                         comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
-                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"zuid-holland" ||
                         comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
                         comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
@@ -539,10 +532,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox2.Checked && checkBox3.Checked == false && checkBox1.Checked == false)
                 {
-                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
-                        comboBox1.Text == @"noord-Holland" ||
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-brabant" ||
+                        comboBox1.Text == @"noord-holland" ||
                         comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
-                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"zuid-holland" ||
                         comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
                         comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
@@ -557,10 +550,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox1.Checked && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
-                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
-                        comboBox1.Text == @"noord-Holland" ||
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-brabant" ||
+                        comboBox1.Text == @"noord-holland" ||
                         comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
-                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"zuid-holland" ||
                         comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
                         comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
@@ -611,22 +604,14 @@ namespace ProjectDrieDataVisualisatie
         {
             if (comboBox3.SelectedIndex != 0 && selectGemeenteComboBox.Text != comboBox3.Text && comboBox3.SelectedIndex != -1 && comboBox3.Text != comboBox1.Text && comboBox3.Text != comboBox4.Text)
             {
-                for (int a = 0; a <= _result.Columns.Count - 1; a++)
-                {
-                    if (_result.Columns[a].ColumnName != "Column1" && _result.Columns[a].ColumnName != "Column2" && _result.Columns[a].ColumnName != "Column3" && _result.Columns[a].ColumnName != "Column111" && _result.Columns[a].ColumnName != "Column211" && _result.Columns[a].ColumnName != "Column311")
-                    {
-                        _result.Columns.Remove(_result.Columns[a]);
-                        a = a - 1;
-                    }
-                }
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
                 {
-                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
-                        comboBox3.Text == @"noord-Holland" ||
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-brabant" ||
+                        comboBox3.Text == @"noord-holland" ||
                         comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
-                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"zuid-holland" ||
                         comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
                         comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
@@ -641,10 +626,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox3.Checked && checkBox2.Checked && checkBox1.Checked == false)
                 {
-                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
-                        comboBox3.Text == @"noord-Holland" ||
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-brabant" ||
+                        comboBox3.Text == @"noord-holland" ||
                         comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
-                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"zuid-holland" ||
                         comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
                         comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
@@ -659,10 +644,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox3.Checked && checkBox1.Checked && checkBox2.Checked == false)
                 {
-                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
-                        comboBox3.Text == @"noord-Holland" ||
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-brabant" ||
+                        comboBox3.Text == @"noord-holland" ||
                         comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
-                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"zuid-holland" ||
                         comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
                         comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
@@ -677,10 +662,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox2.Checked && checkBox1.Checked && checkBox3.Checked == false)
                 {
-                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
-                        comboBox3.Text == @"noord-Holland" ||
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-brabant" ||
+                        comboBox3.Text == @"noord-holland" ||
                         comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
-                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"zuid-holland" ||
                         comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
                         comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
@@ -695,10 +680,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox3.Checked && checkBox2.Checked == false && checkBox1.Checked == false)
                 {
-                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
-                        comboBox3.Text == @"noord-Holland" ||
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-brabant" ||
+                        comboBox3.Text == @"noord-holland" ||
                         comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
-                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"zuid-holland" ||
                         comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
                         comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
@@ -713,10 +698,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox2.Checked && checkBox3.Checked == false && checkBox1.Checked == false)
                 {
-                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
-                        comboBox3.Text == @"noord-Holland" ||
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-brabant" ||
+                        comboBox3.Text == @"noord-holland" ||
                         comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
-                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"zuid-holland" ||
                         comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
                         comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
@@ -731,10 +716,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox1.Checked && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
-                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
-                        comboBox3.Text == @"noord-Holland" ||
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-brabant" ||
+                        comboBox3.Text == @"noord-holland" ||
                         comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
-                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"zuid-holland" ||
                         comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
                         comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
@@ -780,23 +765,15 @@ namespace ProjectDrieDataVisualisatie
         {
             if (comboBox4.SelectedIndex != 0 && selectGemeenteComboBox.Text != comboBox4.Text && comboBox4.SelectedIndex != -1)
             {
-                for (int a = 0; a <= _result.Columns.Count - 1; a++)
-                {
-                    if (_result.Columns[a].ColumnName == "Column11111" || _result.Columns[a].ColumnName == "Column21111" || _result.Columns[a].ColumnName == "Column31111")
-                    {
-                        _result.Columns.Remove(_result.Columns[a]);
-                        a = a - 1;
-                    }
-                }
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
                 if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
                 {
-                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
-                        comboBox4.Text == @"noord-Holland" ||
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-brabant" ||
+                        comboBox4.Text == @"noord-holland" ||
                         comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
-                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"zuid-holland" ||
                         comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
                         comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
@@ -811,10 +788,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox3.Checked && checkBox2.Checked && checkBox1.Checked == false)
                 {
-                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
-                        comboBox4.Text == @"noord-Holland" ||
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-brabant" ||
+                        comboBox4.Text == @"noord-holland" ||
                         comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
-                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"zuid-holland" ||
                         comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
                         comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
@@ -829,10 +806,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox3.Checked && checkBox1.Checked && checkBox2.Checked == false)
                 {
-                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
-                        comboBox4.Text == @"noord-Holland" ||
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-brabant" ||
+                        comboBox4.Text == @"noord-holland" ||
                         comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
-                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"zuid-holland" ||
                         comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
                         comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
@@ -847,10 +824,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox2.Checked && checkBox1.Checked && checkBox3.Checked == false)
                 {
-                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
-                        comboBox4.Text == @"noord-Holland" ||
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-brabant" ||
+                        comboBox4.Text == @"noord-holland" ||
                         comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
-                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"zuid-holland" ||
                         comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
                         comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
@@ -865,10 +842,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox3.Checked && checkBox2.Checked == false && checkBox1.Checked == false)
                 {
-                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
-                        comboBox4.Text == @"noord-Holland" ||
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-brabant" ||
+                        comboBox4.Text == @"noord-holland" ||
                         comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
-                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"zuid-holland" ||
                         comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
                         comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
@@ -883,10 +860,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox2.Checked && checkBox3.Checked == false && checkBox1.Checked == false)
                 {
-                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
-                        comboBox4.Text == @"noord-Holland" ||
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-brabant" ||
+                        comboBox4.Text == @"noord-holland" ||
                         comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
-                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"zuid-holland" ||
                         comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
                         comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
@@ -901,10 +878,10 @@ namespace ProjectDrieDataVisualisatie
                 }
                 else if (checkBox1.Checked && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
-                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
-                        comboBox4.Text == @"noord-Holland" ||
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-brabant" ||
+                        comboBox4.Text == @"noord-holland" ||
                         comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
-                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"zuid-holland" ||
                         comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
                         comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")

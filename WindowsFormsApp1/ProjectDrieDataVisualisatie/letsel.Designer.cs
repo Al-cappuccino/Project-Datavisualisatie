@@ -30,8 +30,8 @@ namespace ProjectDrieDataVisualisatie
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.gemeenteTextBox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
             this.selectGemeenteComboBox = new System.Windows.Forms.ComboBox();
@@ -495,13 +495,13 @@ namespace ProjectDrieDataVisualisatie
             // 
             this.dataChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataChart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            chartArea6.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.dataChart.Legends.Add(legend6);
-            this.dataChart.Location = new System.Drawing.Point(16, 417);
+            chartArea1.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.dataChart.Legends.Add(legend1);
+            this.dataChart.Location = new System.Drawing.Point(16, 406);
             this.dataChart.Name = "dataChart";
-            this.dataChart.Size = new System.Drawing.Size(674, 300);
+            this.dataChart.Size = new System.Drawing.Size(890, 300);
             this.dataChart.TabIndex = 20;
             this.dataChart.Text = "chart1";
             // 
@@ -571,7 +571,7 @@ namespace ProjectDrieDataVisualisatie
             this.comboBox2.Items.AddRange(new object[] {
             "kolomdiagram",
             "gestapelde kolom"});
-            this.comboBox2.Location = new System.Drawing.Point(569, 390);
+            this.comboBox2.Location = new System.Drawing.Point(785, 379);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 30;
@@ -580,7 +580,7 @@ namespace ProjectDrieDataVisualisatie
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(480, 393);
+            this.label1.Location = new System.Drawing.Point(696, 382);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 31;
