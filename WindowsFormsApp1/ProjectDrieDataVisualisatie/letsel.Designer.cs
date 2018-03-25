@@ -173,7 +173,7 @@ namespace ProjectDrieDataVisualisatie
             "Gouda",
             "Grave",
             "\'s-Gravenhage",
-            "Groningen",
+            "Groningen gemeente",
             "Grootegast",
             "Gulpen-Wittem",
             "Haaksbergen",
@@ -378,7 +378,7 @@ namespace ProjectDrieDataVisualisatie
             "Uitgeest",
             "Uithoorn",
             "Urk",
-            "Utrecht",
+            "Utrecht gemeente",
             "Utrechtse Heuvelrug",
             "Vaals",
             "Valkenburg aan de Geul",
@@ -442,18 +442,31 @@ namespace ProjectDrieDataVisualisatie
             "Zutphen",
             "Zwartewaterland",
             "Zwijndrecht",
-            "Zwolle"});
+            "Zwolle",
+            "Drenthe",
+            "Noord-Brabant",
+            "Noord-Holland",
+            "Gelderland",
+            "Friesland",
+            "Zuid-Holland",
+            "Overijssel",
+            "Flevoland",
+            "Groningen",
+            "Zeeland",
+            "Limburg",
+            "Utrecht"});
             this.gemeenteTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.gemeenteTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.gemeenteTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.gemeenteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gemeenteTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.gemeenteTextBox.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gemeenteTextBox.ForeColor = System.Drawing.Color.White;
             this.gemeenteTextBox.Location = new System.Drawing.Point(3, 3);
             this.gemeenteTextBox.Name = "gemeenteTextBox";
             this.gemeenteTextBox.Size = new System.Drawing.Size(594, 53);
             this.gemeenteTextBox.TabIndex = 7;
-            this.gemeenteTextBox.Text = "Voer plaatsnaam in...";
+            this.gemeenteTextBox.Text = "voer plaatsnaam in...";
             this.gemeenteTextBox.Click += new System.EventHandler(this.gemeenteTextBox_Click);
             this.gemeenteTextBox.TextChanged += new System.EventHandler(this.gemeenteTextBox_TextChanged);
             // 

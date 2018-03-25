@@ -250,31 +250,130 @@ namespace ProjectDrieDataVisualisatie
             {
                 if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 3, 1, 0);
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                        selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
+                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
+                        selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
+                        selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 3, 1, 0);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 3, 1, 0);
+                    }
+                        
                 }
                 else if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 2, 1, 0);
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                        selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
+                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
+                        selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
+                        selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Provincie = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 2, 1, 0);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 2, 1, 0);
+                    }
+
+                    
                 }
                 else if (checkBox1.Checked && checkBox3.Checked && checkBox2.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 4, 1, 0);
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                        selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
+                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
+                        selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
+                        selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Provincie = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 4, 1, 0);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 4, 1, 0);
+                    }
+                    
                 }
                 else if (checkBox2.Checked && checkBox3.Checked && checkBox1.Checked == false)
                 {
-                    Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 5, 1, 0);
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                        selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
+                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
+                        selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
+                        selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 5, 1, 0);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 5, 1, 0);
+                    }
+                    
                 }
                 else if (checkBox1.Checked && checkBox2.Checked == false && checkBox3.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 1, 1, 0);
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                        selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
+                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
+                        selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
+                        selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Provincie = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 1, 1, 0);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 1, 1, 0);
+                    }
+                    
                 }
                 else if (checkBox2.Checked && checkBox1.Checked == false && checkBox3.Checked == false)
                 {
-                    Fillchart("select sum(Mishandeling) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 6, 1, 0);
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                        selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
+                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
+                        selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
+                        selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Mishandeling) from Letsel where Provincie = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 6, 1, 0);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Mishandeling) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 6, 1, 0);
+                    }
+                    
                 }
                 else if (checkBox3.Checked && checkBox1.Checked == false && checkBox2.Checked == false)
                 {
-                    Fillchart("select sum(Openlijk_Geweld) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 7, 1, 0);
+                    if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-Brabant" ||
+                        selectGemeenteComboBox.Text == @"noord-Holland" ||
+                        selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
+                        selectGemeenteComboBox.Text == @"zuid-Holland" ||
+                        selectGemeenteComboBox.Text == @"overijssel" || selectGemeenteComboBox.Text == @"flevoland" ||
+                        selectGemeenteComboBox.Text == @"groningen" || selectGemeenteComboBox.Text == @"zeeland" ||
+                        selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Openlijk_Geweld) from Letsel where Provincie = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 7, 1, 0);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Openlijk_Geweld) from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 7, 1, 0);
+                    }
+                    
                 }
                 else if (checkBox3.Checked == false && checkBox1.Checked == false && checkBox2.Checked == false)
                 {
@@ -320,31 +419,129 @@ namespace ProjectDrieDataVisualisatie
                 }
                 if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 3, 4, 1);
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
+                        comboBox1.Text == @"noord-Holland" ||
+                        comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
+                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
+                        comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
+                        comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 3, 4, 1);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 3, 4, 1);
+                    }
+
                 }
                 else if (checkBox3.Checked && checkBox2.Checked && checkBox1.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 2, 4, 1);
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
+                        comboBox1.Text == @"noord-Holland" ||
+                        comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
+                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
+                        comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
+                        comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 2, 4, 1);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 2, 4, 1);
+                    }
+                    
                 }
                 else if (checkBox3.Checked && checkBox1.Checked && checkBox2.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 4, 4, 1);
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
+                        comboBox1.Text == @"noord-Holland" ||
+                        comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
+                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
+                        comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
+                        comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 4, 4, 1);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 4, 4, 1);
+                    }
+                    
                 }
                 else if (checkBox2.Checked && checkBox1.Checked && checkBox3.Checked == false)
                 {
-                    Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 5, 4, 1);
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
+                        comboBox1.Text == @"noord-Holland" ||
+                        comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
+                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
+                        comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
+                        comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 5, 4, 1);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 5, 4, 1);
+                    }
+                    
                 }
                 else if (checkBox3.Checked && checkBox2.Checked == false && checkBox1.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 1, 4, 1);
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
+                        comboBox1.Text == @"noord-Holland" ||
+                        comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
+                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
+                        comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
+                        comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 1, 4, 1);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 1, 4, 1);
+                    }
+                    
                 }
                 else if (checkBox2.Checked && checkBox3.Checked == false && checkBox1.Checked == false)
                 {
-                    Fillchart("select sum(Mishandeling) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 6, 4, 1);
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
+                        comboBox1.Text == @"noord-Holland" ||
+                        comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
+                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
+                        comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
+                        comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Mishandeling) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 6, 4, 1);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Mishandeling) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 6, 4, 1);
+                    }
+                    
                 }
                 else if (checkBox1.Checked && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
-                    Fillchart("select sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 7, 4, 1);
+                    if (comboBox1.Text == @"drenthe" || comboBox1.Text == @"noord-Brabant" ||
+                        comboBox1.Text == @"noord-Holland" ||
+                        comboBox1.Text == @"gelderland" || comboBox1.Text == @"friesland" ||
+                        comboBox1.Text == @"zuid-Holland" ||
+                        comboBox1.Text == @"overijssel" || comboBox1.Text == @"flevoland" ||
+                        comboBox1.Text == @"groningen" || comboBox1.Text == @"zeeland" ||
+                        comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 7, 4, 1);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox1.Text + "'", comboBox1.Text, 7, 4, 1);
+                    }
+                    
                 }
                 else if (checkBox1.Checked == false && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
@@ -396,31 +593,129 @@ namespace ProjectDrieDataVisualisatie
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 3, 8, 2);
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
+                        comboBox3.Text == @"noord-Holland" ||
+                        comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
+                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
+                        comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
+                        comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 3, 8, 2);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 3, 8, 2);
+                    }
+                    
                 }
                 else if (checkBox3.Checked && checkBox2.Checked && checkBox1.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 2, 8, 2);
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
+                        comboBox3.Text == @"noord-Holland" ||
+                        comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
+                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
+                        comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
+                        comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 2, 8, 2);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 2, 8, 2);
+                    }
+                    
                 }
                 else if (checkBox3.Checked && checkBox1.Checked && checkBox2.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 4, 8, 2);
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
+                        comboBox3.Text == @"noord-Holland" ||
+                        comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
+                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
+                        comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
+                        comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 4, 8, 2);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 4, 8, 2);
+                    }
+                    
                 }
                 else if (checkBox2.Checked && checkBox1.Checked && checkBox3.Checked == false)
                 {
-                    Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 5, 8, 2);
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
+                        comboBox3.Text == @"noord-Holland" ||
+                        comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
+                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
+                        comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
+                        comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 5, 8, 2);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 5, 8, 2);
+                    }
+                    
                 }
                 else if (checkBox3.Checked && checkBox2.Checked == false && checkBox1.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 1, 8, 2);
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
+                        comboBox3.Text == @"noord-Holland" ||
+                        comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
+                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
+                        comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
+                        comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 1, 8, 2);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 1, 8, 2);
+                    }
+                    
                 }
                 else if (checkBox2.Checked && checkBox3.Checked == false && checkBox1.Checked == false)
                 {
-                    Fillchart("select sum(Mishandeling) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 6, 8, 2);
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
+                        comboBox3.Text == @"noord-Holland" ||
+                        comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
+                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
+                        comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
+                        comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Mishandeling) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 6, 8, 2);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Mishandeling) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 6, 8, 2);
+                    }
+                    
                 }
                 else if (checkBox1.Checked && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
-                    Fillchart("select sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 7, 8, 2);
+                    if (comboBox3.Text == @"drenthe" || comboBox3.Text == @"noord-Brabant" ||
+                        comboBox3.Text == @"noord-Holland" ||
+                        comboBox3.Text == @"gelderland" || comboBox3.Text == @"friesland" ||
+                        comboBox3.Text == @"zuid-Holland" ||
+                        comboBox3.Text == @"overijssel" || comboBox3.Text == @"flevoland" ||
+                        comboBox3.Text == @"groningen" || comboBox3.Text == @"zeeland" ||
+                        comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 7, 8, 2);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox3.Text + "'", comboBox3.Text, 7, 8, 2);
+                    }
+                    
                 }
                 else if (checkBox1.Checked == false && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
@@ -468,31 +763,129 @@ namespace ProjectDrieDataVisualisatie
                 Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
                 if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 3, 8, 3);
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
+                        comboBox4.Text == @"noord-Holland" ||
+                        comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
+                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
+                        comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
+                        comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 3, 8, 3);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 3, 8, 3);
+                    }
+                    
                 }
                 else if (checkBox3.Checked && checkBox2.Checked && checkBox1.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 2, 8, 3);
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
+                        comboBox4.Text == @"noord-Holland" ||
+                        comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
+                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
+                        comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
+                        comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 2, 8, 3);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 2, 8, 3);
+                    }
+                    
                 }
                 else if (checkBox3.Checked && checkBox1.Checked && checkBox2.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 4, 8, 3);
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
+                        comboBox4.Text == @"noord-Holland" ||
+                        comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
+                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
+                        comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
+                        comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 4, 8, 3);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 4, 8, 3);
+                    }
+                    
                 }
                 else if (checkBox2.Checked && checkBox1.Checked && checkBox3.Checked == false)
                 {
-                    Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 5, 8, 3);
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
+                        comboBox4.Text == @"noord-Holland" ||
+                        comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
+                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
+                        comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
+                        comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 5, 8, 3);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 5, 8, 3);
+                    }
+                    
                 }
                 else if (checkBox3.Checked && checkBox2.Checked == false && checkBox1.Checked == false)
                 {
-                    Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 1, 8, 3);
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
+                        comboBox4.Text == @"noord-Holland" ||
+                        comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
+                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
+                        comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
+                        comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 1, 8, 3);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 1, 8, 3);
+                    }
+                    
                 }
                 else if (checkBox2.Checked && checkBox3.Checked == false && checkBox1.Checked == false)
                 {
-                    Fillchart("select sum(Mishandeling) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 6, 8, 3);
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
+                        comboBox4.Text == @"noord-Holland" ||
+                        comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
+                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
+                        comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
+                        comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Mishandeling) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 6, 8, 3);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Mishandeling) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 6, 8, 3);
+                    }
+                    
                 }
                 else if (checkBox1.Checked && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
-                    Fillchart("select sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 7, 8, 3);
+                    if (comboBox4.Text == @"drenthe" || comboBox4.Text == @"noord-Brabant" ||
+                        comboBox4.Text == @"noord-Holland" ||
+                        comboBox4.Text == @"gelderland" || comboBox4.Text == @"friesland" ||
+                        comboBox4.Text == @"zuid-Holland" ||
+                        comboBox4.Text == @"overijssel" || comboBox4.Text == @"flevoland" ||
+                        comboBox4.Text == @"groningen" || comboBox4.Text == @"zeeland" ||
+                        comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
+                    {
+                        Fillchart("select sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 7, 8, 3);
+                    }
+                    else
+                    {
+                        Fillchart("select sum(Openlijk_Geweld) from Letsel where Gemeente = '" + comboBox4.Text + "'", comboBox4.Text, 7, 8, 3);
+                    }
+                    
                 }
                 else if (checkBox1.Checked == false && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
