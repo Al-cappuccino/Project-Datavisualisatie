@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Security.AccessControl;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Drawing;
 
 namespace ProjectDrieDataVisualisatie
 {
@@ -21,6 +22,7 @@ namespace ProjectDrieDataVisualisatie
         private int _columnNum;
         private string[] _oldquery = new string[12];
         private int[] _selectindex = new int[4];
+        private PictureBox[] _gemLoc = new PictureBox[450];
 
         public static Letsel Instance => _instance ?? (_instance = new Letsel());
 
@@ -36,6 +38,10 @@ namespace ProjectDrieDataVisualisatie
             comboBox3.Items.Add("Nederland");
             comboBox4.Items.Add("Nederland");
             comboBox2.SelectedIndex = 0;
+
+            _gemLoc[1] = new PictureBox();
+            _gemLoc[1].Image = Image.FromFile("C:/Users/Nathan/Documents/yHHL07Cr.jpg");
+            pictureBox1.Image = _gemLoc[1].Image;
         }
 
         private void gemeenteTextBox_Click(object sender, EventArgs e)

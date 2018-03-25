@@ -30,8 +30,9 @@ namespace ProjectDrieDataVisualisatie
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.gemeenteTextBox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
             this.selectGemeenteComboBox = new System.Windows.Forms.ComboBox();
@@ -47,7 +48,11 @@ namespace ProjectDrieDataVisualisatie
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gemeenteTextBox
@@ -460,11 +465,11 @@ namespace ProjectDrieDataVisualisatie
             this.gemeenteTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.gemeenteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.gemeenteTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.gemeenteTextBox.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gemeenteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gemeenteTextBox.ForeColor = System.Drawing.Color.White;
             this.gemeenteTextBox.Location = new System.Drawing.Point(3, 3);
             this.gemeenteTextBox.Name = "gemeenteTextBox";
-            this.gemeenteTextBox.Size = new System.Drawing.Size(594, 53);
+            this.gemeenteTextBox.Size = new System.Drawing.Size(594, 49);
             this.gemeenteTextBox.TabIndex = 7;
             this.gemeenteTextBox.Text = "voer plaatsnaam in...";
             this.gemeenteTextBox.Click += new System.EventHandler(this.gemeenteTextBox_Click);
@@ -495,10 +500,10 @@ namespace ProjectDrieDataVisualisatie
             // 
             this.dataChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataChart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            chartArea1.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.dataChart.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.dataChart.Legends.Add(legend2);
             this.dataChart.Location = new System.Drawing.Point(16, 406);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(890, 300);
@@ -630,10 +635,32 @@ namespace ProjectDrieDataVisualisatie
             this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(16, 213);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 187);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList2
+            // 
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // Letsel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox3);
@@ -653,6 +680,7 @@ namespace ProjectDrieDataVisualisatie
             this.Size = new System.Drawing.Size(1159, 720);
             this.Load += new System.EventHandler(this.Letsel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -675,5 +703,8 @@ namespace ProjectDrieDataVisualisatie
         private ComboBox comboBox3;
         private ComboBox comboBox4;
         private Button button3;
+        private PictureBox pictureBox1;
+        private ImageList imageList1;
+        private ImageList imageList2;
     }
 }
