@@ -20,7 +20,7 @@ namespace ProjectDrieDataVisualisatie
         private bool _check3;
         private int _columnNum;
         private string[] _oldquery = new string[12];
-        private int[] _selectindex = new int[3];
+        private int[] _selectindex = new int[4];
 
         public static Letsel Instance => _instance ?? (_instance = new Letsel());
 
@@ -178,6 +178,10 @@ namespace ProjectDrieDataVisualisatie
             }
 
             dataChart.DataSource = _result;
+            _selectindex[0] = selectGemeenteComboBox.SelectedIndex;
+            _selectindex[1] = comboBox1.SelectedIndex;
+            _selectindex[2] = comboBox3.SelectedIndex;
+            _selectindex[3] = comboBox4.SelectedIndex;
 
             if (columnNum == 1)
             {
@@ -241,7 +245,33 @@ namespace ProjectDrieDataVisualisatie
 
         private void selectGemeenteComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Check1();
+            if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex != -1 &&
+                selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text &&
+                selectGemeenteComboBox.Text != comboBox4.Text && comboBox1.Text != comboBox3.Text &&
+                comboBox1.Text != comboBox4.Text && comboBox3.Text != comboBox4.Text)
+            {
+                Check1();
+            }
+            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex == -1 &&
+                     selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text &&
+                     comboBox1.Text != comboBox3.Text)
+            {
+                Check1();
+            }
+            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1 &&
+                     selectGemeenteComboBox.Text != comboBox1.Text)
+            {
+                Check1();
+            }
+            else if (comboBox1.SelectedIndex == -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1)
+            {
+                Check1();
+            }
+            else
+            {
+                MessageBox.Show(@"Je kan niet twee dezelfde gemeenten of provincies met elkaar vergelijken.");
+                selectGemeenteComboBox.SelectedIndex = _selectindex[0];
+            }
         }
 
         private void Check1()
@@ -928,7 +958,33 @@ namespace ProjectDrieDataVisualisatie
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Check2();
+            if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex != -1 &&
+                selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text &&
+                selectGemeenteComboBox.Text != comboBox4.Text && comboBox1.Text != comboBox3.Text &&
+                comboBox1.Text != comboBox4.Text && comboBox3.Text != comboBox4.Text)
+            {
+                Check2();
+            }
+            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex == -1 &&
+                     selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text &&
+                     comboBox1.Text != comboBox3.Text)
+            {
+                Check2();
+            }
+            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1 &&
+                     selectGemeenteComboBox.Text != comboBox1.Text)
+            {
+                Check2();
+            }
+            else if (comboBox1.SelectedIndex == -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1)
+            {
+                Check2();
+            }
+            else
+            {
+                MessageBox.Show(@"Je kan niet twee dezelfde gemeenten of provincies met elkaar vergelijken.");
+                comboBox1.SelectedIndex = _selectindex[1];
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -953,6 +1009,11 @@ namespace ProjectDrieDataVisualisatie
                 comboBox1.Visible = false;
                 comboBox1.SelectedIndex = -1;
                 button2.Visible = false;
+                comboBox3.Visible = false;
+                comboBox3.SelectedIndex = -1;
+                button3.Visible = false;
+                comboBox4.Visible = false;
+                comboBox4.SelectedIndex = -1;
             }
         }
 
@@ -997,12 +1058,40 @@ namespace ProjectDrieDataVisualisatie
                 comboBox3.Visible = false;
                 comboBox3.SelectedIndex = -1;
                 button3.Visible = false;
+                comboBox4.Visible = false;
+                comboBox4.SelectedIndex = -1;
             }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Check3();
+            if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex != -1 &&
+                selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text &&
+                selectGemeenteComboBox.Text != comboBox4.Text && comboBox1.Text != comboBox3.Text &&
+                comboBox1.Text != comboBox4.Text && comboBox3.Text != comboBox4.Text)
+            {
+                Check3();
+            }
+            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex == -1 &&
+                     selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text &&
+                     comboBox1.Text != comboBox3.Text)
+            {
+                Check3();
+            }
+            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1 &&
+                     selectGemeenteComboBox.Text != comboBox1.Text)
+            {
+                Check3();
+            }
+            else if (comboBox1.SelectedIndex == -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1)
+            {
+                Check3();
+            }
+            else
+            {
+                MessageBox.Show(@"Je kan niet twee dezelfde gemeenten of provincies met elkaar vergelijken.");
+                comboBox3.SelectedIndex = _selectindex[2];
+            }
         }
 
         private void Letsel_Load(object sender, EventArgs e)
@@ -1037,7 +1126,33 @@ namespace ProjectDrieDataVisualisatie
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Check4();
+            if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex != -1 &&
+                selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text &&
+                selectGemeenteComboBox.Text != comboBox4.Text && comboBox1.Text != comboBox3.Text &&
+                comboBox1.Text != comboBox4.Text && comboBox3.Text != comboBox4.Text)
+            {
+                Check4();
+            }
+            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex == -1 &&
+                     selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text &&
+                     comboBox1.Text != comboBox3.Text)
+            {
+                Check4();
+            }
+            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1 &&
+                     selectGemeenteComboBox.Text != comboBox1.Text)
+            {
+                Check4();
+            }
+            else if (comboBox1.SelectedIndex == -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1)
+            {
+                Check4();
+            }
+            else
+            {
+                MessageBox.Show(@"Je kan niet twee dezelfde gemeenten of provincies met elkaar vergelijken.");
+                comboBox4.SelectedIndex = _selectindex[3];
+            }
         }
     }
 }
