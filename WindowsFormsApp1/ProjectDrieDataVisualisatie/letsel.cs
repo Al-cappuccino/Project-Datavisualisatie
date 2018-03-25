@@ -953,11 +953,7 @@ namespace ProjectDrieDataVisualisatie
             {
                 Check2();
             }
-            else if (comboBox1.SelectedIndex == -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1)
-            {
-                Check2();
-            }
-            else
+            else if (comboBox1.SelectedIndex != -1)
             {
                 MessageBox.Show(@"Je kan niet twee dezelfde gemeenten of provincies met elkaar vergelijken.");
                 comboBox1.SelectedIndex = _selectindex[1];
@@ -966,23 +962,32 @@ namespace ProjectDrieDataVisualisatie
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (_check)
-            {
-                _check = false;
-            }
-            else
+            if (!_check && !string.IsNullOrEmpty(selectGemeenteComboBox.Text))
             {
                 _check = true;
-            }
-
-            if (_check)
-            {
                 comboBox1.Visible = true;
                 button2.Visible = true;
             }
-            else
+            else if (_check && !string.IsNullOrEmpty(selectGemeenteComboBox.Text))
             {
+                _check = false;
+                _check2 = false;
+                _check3 = false;
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
+                comboBox1.Visible = false;
+                comboBox1.SelectedIndex = -1;
+                button2.Visible = false;
+                comboBox3.Visible = false;
+                comboBox3.SelectedIndex = -1;
+                button3.Visible = false;
+                comboBox4.Visible = false;
+                comboBox4.SelectedIndex = -1;
+            }
+            else if (_check)
+            {
+                _check = false;
+                _check2 = false;
+                _check3 = false;
                 comboBox1.Visible = false;
                 comboBox1.SelectedIndex = -1;
                 button2.Visible = false;
@@ -1014,24 +1019,28 @@ namespace ProjectDrieDataVisualisatie
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (_check2)
-            {
-                _check2 = false;
-            }
-            else
+            if (!_check2 && !string.IsNullOrEmpty(comboBox1.Text))
             {
                 _check2 = true;
-            }
-
-            if (_check2)
-            {
                 comboBox3.Visible = true;
                 button3.Visible = true;
             }
-            else
+            else if (_check2 && !string.IsNullOrEmpty(comboBox1.Text))
             {
+                _check2 = false;
+                _check3 = false;
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
+                comboBox3.Visible = false;
+                comboBox3.SelectedIndex = -1;
+                button3.Visible = false;
+                comboBox4.Visible = false;
+                comboBox4.SelectedIndex = -1;
+            }
+            else if (_check2 && string.IsNullOrEmpty(comboBox1.Text))
+            {
+                _check2 = false;
+                _check3 = false;
                 comboBox3.Visible = false;
                 comboBox3.SelectedIndex = -1;
                 button3.Visible = false;
@@ -1055,16 +1064,7 @@ namespace ProjectDrieDataVisualisatie
             {
                 Check3();
             }
-            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1 &&
-                     selectGemeenteComboBox.Text != comboBox1.Text)
-            {
-                Check3();
-            }
-            else if (comboBox1.SelectedIndex == -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1)
-            {
-                Check3();
-            }
-            else
+            else if (comboBox3.SelectedIndex != -1)
             {
                 MessageBox.Show(@"Je kan niet twee dezelfde gemeenten of provincies met elkaar vergelijken.");
                 comboBox3.SelectedIndex = _selectindex[2];
@@ -1078,24 +1078,23 @@ namespace ProjectDrieDataVisualisatie
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (_check3)
-            {
-                _check3 = false;
-            }
-            else
+            if (!_check3 && !string.IsNullOrEmpty(comboBox3.Text))
             {
                 _check3 = true;
-            }
-
-            if (_check3)
-            {
                 comboBox4.Visible = true;
             }
-            else
+            else if (_check3 && !string.IsNullOrEmpty(comboBox3.Text))
             {
+                _check3 = false;
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
+                comboBox4.Visible = false;
+                comboBox4.SelectedIndex = -1;
+            }
+            else if (_check3 && string.IsNullOrEmpty(comboBox3.Text))
+            {
+                _check3 = false;
                 comboBox4.Visible = false;
                 comboBox4.SelectedIndex = -1;
             }
@@ -1110,22 +1109,7 @@ namespace ProjectDrieDataVisualisatie
             {
                 Check4();
             }
-            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex == -1 &&
-                     selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text &&
-                     comboBox1.Text != comboBox3.Text)
-            {
-                Check4();
-            }
-            else if (comboBox1.SelectedIndex != -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1 &&
-                     selectGemeenteComboBox.Text != comboBox1.Text)
-            {
-                Check4();
-            }
-            else if (comboBox1.SelectedIndex == -1 && comboBox3.SelectedIndex == -1 && comboBox4.SelectedIndex == -1)
-            {
-                Check4();
-            }
-            else
+            else if (comboBox4.SelectedIndex != -1)
             {
                 MessageBox.Show(@"Je kan niet twee dezelfde gemeenten of provincies met elkaar vergelijken.");
                 comboBox4.SelectedIndex = _selectindex[3];
