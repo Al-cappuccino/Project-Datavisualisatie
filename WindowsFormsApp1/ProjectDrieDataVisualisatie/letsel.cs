@@ -22,7 +22,6 @@ namespace ProjectDrieDataVisualisatie
         private int _columnNum;
         private string[] _oldquery = new string[12];
         private int[] _selectindex = new int[4];
-        private PictureBox[] _gemLoc = new PictureBox[450];
 
         public static Letsel Instance => _instance ?? (_instance = new Letsel());
 
@@ -39,9 +38,7 @@ namespace ProjectDrieDataVisualisatie
             comboBox4.Items.Add("Nederland");
             comboBox2.SelectedIndex = 0;
 
-            _gemLoc[1] = new PictureBox();
-            _gemLoc[1].Image = Image.FromFile("C:/Users/Nathan/Documents/yHHL07Cr.jpg");
-            pictureBox1.Image = _gemLoc[1].Image;
+            pictureBox1.Image = imageList1.Images[0];
         }
 
         private void gemeenteTextBox_Click(object sender, EventArgs e)
@@ -295,6 +292,55 @@ namespace ProjectDrieDataVisualisatie
                         selectGemeenteComboBox.Text == @"limburg" || selectGemeenteComboBox.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + selectGemeenteComboBox.Text + "'", selectGemeenteComboBox.Text, 3, 1, 0);
+                        if (selectGemeenteComboBox.Text == @"zuid-holland")
+                        {
+                            pictureBox1.Image = imageList1.Images[1];
+                        }
+                        else if (selectGemeenteComboBox.Text == @"zeeland")
+                        {
+                            pictureBox1.Image = imageList1.Images[2];
+                        }
+                        else if (selectGemeenteComboBox.Text == @"noord-holland")
+                        {
+                            pictureBox1.Image = imageList1.Images[3];
+                        }
+                        else if (selectGemeenteComboBox.Text == @"utrecht")
+                        {
+                            pictureBox1.Image = imageList1.Images[4];
+                        }
+                        else if (selectGemeenteComboBox.Text == @"flevoland")
+                        {
+                            pictureBox1.Image = imageList1.Images[5];
+                        }
+                        else if (selectGemeenteComboBox.Text == @"gelderland")
+                        {
+                            pictureBox1.Image = imageList1.Images[6];
+                        }
+                        else if (selectGemeenteComboBox.Text == @"limburg")
+                        {
+                            pictureBox1.Image = imageList1.Images[7];
+                        }
+                        else if (selectGemeenteComboBox.Text == @"overijssel")
+                        {
+                            pictureBox1.Image = imageList1.Images[8];
+                        }
+                        else if (selectGemeenteComboBox.Text == @"noord-brabant")
+                        {
+                            pictureBox1.Image = imageList1.Images[9];
+                        }
+                        else if (selectGemeenteComboBox.Text == @"friesland")
+                        {
+                            pictureBox1.Image = imageList1.Images[10];
+                        }
+                        else if (selectGemeenteComboBox.Text == @"groningen")
+                        {
+                            pictureBox1.Image = imageList1.Images[11];
+                        }
+                        else if (selectGemeenteComboBox.Text == @"drenthe")
+                        {
+                            pictureBox1.Image = imageList1.Images[12];
+                        }
+
                     }
                     else
                     {

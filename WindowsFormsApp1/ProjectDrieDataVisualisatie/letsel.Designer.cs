@@ -31,8 +31,9 @@ namespace ProjectDrieDataVisualisatie
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Letsel));
             this.gemeenteTextBox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
             this.selectGemeenteComboBox = new System.Windows.Forms.ComboBox();
@@ -50,7 +51,6 @@ namespace ProjectDrieDataVisualisatie
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -500,10 +500,10 @@ namespace ProjectDrieDataVisualisatie
             // 
             this.dataChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataChart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            chartArea2.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.dataChart.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.dataChart.Legends.Add(legend1);
             this.dataChart.Location = new System.Drawing.Point(16, 406);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(890, 300);
@@ -646,15 +646,21 @@ namespace ProjectDrieDataVisualisatie
             // 
             // imageList1
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // imageList2
-            // 
-            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Nederland 1.png");
+            this.imageList1.Images.SetKeyName(1, "Zuid-Holland2.png");
+            this.imageList1.Images.SetKeyName(2, "Zeeland3.png");
+            this.imageList1.Images.SetKeyName(3, "Noord-Holland4.png");
+            this.imageList1.Images.SetKeyName(4, "Utrecht5.png");
+            this.imageList1.Images.SetKeyName(5, "Flevoland6.png");
+            this.imageList1.Images.SetKeyName(6, "Gelderland7.png");
+            this.imageList1.Images.SetKeyName(7, "Limburg8.png");
+            this.imageList1.Images.SetKeyName(8, "Overijssel9.png");
+            this.imageList1.Images.SetKeyName(9, "Noord-Brabant10.png");
+            this.imageList1.Images.SetKeyName(10, "Friesland11.png");
+            this.imageList1.Images.SetKeyName(11, "Groningen12.png");
+            this.imageList1.Images.SetKeyName(12, "Drenthe13.png");
             // 
             // Letsel
             // 
@@ -705,6 +711,5 @@ namespace ProjectDrieDataVisualisatie
         private Button button3;
         private PictureBox pictureBox1;
         private ImageList imageList1;
-        private ImageList imageList2;
     }
 }
