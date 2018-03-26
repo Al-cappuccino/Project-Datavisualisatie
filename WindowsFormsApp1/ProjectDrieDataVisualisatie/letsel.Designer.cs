@@ -51,8 +51,14 @@ namespace ProjectDrieDataVisualisatie
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // gemeenteTextBox
@@ -504,7 +510,7 @@ namespace ProjectDrieDataVisualisatie
             this.dataChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.dataChart.Legends.Add(legend1);
-            this.dataChart.Location = new System.Drawing.Point(16, 406);
+            this.dataChart.Location = new System.Drawing.Point(16, 440);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(890, 300);
             this.dataChart.TabIndex = 20;
@@ -576,7 +582,7 @@ namespace ProjectDrieDataVisualisatie
             this.comboBox2.Items.AddRange(new object[] {
             "kolomdiagram",
             "gestapelde kolom"});
-            this.comboBox2.Location = new System.Drawing.Point(785, 379);
+            this.comboBox2.Location = new System.Drawing.Point(785, 413);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 30;
@@ -662,10 +668,40 @@ namespace ProjectDrieDataVisualisatie
             this.imageList1.Images.SetKeyName(11, "Groningen12.png");
             this.imageList1.Images.SetKeyName(12, "Drenthe13.png");
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(305, 213);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(189, 187);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 37;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(608, 213);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(189, 187);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 38;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(911, 213);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(189, 187);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 39;
+            this.pictureBox4.TabStop = false;
+            // 
             // Letsel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.button3);
@@ -683,10 +719,13 @@ namespace ProjectDrieDataVisualisatie
             this.Controls.Add(this.submitGemeenteInputBtn);
             this.Controls.Add(this.gemeenteTextBox);
             this.Name = "Letsel";
-            this.Size = new System.Drawing.Size(1159, 720);
+            this.Size = new System.Drawing.Size(1158, 749);
             this.Load += new System.EventHandler(this.Letsel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -711,5 +750,8 @@ namespace ProjectDrieDataVisualisatie
         private Button button3;
         private PictureBox pictureBox1;
         private ImageList imageList1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
     }
 }
