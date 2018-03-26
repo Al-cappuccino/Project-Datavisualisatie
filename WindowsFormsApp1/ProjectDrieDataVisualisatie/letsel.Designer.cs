@@ -512,7 +512,7 @@ namespace ProjectDrieDataVisualisatie
             this.dataChart.Legends.Add(legend1);
             this.dataChart.Location = new System.Drawing.Point(16, 440);
             this.dataChart.Name = "dataChart";
-            this.dataChart.Size = new System.Drawing.Size(890, 300);
+            this.dataChart.Size = new System.Drawing.Size(890, 355);
             this.dataChart.TabIndex = 20;
             this.dataChart.Text = "chart1";
             // 
@@ -719,7 +719,7 @@ namespace ProjectDrieDataVisualisatie
             this.Controls.Add(this.submitGemeenteInputBtn);
             this.Controls.Add(this.gemeenteTextBox);
             this.Name = "Letsel";
-            this.Size = new System.Drawing.Size(1158, 749);
+            this.Size = new System.Drawing.Size(1163, 798);
             this.Load += new System.EventHandler(this.Letsel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
