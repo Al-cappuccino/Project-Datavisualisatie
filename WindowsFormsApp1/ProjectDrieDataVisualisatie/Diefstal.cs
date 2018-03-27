@@ -87,11 +87,15 @@ namespace ProjectDrieDataVisualisatie
 
         private void submitSeletedDataButton_Click(object sender, EventArgs e)
         {
-            if(selectGemeenteComboBox.Text != "")
+            if (dataSelectionCheckBox.CheckedItems.Count == 0)
             {
-                foreach(string item in dataSelectionCheckBox.CheckedItems)
+                MessageBox.Show("Kies een geldig filter");
+            }
+            else if (selectGemeenteComboBox.Text != "")
+            {
+                foreach (string item in dataSelectionCheckBox.CheckedItems)
                 {
-                        SelectedData[selectGemeenteComboBox.Text].Add(item);
+                    SelectedData[selectGemeenteComboBox.Text].Add(item);
                 }
             }
         }
