@@ -1086,7 +1086,7 @@ namespace ProjectDrieDataVisualisatie
                 }
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", comboBox1.Text, 3, 4, 1);
-                pictureBox1.Image = imageList1.Images[0];
+                pictureBox2.Image = imageList1.Images[0];
             }
 
             if (comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex != -1 && comboBox1.Text != comboBox3.Text && comboBox1.Text != comboBox4.Text)
@@ -1268,7 +1268,7 @@ namespace ProjectDrieDataVisualisatie
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", comboBox3.Text, 3, 8, 2);
-                pictureBox1.Image = imageList1.Images[0];
+                pictureBox3.Image = imageList1.Images[0];
             }
 
             if (comboBox4.SelectedIndex != -1 && comboBox3.Text != selectGemeenteComboBox.Text && comboBox3.Text != comboBox1.Text && comboBox3.Text != comboBox4.Text)
@@ -1446,7 +1446,7 @@ namespace ProjectDrieDataVisualisatie
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
                 Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", comboBox4.Text, 3, 8, 3);
-                pictureBox1.Image = imageList1.Images[0];
+                pictureBox4.Image = imageList1.Images[0];
             }
         }
 
