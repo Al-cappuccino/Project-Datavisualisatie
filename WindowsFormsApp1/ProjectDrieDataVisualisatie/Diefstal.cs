@@ -65,18 +65,19 @@ namespace ProjectDrieDataVisualisatie
         }
         private void addGemeenteButton_Click(object sender, EventArgs e)
         {
-            foreach (String s in gemeenteTextbox.AutoCompleteCustomSource)
+            if (gemeenteTextbox.AutoCompleteCustomSource.Contains(gemeenteTextbox.Text))
             {
-                if (s.Contains(gemeenteTextbox.Text))
+                if (!SelectedGemeentes.Contains(gemeenteTextbox.Text))
                 {
-                    if (!SelectedGemeentes.Contains(gemeenteTextbox.Text))
-                    {
-                        SelectedGemeentes.Add(gemeenteTextbox.Text);
-                        SelectedData.Add(gemeenteTextbox.Text, new List<string>());
-                        selectGemeenteComboBox.Items.Add(gemeenteTextbox.Text);
-                    }
+                    SelectedGemeentes.Add(gemeenteTextbox.Text);
+                    SelectedData.Add(gemeenteTextbox.Text, new List<string>());
+                    selectGemeenteComboBox.Items.Add(gemeenteTextbox.Text);
+                    selectGemeenteComboBox.SelectedIndex = 0;
                 }
             }
+            else
+                MessageBox.Show("Voer een geldige gemeente in");
+            
             
         }
 
