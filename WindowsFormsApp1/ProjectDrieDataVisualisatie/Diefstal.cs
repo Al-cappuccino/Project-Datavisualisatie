@@ -88,6 +88,7 @@ namespace ProjectDrieDataVisualisatie
 
         private void submitSeletedDataButton_Click(object sender, EventArgs e)
         {
+            List<string> checkedItems = new List<string>();
             if (dataSelectionCheckBox.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Kies een geldig filter");
@@ -96,7 +97,8 @@ namespace ProjectDrieDataVisualisatie
             {
                 foreach (string item in dataSelectionCheckBox.CheckedItems)
                 {
-                    SelectedData[selectGemeenteComboBox.Text].Add(item);
+                    checkedItems.Add(item);
+                    SelectedData[selectGemeenteComboBox.Text] = checkedItems;
                 }
             }
         }
