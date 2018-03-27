@@ -36,11 +36,13 @@ namespace ProjectDrieDataVisualisatie
         {
             InitializeComponent();
             conString = ConfigurationManager.ConnectionStrings["ProjectDrieDataVisualisatie.Properties.Settings.Database1ConnectionString"].ConnectionString;
+            dataSelectionCheckBox.SetItemChecked(0, true);
         }
 
         private void gemeenteTextbox_Click(object sender, EventArgs e)
         {
-            gemeenteTextbox.Text = null;
+            if (gemeenteTextbox.Text == "Voer plaatsnaam in...")
+                gemeenteTextbox.Text = null;
         }
         private string createQueryString(string gemeente, List<string> dataRequest)
         {
@@ -63,13 +65,16 @@ namespace ProjectDrieDataVisualisatie
         }
         private void addGemeenteButton_Click(object sender, EventArgs e)
         {
-            if(gemeenteTextbox.Text != "")
+            foreach (String s in gemeenteTextbox.AutoCompleteCustomSource)
             {
-                if (!SelectedGemeentes.Contains(gemeenteTextbox.Text))
+                if (s.Contains(gemeenteTextbox.Text))
                 {
-                    SelectedGemeentes.Add(gemeenteTextbox.Text);
-                    SelectedData.Add(gemeenteTextbox.Text, new List<string>());
-                    selectGemeenteComboBox.Items.Add(gemeenteTextbox.Text);
+                    if (!SelectedGemeentes.Contains(gemeenteTextbox.Text))
+                    {
+                        SelectedGemeentes.Add(gemeenteTextbox.Text);
+                        SelectedData.Add(gemeenteTextbox.Text, new List<string>());
+                        selectGemeenteComboBox.Items.Add(gemeenteTextbox.Text);
+                    }
                 }
             }
             
@@ -82,11 +87,15 @@ namespace ProjectDrieDataVisualisatie
 
         private void submitSeletedDataButton_Click(object sender, EventArgs e)
         {
-            if(selectGemeenteComboBox.Text != "")
+            if (dataSelectionCheckBox.CheckedItems.Count == 0)
             {
-                foreach(string item in dataSelectionCheckBox.CheckedItems)
+                MessageBox.Show("Kies een geldig filter");
+            }
+            else if (selectGemeenteComboBox.Text != "")
+            {
+                foreach (string item in dataSelectionCheckBox.CheckedItems)
                 {
-                        SelectedData[selectGemeenteComboBox.Text].Add(item);
+                    SelectedData[selectGemeenteComboBox.Text].Add(item);
                 }
             }
         }
