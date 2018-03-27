@@ -278,267 +278,261 @@ namespace ProjectDrieDataVisualisatie
         }
         private void LocDispGem()
         {
-            for (int a = 0; a <= _result.Rows.Count -1; a++)
+            
+            if (_result.Rows[0][3].ToString() == @"Zuid-holland" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
             {
-                if (_result.Rows[a][3].ToString() == @"Zuid-holland" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[1];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Zeeland" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[2];
-                }
-                
-                else if (_result.Rows[a][3].ToString() == @"Noord-holland" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[3];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Utrecht" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[4];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Flevoland" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[5];
-                }
-                else if (_result.Rows[a][3].ToString() == @"Gelderland" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[6];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Limburg" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[7];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Overijssel" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[8];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Noord-brabant" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[9];
-                }
-                
-                else if (_result.Rows[a][3].ToString() == @"Friesland" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[10];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Groningen" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[11];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Drenthe" && _result.Rows[a][4].ToString().ToLower() == gemeenteTextBox.Text)
-                {
-                    pictureBox1.Image = imageList1.Images[12];
-                }
-                else
-                {
-                    pictureBox1.Image = imageList1.Images[0];
-                }
+                pictureBox1.Image = imageList1.Images[1];
             }
+
+            else if (_result.Rows[0][3].ToString() == @"Zeeland" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
+            {
+                pictureBox1.Image = imageList1.Images[2];
+            }
+                
+            else if (_result.Rows[0][3].ToString() == @"noord-holland" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
+            {
+                pictureBox1.Image = imageList1.Images[3];
+            }
+
+            else if (_result.Rows[0][3].ToString() == @"Utrecht" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
+            {
+                pictureBox1.Image = imageList1.Images[4];
+            }
+
+            else if (_result.Rows[0][3].ToString() == @"Flevoland" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
+            {
+                pictureBox1.Image = imageList1.Images[5];
+            }
+            else if (_result.Rows[0][3].ToString() == @"Gelderland" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
+            {
+                pictureBox1.Image = imageList1.Images[6];
+            }
+
+            else if (_result.Rows[0][3].ToString() == @"Limburg" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
+            {
+                pictureBox1.Image = imageList1.Images[7];
+            }
+
+            else if (_result.Rows[0][3].ToString() == @"Overijssel" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
+            {
+                pictureBox1.Image = imageList1.Images[8];
+            }
+
+            else if (_result.Rows[0][3].ToString() == @"Noord-brabant" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
+            {
+                pictureBox1.Image = imageList1.Images[9];
+            }
+                
+            else if (_result.Rows[0][3].ToString() == @"Friesland" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
+            {
+                pictureBox1.Image = imageList1.Images[10];
+            }
+
+            else if (_result.Rows[0][3].ToString() == @"Groningen" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
+            {
+                pictureBox1.Image = imageList1.Images[11];
+            }
+
+            else if (_result.Rows[0][3].ToString() == @"Drenthe" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
+            {
+                pictureBox1.Image = imageList1.Images[12];
+            }
+            else
+            {
+                pictureBox1.Image = imageList1.Images[0];
+            }
+            
         }
         private void LocDispGem2()
-        {
-            for (int a = 0; a <= _result.Rows.Count - 1; a++)
+        { 
+            if (_result.Rows[1][3].ToString() == @"Zuid-holland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
             {
-                if (_result.Rows[a][3].ToString() == @"Zuid-holland" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[1];
-                }
+                pictureBox2.Image = imageList1.Images[1];
+            }
 
-                else if (_result.Rows[a][3].ToString() == @"Zeeland" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[2];
-                }
+            else if (_result.Rows[1][3].ToString() == @"Zeeland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
+            {
+                pictureBox2.Image = imageList1.Images[2];
+            }
 
-                else if (_result.Rows[a][3].ToString() == @"Noord-holland" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[3];
-                }
+            else if (_result.Rows[1][3].ToString() == @"Noord-holland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
+            {
+                pictureBox2.Image = imageList1.Images[3];
+            }
 
-                else if (_result.Rows[a][3].ToString() == @"Utrecht" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[4];
-                }
+            else if (_result.Rows[1][3].ToString() == @"Utrecht" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
+            {
+                pictureBox2.Image = imageList1.Images[4];
+            }
 
-                else if (_result.Rows[a][3].ToString() == @"Flevoland" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[5];
-                }
-                else if (_result.Rows[a][3].ToString() == @"Gelderland" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[6];
-                }
+            else if (_result.Rows[1][3].ToString() == @"Flevoland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
+            {
+                pictureBox2.Image = imageList1.Images[5];
+            }
+            else if (_result.Rows[1][3].ToString() == @"Gelderland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
+            {
+                pictureBox2.Image = imageList1.Images[6];
+            }
 
-                else if (_result.Rows[a][3].ToString() == @"Limburg" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[7];
-                }
+            else if (_result.Rows[1][3].ToString() == @"Limburg" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
+            {
+                pictureBox2.Image = imageList1.Images[7];
+            }
 
-                else if (_result.Rows[a][3].ToString() == @"Overijssel" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[8];
-                }
+            else if (_result.Rows[1][3].ToString() == @"Overijssel" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
+            {
+                pictureBox2.Image = imageList1.Images[8];
+            }
 
-                else if (_result.Rows[a][3].ToString() == @"Noord-brabant" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[9];
-                }
+            else if (_result.Rows[1][3].ToString() == @"Noord-brabant" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
+            {
+                pictureBox2.Image = imageList1.Images[9];
+            }
 
-                else if (_result.Rows[a][3].ToString() == @"Friesland" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[10];
-                }
+            else if (_result.Rows[1][3].ToString() == @"Friesland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
+            {
+                pictureBox2.Image = imageList1.Images[10];
+            }
 
-                else if (_result.Rows[a][3].ToString() == @"Groningen" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[11];
-                }
+            else if (_result.Rows[1][3].ToString() == @"Groningen" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
+            {
+                pictureBox2.Image = imageList1.Images[11];
+            }
 
-                else if (_result.Rows[a][3].ToString() == @"Drenthe" && _result.Rows[a][4].ToString().ToLower() == comboBox1.Text)
-                {
-                    pictureBox2.Image = imageList1.Images[12];
-                }
-                else
-                {
-                    pictureBox2.Image = imageList1.Images[0];
-                }
+            else if (_result.Rows[1][3].ToString() == @"Drenthe" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
+            {
+                pictureBox2.Image = imageList1.Images[12];
+            }
+            else
+            {
+                pictureBox2.Image = imageList1.Images[0];
             }
         }
         private void LocDispGem3()
         {
-            for (int a = 0; a <= _result.Rows.Count - 1; a++)
+            
+            if (_result.Rows[2][3].ToString() == @"Zuid-holland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
             {
-                if (_result.Rows[a][3].ToString() == @"Zuid-holland" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[1];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Zeeland" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[2];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Noord-holland" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[3];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Utrecht" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[4];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Flevoland" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[5];
-                }
-                else if (_result.Rows[a][3].ToString() == @"Gelderland" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[6];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Limburg" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[7];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Overijssel" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[8];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Noord-brabant" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[9];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Friesland" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[10];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Groningen" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[11];
-                }
-
-                else if (_result.Rows[a][3].ToString() == @"Drenthe" && _result.Rows[a][4].ToString().ToLower() == comboBox3.Text)
-                {
-                    pictureBox3.Image = imageList1.Images[12];
-                }
-                else
-                {
-                    pictureBox3.Image = imageList1.Images[0];
-                }
+                pictureBox3.Image = imageList1.Images[1];
             }
+
+            else if (_result.Rows[2][3].ToString() == @"Zeeland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
+            {
+                pictureBox3.Image = imageList1.Images[2];
+            }
+
+            else if (_result.Rows[2][3].ToString() == @"noord-holland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
+            {
+                pictureBox3.Image = imageList1.Images[3];
+            }
+
+            else if (_result.Rows[2][3].ToString() == @"Utrecht" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
+            {
+                pictureBox3.Image = imageList1.Images[4];
+            }
+
+            else if (_result.Rows[2][3].ToString() == @"Flevoland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
+            {
+                pictureBox3.Image = imageList1.Images[5];
+            }
+            else if (_result.Rows[2][3].ToString() == @"Gelderland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
+            {
+                pictureBox3.Image = imageList1.Images[6];
+            }
+
+            else if (_result.Rows[2][3].ToString() == @"Limburg" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
+            {
+                pictureBox3.Image = imageList1.Images[7];
+            }
+
+            else if (_result.Rows[2][3].ToString() == @"Overijssel" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
+            {
+                pictureBox3.Image = imageList1.Images[8];
+            }
+
+            else if (_result.Rows[2][3].ToString() == @"Noord-brabant" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
+            {
+                pictureBox3.Image = imageList1.Images[9];
+            }
+
+            else if (_result.Rows[2][3].ToString() == @"Friesland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
+            {
+                pictureBox3.Image = imageList1.Images[10];
+            }
+
+            else if (_result.Rows[2][3].ToString() == @"Groningen" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
+            {
+                pictureBox3.Image = imageList1.Images[11];
+            }
+
+            else if (_result.Rows[2][3].ToString() == @"Drenthe" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
+            {
+                pictureBox3.Image = imageList1.Images[12];
+            }
+            else
+            {
+                pictureBox3.Image = imageList1.Images[0];
+            }
+            
         }
         private void LocDispGem4()
         {
-            for (int a = 0; a <= _result.Rows.Count - 1; a++)
-            {
-                if (_result.Rows[a][3].ToString() == @"Zuid-holland" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+            
+                if (_result.Rows[3][3].ToString() == @"Zuid-holland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[1];
                 }
 
-                else if (_result.Rows[a][3].ToString() == @"Zeeland" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+                else if (_result.Rows[3][3].ToString() == @"Zeeland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[2];
                 }
 
-                else if (_result.Rows[a][3].ToString() == @"Noord-holland" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+                else if (_result.Rows[3][3].ToString() == @"noord-holland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[3];
                 }
 
-                else if (_result.Rows[a][3].ToString() == @"Utrecht" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+                else if (_result.Rows[3][3].ToString() == @"Utrecht" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[4];
                 }
 
-                else if (_result.Rows[a][3].ToString() == @"Flevoland" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+                else if (_result.Rows[3][3].ToString() == @"Flevoland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[5];
                 }
-                else if (_result.Rows[a][3].ToString() == @"Gelderland" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+                else if (_result.Rows[3][3].ToString() == @"Gelderland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[6];
                 }
 
-                else if (_result.Rows[a][3].ToString() == @"Limburg" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+                else if (_result.Rows[3][3].ToString() == @"Limburg" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[7];
                 }
 
-                else if (_result.Rows[a][3].ToString() == @"Overijssel" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+                else if (_result.Rows[3][3].ToString() == @"Overijssel" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[8];
                 }
 
-                else if (_result.Rows[a][3].ToString() == @"Noord-brabant" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+                else if (_result.Rows[3][3].ToString() == @"Noord-brabant" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[9];
                 }
 
-                else if (_result.Rows[a][3].ToString() == @"Friesland" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+                else if (_result.Rows[3][3].ToString() == @"Friesland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[10];
                 }
 
-                else if (_result.Rows[a][3].ToString() == @"Groningen" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+                else if (_result.Rows[3][3].ToString() == @"Groningen" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[11];
                 }
 
-                else if (_result.Rows[a][3].ToString() == @"Drenthe" && _result.Rows[a][4].ToString().ToLower() == comboBox4.Text)
+                else if (_result.Rows[3][3].ToString() == @"Drenthe" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
                 {
                     pictureBox4.Image = imageList1.Images[12];
                 }
@@ -546,7 +540,7 @@ namespace ProjectDrieDataVisualisatie
                 {
                     pictureBox4.Image = imageList1.Images[0];
                 }
-            }
+            
         }
         private void CheckProvBox1()
         {
@@ -950,7 +944,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld), Provincie from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, Provincie", comboBox1.Text, 3, 4, 1);
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld), Provincie, Gemeente from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, Provincie", comboBox1.Text, 3, 4, 1);
                         LocDispGem2();
                     }
 
@@ -1131,7 +1125,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld), Provincie from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, Provincie", comboBox3.Text, 3, 8, 2);
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld), Provincie, Gemeente from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, Provincie", comboBox3.Text, 3, 8, 2);
                         LocDispGem3();
                     }
                     
@@ -1308,8 +1302,8 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld), Provincie from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, Provincie", comboBox4.Text, 3, 8, 3);
-                        CheckProvBox4();
+                        Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld), Provincie, Gemeente from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, Provincie", comboBox4.Text, 3, 8, 3);
+                        LocDispGem4();
                     }
                     
                 }
@@ -1409,6 +1403,7 @@ namespace ProjectDrieDataVisualisatie
                     else
                     {
                         Fillchart("select sum(Mishandeling), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox4.Text, 6, 8, 3);
+                        LocDispGem4();
                     }
                     
                 }
