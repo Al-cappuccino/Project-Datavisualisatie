@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.gemeenteTextbox = new System.Windows.Forms.TextBox();
             this.addGemeenteButton = new System.Windows.Forms.Button();
-            this.selectGemeenteComboBox = new System.Windows.Forms.ComboBox();
             this.dataSelectionCheckBox = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.renderGraphsButton = new System.Windows.Forms.Button();
             this.dataChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.gemeenteselectionCheck = new System.Windows.Forms.CheckedListBox();
+            this.gemeenteSelectionCheckbox = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -447,7 +446,6 @@
             this.gemeenteTextbox.TabIndex = 6;
             this.gemeenteTextbox.Text = "Voer plaatsnaam in...";
             this.gemeenteTextbox.Click += new System.EventHandler(this.gemeenteTextbox_Click);
-            this.gemeenteTextbox.TextChanged += new System.EventHandler(this.gemeenteTextbox_TextChanged);
             // 
             // addGemeenteButton
             // 
@@ -459,15 +457,6 @@
             this.addGemeenteButton.Text = "Ga";
             this.addGemeenteButton.UseVisualStyleBackColor = true;
             this.addGemeenteButton.Click += new System.EventHandler(this.addGemeenteButton_Click);
-            // 
-            // selectGemeenteComboBox
-            // 
-            this.selectGemeenteComboBox.FormattingEnabled = true;
-            this.selectGemeenteComboBox.Location = new System.Drawing.Point(19, 132);
-            this.selectGemeenteComboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.selectGemeenteComboBox.Name = "selectGemeenteComboBox";
-            this.selectGemeenteComboBox.Size = new System.Drawing.Size(197, 21);
-            this.selectGemeenteComboBox.TabIndex = 14;
             // 
             // dataSelectionCheckBox
             // 
@@ -510,34 +499,33 @@
             // 
             // dataChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.dataChart.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.dataChart.Legends.Add(legend2);
             this.dataChart.Location = new System.Drawing.Point(302, 256);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(674, 300);
             this.dataChart.TabIndex = 19;
             this.dataChart.Text = "chart1";
             // 
-            // gemeenteselectionCheck
+            // gemeenteSelectionCheckbox
             // 
-            this.gemeenteselectionCheck.FormattingEnabled = true;
-            this.gemeenteselectionCheck.Location = new System.Drawing.Point(19, 172);
-            this.gemeenteselectionCheck.Name = "gemeenteselectionCheck";
-            this.gemeenteselectionCheck.Size = new System.Drawing.Size(197, 169);
-            this.gemeenteselectionCheck.TabIndex = 20;
+            this.gemeenteSelectionCheckbox.FormattingEnabled = true;
+            this.gemeenteSelectionCheckbox.Location = new System.Drawing.Point(19, 172);
+            this.gemeenteSelectionCheckbox.Name = "gemeenteSelectionCheckbox";
+            this.gemeenteSelectionCheckbox.Size = new System.Drawing.Size(197, 169);
+            this.gemeenteSelectionCheckbox.TabIndex = 20;
             // 
             // Diefstal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gemeenteselectionCheck);
+            this.Controls.Add(this.gemeenteSelectionCheckbox);
             this.Controls.Add(this.dataChart);
             this.Controls.Add(this.renderGraphsButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataSelectionCheckBox);
-            this.Controls.Add(this.selectGemeenteComboBox);
             this.Controls.Add(this.addGemeenteButton);
             this.Controls.Add(this.gemeenteTextbox);
             this.Name = "Diefstal";
@@ -552,11 +540,10 @@
 
         private System.Windows.Forms.TextBox gemeenteTextbox;
         private System.Windows.Forms.Button addGemeenteButton;
-        private System.Windows.Forms.ComboBox selectGemeenteComboBox;
         private System.Windows.Forms.CheckedListBox dataSelectionCheckBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button renderGraphsButton;
         private System.Windows.Forms.DataVisualization.Charting.Chart dataChart;
-        private System.Windows.Forms.CheckedListBox gemeenteselectionCheck;
+        private System.Windows.Forms.CheckedListBox gemeenteSelectionCheckbox;
     }
 }
