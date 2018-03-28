@@ -74,6 +74,8 @@ namespace ProjectDrieDataVisualisatie
                     selectGemeenteComboBox.Items.Add(gemeenteTextbox.Text);
                     selectGemeenteComboBox.SelectedIndex = 0;
                 }
+                else
+                    MessageBox.Show("Deze gemeente is al toegevoegd");
             }
             else
                 MessageBox.Show("Voer een geldige gemeente in");
@@ -81,32 +83,24 @@ namespace ProjectDrieDataVisualisatie
             
         }
 
-        private void selectGemeenteComboBox_TextChanged(object sender, EventArgs e)
+        private void renderGraphsButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void submitSeletedDataButton_Click(object sender, EventArgs e)
-        {
-            List<string> checkedItems = new List<string>();
+            List<string> checkedItems = dataSelectionCheckBox.CheckedItems.OfType<string>().ToList();
+            List<string> keys = new List<string>(SelectedData.Keys);
             if (dataSelectionCheckBox.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Kies een geldig filter");
             }
             else if (selectGemeenteComboBox.Text != "")
             {
-                foreach (string item in dataSelectionCheckBox.CheckedItems)
+                foreach (string key in keys)
                 {
-                    checkedItems.Add(item);
-                    SelectedData[selectGemeenteComboBox.Text] = checkedItems;
+                    SelectedData[key] = checkedItems;
                 }
             }
-        }
 
-        private void renderGraphsButton_Click(object sender, EventArgs e)
-        {
             if (dataChart.Series.Count > 0)
-                dataChart.Series.RemoveAt(0);
+                dataChart.Series.Clear();
 
             foreach (KeyValuePair<string, List<string>> dataRequest in SelectedData)
             {
