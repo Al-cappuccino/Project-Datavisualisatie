@@ -15,8 +15,6 @@ namespace ProjectDrieDataVisualisatie
 {
     public partial class Diefstal : UserControl
     {
-        private List<string> SelectedGemeentes = new List<string>();
-        private List<string> SelectedFilters = new List<string>();
         private static Diefstal _Instance;
 
         public static Diefstal Instance
@@ -66,7 +64,7 @@ namespace ProjectDrieDataVisualisatie
         {
             if (gemeenteTextbox.AutoCompleteCustomSource.Contains(gemeenteTextbox.Text))
             {
-                if (!SelectedGemeentes.Contains(gemeenteTextbox.Text))
+                if (!gemeenteSelectionCheckbox.Items.Contains(gemeenteTextbox.Text))
                 {
                     gemeenteSelectionCheckbox.Items.Add(gemeenteTextbox.Text);
                 }
