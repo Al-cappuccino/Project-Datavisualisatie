@@ -515,7 +515,7 @@ namespace ProjectDrieDataVisualisatie
             this.dataChart.Legends.Add(legend1);
             this.dataChart.Location = new System.Drawing.Point(16, 440);
             this.dataChart.Name = "dataChart";
-            this.dataChart.Size = new System.Drawing.Size(890, 355);
+            this.dataChart.Size = new System.Drawing.Size(1092, 355);
             this.dataChart.TabIndex = 20;
             this.dataChart.Text = "chart1";
             // 
