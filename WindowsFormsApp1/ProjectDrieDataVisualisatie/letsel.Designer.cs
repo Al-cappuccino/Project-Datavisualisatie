@@ -31,8 +31,8 @@ namespace ProjectDrieDataVisualisatie
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Letsel));
             this.gemeenteTextBox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
@@ -51,14 +51,15 @@ namespace ProjectDrieDataVisualisatie
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.fu = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.backgroundselect = new System.Windows.Forms.ComboBox();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.ImageOfDeath = new System.Windows.Forms.PictureBox();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageOfDeath)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // gemeenteTextBox
@@ -508,12 +509,12 @@ namespace ProjectDrieDataVisualisatie
             this.dataChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataChart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            chartArea5.AxisX.Interval = 1D;
-            chartArea5.AxisX.IntervalOffset = 1D;
-            chartArea5.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.dataChart.Legends.Add(legend5);
+            chartArea8.AxisX.Interval = 1D;
+            chartArea8.AxisX.IntervalOffset = 1D;
+            chartArea8.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.dataChart.Legends.Add(legend8);
             this.dataChart.Location = new System.Drawing.Point(21, 304);
             this.dataChart.Margin = new System.Windows.Forms.Padding(4);
             this.dataChart.Name = "dataChart";
@@ -683,34 +684,9 @@ namespace ProjectDrieDataVisualisatie
             this.imageList1.Images.SetKeyName(11, "Groningen12.png");
             this.imageList1.Images.SetKeyName(12, "Drenthe13.png");
             // 
-            // fu
-            // 
-            this.fu.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.fu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.fu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.fu.Location = new System.Drawing.Point(1179, 16);
-            this.fu.Margin = new System.Windows.Forms.Padding(0);
-            this.fu.Name = "fu";
-            this.fu.Size = new System.Drawing.Size(75, 23);
-            this.fu.TabIndex = 38;
-            this.fu.UseVisualStyleBackColor = false;
-            this.fu.Click += new System.EventHandler(this.fu_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // backgroundselect
-            // 
-            this.backgroundselect.FormattingEnabled = true;
-            this.backgroundselect.Items.AddRange(new object[] {
-            "Retro Pepe"});
-            this.backgroundselect.Location = new System.Drawing.Point(1179, 35);
-            this.backgroundselect.Name = "backgroundselect";
-            this.backgroundselect.Size = new System.Drawing.Size(75, 24);
-            this.backgroundselect.TabIndex = 39;
-            this.backgroundselect.Visible = false;
-            this.backgroundselect.SelectedIndexChanged += new System.EventHandler(this.backgroundselect_SelectedIndexChanged);
             // 
             // imageList2
             // 
@@ -728,12 +704,23 @@ namespace ProjectDrieDataVisualisatie
             this.ImageOfDeath.TabIndex = 40;
             this.ImageOfDeath.TabStop = false;
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 4);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(1548, 1024);
+            this.axWindowsMediaPlayer1.TabIndex = 41;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            // 
             // Letsel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.backgroundselect);
-            this.Controls.Add(this.fu);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.button3);
@@ -751,6 +738,7 @@ namespace ProjectDrieDataVisualisatie
             this.Controls.Add(this.submitGemeenteInputBtn);
             this.Controls.Add(this.gemeenteTextBox);
             this.Controls.Add(this.ImageOfDeath);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Letsel";
             this.Size = new System.Drawing.Size(1551, 982);
@@ -758,6 +746,7 @@ namespace ProjectDrieDataVisualisatie
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageOfDeath)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -782,10 +771,10 @@ namespace ProjectDrieDataVisualisatie
         private Button button3;
         private PictureBox pictureBox1;
         private ImageList imageList1;
-        private Button fu;
         private OpenFileDialog openFileDialog1;
-        private ComboBox backgroundselect;
         private ImageList imageList2;
         private PictureBox ImageOfDeath;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private Timer timer1;
     }
 }

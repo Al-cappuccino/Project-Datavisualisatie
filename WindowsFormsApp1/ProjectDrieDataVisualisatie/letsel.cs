@@ -6,6 +6,8 @@ using System.Data.SqlClient;
 using System.Security.AccessControl;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Drawing;
+using System.Timers;
+using System.Threading;
 
 namespace ProjectDrieDataVisualisatie
 {
@@ -508,7 +510,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk1, Provincie from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "' group by Gemeente, junk, Provincie", selectGemeenteComboBox.Text, 1, 1, 0);
+                        Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk2, Provincie from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "' group by Gemeente, junk, Provincie", selectGemeenteComboBox.Text, 1, 1, 0);
                         LocDispGem();
                     }
 
@@ -528,7 +530,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(Mishandeling), junk, junk1, Provincie from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "' group by Gemeente, junk, junk1, Provincie", selectGemeenteComboBox.Text, 6, 1, 0);
+                        Fillchart("select sum(Mishandeling), junk, junk2, Provincie from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "' group by Gemeente, junk, junk2, Provincie", selectGemeenteComboBox.Text, 6, 1, 0);
                         LocDispGem();
                     }
 
@@ -548,7 +550,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(Openlijk_Geweld), junk1, junk, Provincie, Gemeente from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "' group by Gemeente, junk, junk1, Provincie", selectGemeenteComboBox.Text, 7, 1, 0);
+                        Fillchart("select sum(Openlijk_Geweld), junk2, junk, Provincie, Gemeente from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "' group by Gemeente, junk, junk2, Provincie", selectGemeenteComboBox.Text, 7, 1, 0);
                         LocDispGem();
                     }
 
@@ -684,7 +686,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox1.Text, 1, 4, 1);
+                        Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk2, Provincie from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, junk2, Provincie", comboBox1.Text, 1, 4, 1);
 
                     }
 
@@ -704,7 +706,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(Mishandeling), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox1.Text, 6, 4, 1);
+                        Fillchart("select sum(Mishandeling), junk, junk2, Provincie from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, junk2, Provincie", comboBox1.Text, 6, 4, 1);
 
                     }
 
@@ -724,7 +726,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(Openlijk_Geweld), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox1.Text, 7, 4, 1);
+                        Fillchart("select sum(Openlijk_Geweld), junk, junk2, Provincie from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, junk2, Provincie", comboBox1.Text, 7, 4, 1);
 
                     }
 
@@ -864,7 +866,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox3.Text, 1, 8, 2);
+                        Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk2, Provincie from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, junk2, Provincie", comboBox3.Text, 1, 8, 2);
 
                     }
 
@@ -884,7 +886,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(Mishandeling), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox3.Text, 6, 8, 2);
+                        Fillchart("select sum(Mishandeling), junk, junk2, Provincie from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, junk2, Provincie", comboBox3.Text, 6, 8, 2);
 
                     }
 
@@ -904,7 +906,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(Openlijk_Geweld), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox3.Text, 7, 8, 2);
+                        Fillchart("select sum(Openlijk_Geweld), junk, junk2, Provincie from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, junk2, Provincie", comboBox3.Text, 7, 8, 2);
 
                     }
 
@@ -1040,7 +1042,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox4.Text, 1, 8, 3);
+                        Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk2, Provincie from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, junk2, Provincie", comboBox4.Text, 1, 8, 3);
 
                     }
 
@@ -1060,7 +1062,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(Mishandeling), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox4.Text, 6, 8, 3);
+                        Fillchart("select sum(Mishandeling), junk, junk2, Provincie from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, junk2, Provincie", comboBox4.Text, 6, 8, 3);
 
                     }
 
@@ -1080,7 +1082,7 @@ namespace ProjectDrieDataVisualisatie
                     }
                     else
                     {
-                        Fillchart("select sum(Openlijk_Geweld), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox4.Text, 7, 8, 3);
+                        Fillchart("select sum(Openlijk_Geweld), junk, junk2, Provincie from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, junk2, Provincie", comboBox4.Text, 7, 8, 3);
 
                     }
 
@@ -1104,10 +1106,8 @@ namespace ProjectDrieDataVisualisatie
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
                 Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", comboBox4.Text, 3, 8, 3);
-
             }
         }
-
         private void gemeenteTextBox_TextChanged(object sender, EventArgs e)
         {
             if (gemeenteTextBox.Text == "delete system32" || gemeenteTextBox.Text == "deletesystem32" || gemeenteTextBox.Text == "deletesystem 32")
@@ -1121,14 +1121,24 @@ namespace ProjectDrieDataVisualisatie
                 }
 
             }
-            if (gemeenteTextBox.Text == "pepe" || gemeenteTextBox.Text == "dank pepe" || gemeenteTextBox.Text == "rare pepe")
+            else if (gemeenteTextBox.Text == "pepe" || gemeenteTextBox.Text == "dank pepe" || gemeenteTextBox.Text == "rare pepe")
             {
                 ImageOfDeath.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/yHHL07C.jpg");
                 ImageOfDeath.BringToFront();
             }
 
-        }
+            else if (gemeenteTextBox.Text == "hillary" || gemeenteTextBox.Text == "trump" || gemeenteTextBox.Text == "bernie" || gemeenteTextBox.Text == "bernie sanders" || gemeenteTextBox.Text == "hillary clinton" || gemeenteTextBox.Text == "hitler" || gemeenteTextBox.Text == "adolf hitler" || gemeenteTextBox.Text == "stalin" || gemeenteTextBox.Text == "mao" || gemeenteTextBox.Text == "mark rutte" || gemeenteTextBox.Text == "rutte" || gemeenteTextBox.Text == "Lenin" || gemeenteTextBox.Text == "Trotsky" || gemeenteTextBox.Text == "Spencer" || gemeenteTextBox.Text == "richard spencer")
+            {
+                axWindowsMediaPlayer1.URL = "C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/Stop it.mp4";
+                pictureBox1.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/IMG_5535.jpg");
+                timer1.Start();
+                timer1.Stop();
+                pictureBox1.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/jordan.jpg");
 
+            }
+
+        }
+        
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
         }
@@ -1334,18 +1344,6 @@ namespace ProjectDrieDataVisualisatie
             }
         }
 
-        private void fu_Click(object sender, EventArgs e)
-        {
-            if (backgroundselect.Visible == false)
-            {
-                backgroundselect.Visible = true;
-            }
-
-            else if (backgroundselect.Visible == true)
-            {
-                backgroundselect.Visible = false;
-            }
-        }
 
         private void backgroundselect_SelectedIndexChanged(object sender, EventArgs e)
         {
