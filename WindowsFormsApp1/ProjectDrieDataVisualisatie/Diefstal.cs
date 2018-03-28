@@ -16,7 +16,7 @@ namespace ProjectDrieDataVisualisatie
     public partial class Diefstal : UserControl
     {
         private List<string> SelectedGemeentes = new List<string>();
-        private Dictionary<string, List<string>> SelectedData = new Dictionary<string, List<string>>();
+        private List<string> SelectedFilters = new List<string>();
         private static Diefstal _Instance;
 
         public static Diefstal Instance
@@ -41,8 +41,7 @@ namespace ProjectDrieDataVisualisatie
 
         private void gemeenteTextbox_Click(object sender, EventArgs e)
         {
-            if (gemeenteTextbox.Text == "Voer plaatsnaam in...")
-                gemeenteTextbox.Text = null;
+            
         }
         private string createQueryString(string gemeente, List<string> dataRequest)
         {
@@ -69,59 +68,43 @@ namespace ProjectDrieDataVisualisatie
             {
                 if (!SelectedGemeentes.Contains(gemeenteTextbox.Text))
                 {
-                    SelectedGemeentes.Add(gemeenteTextbox.Text);
-                    SelectedData.Add(gemeenteTextbox.Text, new List<string>());
-                    selectGemeenteComboBox.Items.Add(gemeenteTextbox.Text);
-                    selectGemeenteComboBox.SelectedIndex = 0;
+                    gemeenteSelectionCheckbox.Items.Add(gemeenteTextbox.Text);
                 }
                 else
                     MessageBox.Show("Deze gemeente is al toegevoegd");
             }
             else
                 MessageBox.Show("Voer een geldige gemeente in");
-            
-            
+
         }
 
         private void renderGraphsButton_Click(object sender, EventArgs e)
         {
-            List<string> checkedItems = dataSelectionCheckBox.CheckedItems.OfType<string>().ToList();
-            List<string> keys = new List<string>(SelectedData.Keys);
-            if (dataSelectionCheckBox.CheckedItems.Count == 0)
+            foreach (string SelectedGemeente in gemeenteSelectionCheckbox.CheckedItems)
             {
-                MessageBox.Show("Kies een geldig filter");
+                SelectedGemeentes.Add(SelectedGemeente);
             }
-            else if (selectGemeenteComboBox.Text != "")
+            foreach (string SelectedFilter in dataSelectionCheckBox.CheckedItems)
             {
-                foreach (string key in keys)
-                {
-                    SelectedData[key] = checkedItems;
-                }
+                SelectedFilters.Add(SelectedFilter);
             }
-
-            if (dataChart.Series.Count > 0)
-                dataChart.Series.Clear();
-
-            foreach (KeyValuePair<string, List<string>> dataRequest in SelectedData)
+            foreach (string Gemeente in SelectedGemeentes)
             {
-                dataChart.Series.Add(dataRequest.Key);
-                createQueryString(dataRequest.Key, dataRequest.Value);
+                if (!dataChart.Series.IsUniqueName(Gemeente))
+                    dataChart.Series.Remove(dataChart.Series[Gemeente]);
+
+                dataChart.Series.Add(Gemeente);
                 using (connection = new SqlConnection(conString))
-                using (SqlDataAdapter adapter = new SqlDataAdapter(createQueryString(dataRequest.Key, dataRequest.Value), connection))
+                using (SqlDataAdapter adapter = new SqlDataAdapter(createQueryString(Gemeente, SelectedFilters), connection))
                 {
                     DataTable result = new DataTable();
                     adapter.Fill(result);
-                    foreach (string column in dataRequest.Value)
+                    foreach (string Filter in SelectedFilters)
                     {
-                        dataChart.Series[dataRequest.Key].Points.AddXY(column, result.Rows[0][column]);
+                        dataChart.Series[Gemeente].Points.AddXY(Filter, result.Rows[0][Filter]);
                     }
                 }
             }
-        }
-
-        private void gemeenteTextbox_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 
