@@ -69,7 +69,7 @@ namespace ProjectDrieDataVisualisatie
             {
                 if (!gemeenteSelectionCheckbox.Items.Contains(gemeenteTextbox.Text))
                 {
-                
+                    gemeenteSelectionCheckbox.Items.Add(gemeenteTextbox.Text);
                 }
                 else
                     MessageBox.Show("Deze gemeente is al toegevoegd");
@@ -81,23 +81,28 @@ namespace ProjectDrieDataVisualisatie
 
         private void renderGraphsButton_Click(object sender, EventArgs e)
         {
-            dataChart.Series.Clear();
-            foreach (string Gemeente in gemeenteSelectionCheckbox.CheckedItems)
+            if (dataSelectionCheckBox.CheckedItems.Count == 0)
             {
-                dataChart.Series.Add(Gemeente);
-                using (connection = new SqlConnection(conString))
-                using (SqlDataAdapter adapter = new SqlDataAdapter(createQueryString(Gemeente, dataSelectionCheckBox.CheckedItems.OfType<string>().ToList()), connection))
-                { 
-                    DataTable result = new DataTable();
-                    adapter.Fill(result);
-                    foreach (string Filter in dataSelectionCheckBox.CheckedItems)
+                MessageBox.Show("Kies een geldig filter");
+            }
+            else
+            {
+                dataChart.Series.Clear();
+                foreach (string Gemeente in gemeenteSelectionCheckbox.CheckedItems)
+                {
+                    dataChart.Series.Add(Gemeente);
+                    using (connection = new SqlConnection(conString))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(createQueryString(Gemeente, dataSelectionCheckBox.CheckedItems.OfType<string>().ToList()), connection))
                     {
-                        dataChart.Series[Gemeente].Points.AddXY(Filter, result.Rows[0][Filter]);
+                        DataTable result = new DataTable();
+                        adapter.Fill(result);
+                        foreach (string Filter in dataSelectionCheckBox.CheckedItems)
+                        {
+                            dataChart.Series[Gemeente].Points.AddXY(Filter, result.Rows[0][Filter]);
+                        }
                     }
                 }
             }
         }
-        
     }
-
 }
