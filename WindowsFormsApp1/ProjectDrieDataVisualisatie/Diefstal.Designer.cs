@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.renderGraphsButton = new System.Windows.Forms.Button();
             this.dataChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.gemeenteselectionCheck = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -481,7 +482,7 @@
             "WoningDiefstal",
             "DiefstaluitnietResidentieleGebouwen",
             "OverigeDiefstalenInbraak"});
-            this.dataSelectionCheckBox.Location = new System.Drawing.Point(19, 156);
+            this.dataSelectionCheckBox.Location = new System.Drawing.Point(19, 358);
             this.dataSelectionCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.dataSelectionCheckBox.Name = "dataSelectionCheckBox";
             this.dataSelectionCheckBox.Size = new System.Drawing.Size(197, 184);
@@ -519,10 +520,19 @@
             this.dataChart.TabIndex = 19;
             this.dataChart.Text = "chart1";
             // 
+            // gemeenteselectionCheck
+            // 
+            this.gemeenteselectionCheck.FormattingEnabled = true;
+            this.gemeenteselectionCheck.Location = new System.Drawing.Point(19, 172);
+            this.gemeenteselectionCheck.Name = "gemeenteselectionCheck";
+            this.gemeenteselectionCheck.Size = new System.Drawing.Size(197, 169);
+            this.gemeenteselectionCheck.TabIndex = 20;
+            // 
             // Diefstal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gemeenteselectionCheck);
             this.Controls.Add(this.dataChart);
             this.Controls.Add(this.renderGraphsButton);
             this.Controls.Add(this.label1);
@@ -547,5 +557,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button renderGraphsButton;
         private System.Windows.Forms.DataVisualization.Charting.Chart dataChart;
+        private System.Windows.Forms.CheckedListBox gemeenteselectionCheck;
     }
 }
