@@ -74,6 +74,8 @@ namespace ProjectDrieDataVisualisatie
                     selectGemeenteComboBox.Items.Add(gemeenteTextbox.Text);
                     selectGemeenteComboBox.SelectedIndex = 0;
                 }
+                else
+                    MessageBox.Show("Deze gemeente is al toegevoegd");
             }
             else
                 MessageBox.Show("Voer een geldige gemeente in");

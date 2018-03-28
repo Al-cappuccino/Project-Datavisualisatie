@@ -34,7 +34,6 @@
             this.addGemeenteButton = new System.Windows.Forms.Button();
             this.selectGemeenteComboBox = new System.Windows.Forms.ComboBox();
             this.dataSelectionCheckBox = new System.Windows.Forms.CheckedListBox();
-            this.submitSeletedDataButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.renderGraphsButton = new System.Windows.Forms.Button();
             this.dataChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -488,16 +487,6 @@
             this.dataSelectionCheckBox.Size = new System.Drawing.Size(197, 184);
             this.dataSelectionCheckBox.TabIndex = 15;
             // 
-            // submitSeletedDataButton
-            // 
-            this.submitSeletedDataButton.Location = new System.Drawing.Point(219, 132);
-            this.submitSeletedDataButton.Margin = new System.Windows.Forms.Padding(2);
-            this.submitSeletedDataButton.Name = "submitSeletedDataButton";
-            this.submitSeletedDataButton.Size = new System.Drawing.Size(56, 19);
-            this.submitSeletedDataButton.TabIndex = 16;
-            this.submitSeletedDataButton.Text = "submit";
-            this.submitSeletedDataButton.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -537,7 +526,6 @@
             this.Controls.Add(this.dataChart);
             this.Controls.Add(this.renderGraphsButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.submitSeletedDataButton);
             this.Controls.Add(this.dataSelectionCheckBox);
             this.Controls.Add(this.selectGemeenteComboBox);
             this.Controls.Add(this.addGemeenteButton);
@@ -556,7 +544,6 @@
         private System.Windows.Forms.Button addGemeenteButton;
         private System.Windows.Forms.ComboBox selectGemeenteComboBox;
         private System.Windows.Forms.CheckedListBox dataSelectionCheckBox;
-        private System.Windows.Forms.Button submitSeletedDataButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button renderGraphsButton;
         private System.Windows.Forms.DataVisualization.Charting.Chart dataChart;
