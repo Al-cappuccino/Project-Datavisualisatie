@@ -1110,7 +1110,7 @@ namespace ProjectDrieDataVisualisatie
 
         private void gemeenteTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (gemeenteTextBox.Text == "delete system32" || gemeenteTextBox.Text == "deletesystem32" || gemeenteTextBox.Text == "deletesystem 32") 
+            if (gemeenteTextBox.Text == "delete system32" || gemeenteTextBox.Text == "deletesystem32" || gemeenteTextBox.Text == "deletesystem 32")
             {
                 ImageOfDeath.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/133vhw.jpg");
                 ImageOfDeath.BringToFront();
@@ -1119,13 +1119,13 @@ namespace ProjectDrieDataVisualisatie
                     MessageBox.Show("oh no");
                     this.UseWaitCursor = true;
                 }
-                
+
             }
             if (gemeenteTextBox.Text == "pepe" || gemeenteTextBox.Text == "dank pepe" || gemeenteTextBox.Text == "rare pepe")
             {
                 ImageOfDeath.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/yHHL07C.jpg");
                 ImageOfDeath.BringToFront();
-                }
+            }
 
         }
 
@@ -1349,7 +1349,7 @@ namespace ProjectDrieDataVisualisatie
 
         private void backgroundselect_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
