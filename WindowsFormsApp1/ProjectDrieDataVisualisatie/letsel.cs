@@ -89,7 +89,11 @@ namespace ProjectDrieDataVisualisatie
                     if (_result.Columns[a].ColumnName == "Column11" || _result.Columns[a].ColumnName == "Column21" || _result.Columns[a].ColumnName == "Column31")
                     {
                         _result.Columns[a].ColumnName = _result.Columns[a].ColumnName.Remove(_result.Columns[a].ColumnName.Length - 1);
-                        _columnNum = a + 1;
+                        if (_result.Columns[a + 1].ColumnName != "Provincie" && _result.Columns[a + 1].ColumnName != "Gemeente")
+                        {
+                            _columnNum = a + 1;
+                        }
+                        else _columnNum = a + 3;
                     }
                 }
             }
@@ -125,7 +129,11 @@ namespace ProjectDrieDataVisualisatie
 
                     if (_result.Columns[a].ColumnName == "Column311")
                     {
-                        _columnNum = a + 1;
+                        if (_result.Columns[a + 1].ColumnName != "Provincie" && _result.Columns[a + 1].ColumnName != "Gemeente")
+                        {
+                            _columnNum = a + 1;
+                        }
+                        else _columnNum = a + 3;
                     }
                 }
             }
@@ -163,7 +171,11 @@ namespace ProjectDrieDataVisualisatie
 
                     if (_result.Columns[a].ColumnName == "Column3111")
                     {
-                        _columnNum = a + 1;
+                        if (_result.Columns[a + 1].ColumnName != "Provincie" && _result.Columns[a + 1].ColumnName != "Gemeente")
+                        {
+                            _columnNum = a + 1;
+                        }
+                        else _columnNum = a + 3;
                     }
                 }
             }
@@ -278,7 +290,7 @@ namespace ProjectDrieDataVisualisatie
         }
         private void LocDispGem()
         {
-            
+
             if (_result.Rows[0][3].ToString() == @"Zuid-holland" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
             {
                 pictureBox1.Image = imageList1.Images[1];
@@ -288,7 +300,7 @@ namespace ProjectDrieDataVisualisatie
             {
                 pictureBox1.Image = imageList1.Images[2];
             }
-                
+
             else if (_result.Rows[0][3].ToString() == @"noord-holland" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
             {
                 pictureBox1.Image = imageList1.Images[3];
@@ -322,7 +334,7 @@ namespace ProjectDrieDataVisualisatie
             {
                 pictureBox1.Image = imageList1.Images[9];
             }
-                
+
             else if (_result.Rows[0][3].ToString() == @"Friesland" && _result.Rows[0][4].ToString().ToLower() == selectGemeenteComboBox.Text)
             {
                 pictureBox1.Image = imageList1.Images[10];
@@ -341,206 +353,7 @@ namespace ProjectDrieDataVisualisatie
             {
                 pictureBox1.Image = imageList1.Images[0];
             }
-            
-        }
-        private void LocDispGem2()
-        { 
-            if (_result.Rows[1][3].ToString() == @"Zuid-holland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[1];
-            }
 
-            else if (_result.Rows[1][3].ToString() == @"Zeeland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[2];
-            }
-
-            else if (_result.Rows[1][3].ToString() == @"Noord-holland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[3];
-            }
-
-            else if (_result.Rows[1][3].ToString() == @"Utrecht" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[4];
-            }
-
-            else if (_result.Rows[1][3].ToString() == @"Flevoland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[5];
-            }
-            else if (_result.Rows[1][3].ToString() == @"Gelderland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[6];
-            }
-
-            else if (_result.Rows[1][3].ToString() == @"Limburg" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[7];
-            }
-
-            else if (_result.Rows[1][3].ToString() == @"Overijssel" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[8];
-            }
-
-            else if (_result.Rows[1][3].ToString() == @"Noord-brabant" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[9];
-            }
-
-            else if (_result.Rows[1][3].ToString() == @"Friesland" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[10];
-            }
-
-            else if (_result.Rows[1][3].ToString() == @"Groningen" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[11];
-            }
-
-            else if (_result.Rows[1][3].ToString() == @"Drenthe" && _result.Rows[1][4].ToString().ToLower() == comboBox1.Text)
-            {
-                pictureBox2.Image = imageList1.Images[12];
-            }
-            else
-            {
-                pictureBox2.Image = imageList1.Images[0];
-            }
-        }
-        private void LocDispGem3()
-        {
-            
-            if (_result.Rows[2][3].ToString() == @"Zuid-holland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[1];
-            }
-
-            else if (_result.Rows[2][3].ToString() == @"Zeeland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[2];
-            }
-
-            else if (_result.Rows[2][3].ToString() == @"noord-holland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[3];
-            }
-
-            else if (_result.Rows[2][3].ToString() == @"Utrecht" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[4];
-            }
-
-            else if (_result.Rows[2][3].ToString() == @"Flevoland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[5];
-            }
-            else if (_result.Rows[2][3].ToString() == @"Gelderland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[6];
-            }
-
-            else if (_result.Rows[2][3].ToString() == @"Limburg" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[7];
-            }
-
-            else if (_result.Rows[2][3].ToString() == @"Overijssel" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[8];
-            }
-
-            else if (_result.Rows[2][3].ToString() == @"Noord-brabant" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[9];
-            }
-
-            else if (_result.Rows[2][3].ToString() == @"Friesland" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[10];
-            }
-
-            else if (_result.Rows[2][3].ToString() == @"Groningen" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[11];
-            }
-
-            else if (_result.Rows[2][3].ToString() == @"Drenthe" && _result.Rows[2][4].ToString().ToLower() == comboBox3.Text)
-            {
-                pictureBox3.Image = imageList1.Images[12];
-            }
-            else
-            {
-                pictureBox3.Image = imageList1.Images[0];
-            }
-            
-        }
-        private void LocDispGem4()
-        {
-            
-                if (_result.Rows[3][3].ToString() == @"Zuid-holland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[1];
-                }
-
-                else if (_result.Rows[3][3].ToString() == @"Zeeland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[2];
-                }
-
-                else if (_result.Rows[3][3].ToString() == @"noord-holland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[3];
-                }
-
-                else if (_result.Rows[3][3].ToString() == @"Utrecht" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[4];
-                }
-
-                else if (_result.Rows[3][3].ToString() == @"Flevoland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[5];
-                }
-                else if (_result.Rows[3][3].ToString() == @"Gelderland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[6];
-                }
-
-                else if (_result.Rows[3][3].ToString() == @"Limburg" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[7];
-                }
-
-                else if (_result.Rows[3][3].ToString() == @"Overijssel" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[8];
-                }
-
-                else if (_result.Rows[3][3].ToString() == @"Noord-brabant" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[9];
-                }
-
-                else if (_result.Rows[3][3].ToString() == @"Friesland" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[10];
-                }
-
-                else if (_result.Rows[3][3].ToString() == @"Groningen" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[11];
-                }
-
-                else if (_result.Rows[3][3].ToString() == @"Drenthe" && _result.Rows[3][4].ToString().ToLower() == comboBox4.Text)
-                {
-                    pictureBox4.Image = imageList1.Images[12];
-                }
-                else
-                {
-                    pictureBox4.Image = imageList1.Images[0];
-                }
-            
         }
         private void CheckProvBox1()
         {
@@ -593,165 +406,12 @@ namespace ProjectDrieDataVisualisatie
                 pictureBox1.Image = imageList1.Images[12];
             }
         }
-        private void CheckProvBox2()
-        {
-            if (comboBox1.Text == @"zuid-holland")
-            {
-                pictureBox2.Image = imageList1.Images[1];
-            }
-            else if (comboBox1.Text == @"zeeland")
-            {
-                pictureBox2.Image = imageList1.Images[2];
-            }
-            else if (comboBox1.Text == @"noord-holland")
-            {
-                pictureBox2.Image = imageList1.Images[3];
-            }
-            else if (comboBox1.Text == @"utrecht")
-            {
-                pictureBox2.Image = imageList1.Images[4];
-            }
-            else if (comboBox1.Text == @"flevoland")
-            {
-                pictureBox2.Image = imageList1.Images[5];
-            }
-            else if (comboBox1.Text == @"gelderland")
-            {
-                pictureBox2.Image = imageList1.Images[6];
-            }
-            else if (comboBox1.Text == @"limburg")
-            {
-                pictureBox2.Image = imageList1.Images[7];
-            }
-            else if (comboBox1.Text == @"overijssel")
-            {
-                pictureBox2.Image = imageList1.Images[8];
-            }
-            else if (comboBox1.Text == @"noord-brabant")
-            {
-                pictureBox2.Image = imageList1.Images[9];
-            }
-            else if (comboBox1.Text == @"friesland")
-            {
-                pictureBox2.Image = imageList1.Images[10];
-            }
-            else if (comboBox1.Text == @"groningen")
-            {
-                pictureBox2.Image = imageList1.Images[11];
-            }
-            else if (comboBox1.Text == @"drenthe")
-            {
-                pictureBox2.Image = imageList1.Images[12];
-            }
-        }
-        private void CheckProvBox3()
-        {
-            if (comboBox3.Text == @"zuid-holland")
-            {
-                pictureBox3.Image = imageList1.Images[1];
-            }
-            else if (comboBox3.Text == @"zeeland")
-            {
-                pictureBox3.Image = imageList1.Images[2];
-            }
-            else if (comboBox3.Text == @"noord-holland")
-            {
-                pictureBox3.Image = imageList1.Images[3];
-            }
-            else if (comboBox3.Text == @"utrecht")
-            {
-                pictureBox3.Image = imageList1.Images[4];
-            }
-            else if (comboBox3.Text == @"flevoland")
-            {
-                pictureBox3.Image = imageList1.Images[5];
-            }
-            else if (comboBox3.Text == @"gelderland")
-            {
-                pictureBox3.Image = imageList1.Images[6];
-            }
-            else if (comboBox3.Text == @"limburg")
-            {
-                pictureBox3.Image = imageList1.Images[7];
-            }
-            else if (comboBox3.Text == @"overijssel")
-            {
-                pictureBox3.Image = imageList1.Images[8];
-            }
-            else if (comboBox3.Text == @"noord-brabant")
-            {
-                pictureBox3.Image = imageList1.Images[9];
-            }
-            else if (comboBox3.Text == @"friesland")
-            {
-                pictureBox3.Image = imageList1.Images[10];
-            }
-            else if (comboBox3.Text == @"groningen")
-            {
-                pictureBox3.Image = imageList1.Images[11];
-            }
-            else if (comboBox3.Text == @"drenthe")
-            {
-                pictureBox3.Image = imageList1.Images[12];
-            }
-        }
-        private void CheckProvBox4()
-        {
-            if (comboBox4.Text == @"zuid-holland")
-            {
-                pictureBox4.Image = imageList1.Images[1];
-            }
-            else if (comboBox4.Text == @"zeeland")
-            {
-                pictureBox4.Image = imageList1.Images[2];
-            }
-            else if (comboBox4.Text == @"noord-holland")
-            {
-                pictureBox4.Image = imageList1.Images[3];
-            }
-            else if (comboBox4.Text == @"utrecht")
-            {
-                pictureBox4.Image = imageList1.Images[4];
-            }
-            else if (comboBox4.Text == @"flevoland")
-            {
-                pictureBox4.Image = imageList1.Images[5];
-            }
-            else if (comboBox4.Text == @"gelderland")
-            {
-                pictureBox4.Image = imageList1.Images[6];
-            }
-            else if (comboBox4.Text == @"limburg")
-            {
-                pictureBox4.Image = imageList1.Images[7];
-            }
-            else if (comboBox4.Text == @"overijssel")
-            {
-                pictureBox4.Image = imageList1.Images[8];
-            }
-            else if (comboBox4.Text == @"noord-brabant")
-            {
-                pictureBox4.Image = imageList1.Images[9];
-            }
-            else if (comboBox4.Text == @"friesland")
-            {
-                pictureBox4.Image = imageList1.Images[10];
-            }
-            else if (comboBox4.Text == @"groningen")
-            {
-                pictureBox4.Image = imageList1.Images[11];
-            }
-            else if (comboBox4.Text == @"drenthe")
-            {
-                pictureBox4.Image = imageList1.Images[12];
-            }
-        }
         private void Check1()
         {
             if (selectGemeenteComboBox.SelectedIndex != 0 && selectGemeenteComboBox.SelectedIndex != -1 && selectGemeenteComboBox.Text != comboBox1.Text && selectGemeenteComboBox.Text != comboBox3.Text && selectGemeenteComboBox.Text != comboBox4.Text)
             {
                 if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
-                {   
+                {
                     if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-brabant" ||
                         selectGemeenteComboBox.Text == @"noord-holland" ||
                         selectGemeenteComboBox.Text == @"gelderland" || selectGemeenteComboBox.Text == @"friesland" ||
@@ -791,7 +451,7 @@ namespace ProjectDrieDataVisualisatie
                         LocDispGem();
                     }
 
-                    
+
                 }
                 else if (checkBox1.Checked && checkBox3.Checked && checkBox2.Checked == false)
                 {
@@ -811,7 +471,7 @@ namespace ProjectDrieDataVisualisatie
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld), junk, Provincie, Gemeente from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "' group by Gemeente, junk, Provincie", selectGemeenteComboBox.Text, 4, 1, 0);
                         LocDispGem();
                     }
-                    
+
                 }
                 else if (checkBox2.Checked && checkBox3.Checked && checkBox1.Checked == false)
                 {
@@ -831,7 +491,7 @@ namespace ProjectDrieDataVisualisatie
                         Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld), junk, Provincie, Gemeente from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "' group by Gemeente, junk, Provincie", selectGemeenteComboBox.Text, 5, 1, 0);
                         LocDispGem();
                     }
-                    
+
                 }
                 else if (checkBox1.Checked && checkBox2.Checked == false && checkBox3.Checked == false)
                 {
@@ -851,7 +511,7 @@ namespace ProjectDrieDataVisualisatie
                         Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk1, Provincie from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "' group by Gemeente, junk, Provincie", selectGemeenteComboBox.Text, 1, 1, 0);
                         LocDispGem();
                     }
-                    
+
                 }
                 else if (checkBox2.Checked && checkBox1.Checked == false && checkBox3.Checked == false)
                 {
@@ -871,7 +531,7 @@ namespace ProjectDrieDataVisualisatie
                         Fillchart("select sum(Mishandeling), junk, junk1, Provincie from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "' group by Gemeente, junk, junk1, Provincie", selectGemeenteComboBox.Text, 6, 1, 0);
                         LocDispGem();
                     }
-                    
+
                 }
                 else if (checkBox3.Checked && checkBox1.Checked == false && checkBox2.Checked == false)
                 {
@@ -891,7 +551,7 @@ namespace ProjectDrieDataVisualisatie
                         Fillchart("select sum(Openlijk_Geweld), junk1, junk, Provincie, Gemeente from Letsel where Gemeente = '" + selectGemeenteComboBox.Text + "' group by Gemeente, junk, junk1, Provincie", selectGemeenteComboBox.Text, 7, 1, 0);
                         LocDispGem();
                     }
-                    
+
                 }
                 else if (checkBox3.Checked == false && checkBox1.Checked == false && checkBox2.Checked == false)
                 {
@@ -940,12 +600,12 @@ namespace ProjectDrieDataVisualisatie
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 3, 4, 1);
-                        CheckProvBox2();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld), Provincie, Gemeente from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, Provincie", comboBox1.Text, 3, 4, 1);
-                        LocDispGem2();
+
                     }
 
                 }
@@ -960,14 +620,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 2, 4, 1);
-                        CheckProvBox2();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), junk, Provincie, Gemeente from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, Provincie", comboBox1.Text, 2, 4, 1);
-                        LocDispGem2();
+
                     }
-                    
+
                 }
                 else if (checkBox3.Checked && checkBox1.Checked && checkBox2.Checked == false)
                 {
@@ -980,14 +640,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 4, 4, 1);
-                        CheckProvBox2();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld), junk, Provincie, Gemeente from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, Provincie", comboBox1.Text, 4, 4, 1);
-                        LocDispGem2();
+
                     }
-                    
+
                 }
                 else if (checkBox2.Checked && checkBox1.Checked && checkBox3.Checked == false)
                 {
@@ -1000,14 +660,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
                     {
                         Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 5, 4, 1);
-                        CheckProvBox2();
+
                     }
                     else
                     {
                         Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld), junk, Provincie, Gemeente from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, Provincie", comboBox1.Text, 5, 4, 1);
-                        LocDispGem2();
+
                     }
-                    
+
                 }
                 else if (checkBox3.Checked && checkBox2.Checked == false && checkBox1.Checked == false)
                 {
@@ -1020,14 +680,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 1, 4, 1);
-                        CheckProvBox2();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox1.Text, 1, 4, 1);
-                        LocDispGem2();
+
                     }
-                    
+
                 }
                 else if (checkBox2.Checked && checkBox3.Checked == false && checkBox1.Checked == false)
                 {
@@ -1040,14 +700,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
                     {
                         Fillchart("select sum(Mishandeling) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 6, 4, 1);
-                        CheckProvBox2();
+
                     }
                     else
                     {
                         Fillchart("select sum(Mishandeling), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox1.Text, 6, 4, 1);
-                        LocDispGem2();
+
                     }
-                    
+
                 }
                 else if (checkBox1.Checked && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
@@ -1060,14 +720,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox1.Text == @"limburg" || comboBox1.Text == @"utrecht")
                     {
                         Fillchart("select sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox1.Text + "'", comboBox1.Text, 7, 4, 1);
-                        CheckProvBox2();
+
                     }
                     else
                     {
                         Fillchart("select sum(Openlijk_Geweld), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox1.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox1.Text, 7, 4, 1);
-                        LocDispGem2();
+
                     }
-                    
+
                 }
                 else if (checkBox1.Checked == false && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
@@ -1086,7 +746,6 @@ namespace ProjectDrieDataVisualisatie
                 }
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", comboBox1.Text, 3, 4, 1);
-                pictureBox2.Image = imageList1.Images[0];
             }
 
             if (comboBox3.SelectedIndex != -1 && comboBox4.SelectedIndex != -1 && comboBox1.Text != comboBox3.Text && comboBox1.Text != comboBox4.Text)
@@ -1121,14 +780,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 3, 8, 2);
-                        CheckProvBox3();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld), Provincie, Gemeente from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, Provincie", comboBox3.Text, 3, 8, 2);
-                        LocDispGem3();
+
                     }
-                    
+
                 }
                 else if (checkBox3.Checked && checkBox2.Checked && checkBox1.Checked == false)
                 {
@@ -1141,14 +800,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 2, 8, 2);
-                        CheckProvBox3();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), junk, Provincie, Gemeente from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, Provincie", comboBox3.Text, 2, 8, 2);
-                        LocDispGem3();
+
                     }
-                    
+
                 }
                 else if (checkBox3.Checked && checkBox1.Checked && checkBox2.Checked == false)
                 {
@@ -1161,14 +820,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 4, 8, 2);
-                        CheckProvBox3();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld), junk, Provincie, Gemeente from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, Provincie", comboBox3.Text, 4, 8, 2);
-                        LocDispGem3();
+
                     }
-                    
+
                 }
                 else if (checkBox2.Checked && checkBox1.Checked && checkBox3.Checked == false)
                 {
@@ -1181,14 +840,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
                     {
                         Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 5, 8, 2);
-                        CheckProvBox3();
+
                     }
                     else
                     {
                         Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld), junk, Provincie, Gemeente from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, Provincie", comboBox3.Text, 5, 8, 2);
-                        LocDispGem3();
+
                     }
-                    
+
                 }
                 else if (checkBox3.Checked && checkBox2.Checked == false && checkBox1.Checked == false)
                 {
@@ -1201,14 +860,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 1, 8, 2);
-                        CheckProvBox3();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox3.Text, 1, 8, 2);
-                        LocDispGem3();
+
                     }
-                    
+
                 }
                 else if (checkBox2.Checked && checkBox3.Checked == false && checkBox1.Checked == false)
                 {
@@ -1221,14 +880,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
                     {
                         Fillchart("select sum(Mishandeling) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 6, 8, 2);
-                        CheckProvBox3();
+
                     }
                     else
                     {
                         Fillchart("select sum(Mishandeling), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox3.Text, 6, 8, 2);
-                        LocDispGem3();
+
                     }
-                    
+
                 }
                 else if (checkBox1.Checked && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
@@ -1241,14 +900,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox3.Text == @"limburg" || comboBox3.Text == @"utrecht")
                     {
                         Fillchart("select sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox3.Text + "'", comboBox3.Text, 7, 8, 2);
-                        CheckProvBox3();
+
                     }
                     else
                     {
                         Fillchart("select sum(Openlijk_Geweld), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox3.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox3.Text, 7, 8, 2);
-                        LocDispGem3();
+
                     }
-                    
+
                 }
                 else if (checkBox1.Checked == false && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
@@ -1268,7 +927,6 @@ namespace ProjectDrieDataVisualisatie
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", comboBox3.Text, 3, 8, 2);
-                pictureBox3.Image = imageList1.Images[0];
             }
 
             if (comboBox4.SelectedIndex != -1 && comboBox3.Text != selectGemeenteComboBox.Text && comboBox3.Text != comboBox1.Text && comboBox3.Text != comboBox4.Text)
@@ -1298,14 +956,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 3, 8, 3);
-                        CheckProvBox4();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld), Provincie, Gemeente from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, Provincie", comboBox4.Text, 3, 8, 3);
-                        LocDispGem4();
+
                     }
-                    
+
                 }
                 else if (checkBox3.Checked && checkBox2.Checked && checkBox1.Checked == false)
                 {
@@ -1318,14 +976,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 2, 8, 3);
-                        CheckProvBox4();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), junk, Provincie, Gemeente from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, Provincie", comboBox4.Text, 2, 8, 3);
-                        LocDispGem4();
+
                     }
-                    
+
                 }
                 else if (checkBox3.Checked && checkBox1.Checked && checkBox2.Checked == false)
                 {
@@ -1338,14 +996,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 4, 8, 3);
-                        CheckProvBox4();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), sum(Openlijk_Geweld), junk, Provincie, Gemeente from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, Provincie", comboBox4.Text, 4, 8, 3);
-                        LocDispGem4();
+
                     }
-                    
+
                 }
                 else if (checkBox2.Checked && checkBox1.Checked && checkBox3.Checked == false)
                 {
@@ -1358,14 +1016,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
                     {
                         Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 5, 8, 3);
-                        CheckProvBox4();
+
                     }
                     else
                     {
                         Fillchart("select sum(Mishandeling), sum(Openlijk_Geweld), junk, Provincie, Gemeente from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, Provincie", comboBox4.Text, 5, 8, 3);
-                        LocDispGem4();
+
                     }
-                    
+
                 }
                 else if (checkBox3.Checked && checkBox2.Checked == false && checkBox1.Checked == false)
                 {
@@ -1378,14 +1036,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 1, 8, 3);
-                        CheckProvBox4();
+
                     }
                     else
                     {
                         Fillchart("select sum(HIC_geweldsmisdrijven), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox4.Text, 1, 8, 3);
-                        LocDispGem4();
+
                     }
-                    
+
                 }
                 else if (checkBox2.Checked && checkBox3.Checked == false && checkBox1.Checked == false)
                 {
@@ -1398,14 +1056,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
                     {
                         Fillchart("select sum(Mishandeling) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 6, 8, 3);
-                        CheckProvBox4();
+
                     }
                     else
                     {
                         Fillchart("select sum(Mishandeling), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox4.Text, 6, 8, 3);
-                        LocDispGem4();
+
                     }
-                    
+
                 }
                 else if (checkBox1.Checked && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
@@ -1418,14 +1076,14 @@ namespace ProjectDrieDataVisualisatie
                         comboBox4.Text == @"limburg" || comboBox4.Text == @"utrecht")
                     {
                         Fillchart("select sum(Openlijk_Geweld) from Letsel where Provincie = '" + comboBox4.Text + "'", comboBox4.Text, 7, 8, 3);
-                        CheckProvBox4();
+
                     }
                     else
                     {
                         Fillchart("select sum(Openlijk_Geweld), junk, junk1, Provincie from Letsel where Gemeente = '" + comboBox4.Text + "'group by Gemeente, junk, junk1, Provincie", comboBox4.Text, 7, 8, 3);
-                        LocDispGem4();
+
                     }
-                    
+
                 }
                 else if (checkBox1.Checked == false && checkBox3.Checked == false && checkBox2.Checked == false)
                 {
@@ -1446,7 +1104,7 @@ namespace ProjectDrieDataVisualisatie
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
                 Fillchart("select sum(HIC_geweldsmisdrijven), sum(Mishandeling), sum(Openlijk_Geweld) from Letsel", comboBox4.Text, 3, 8, 3);
-                pictureBox4.Image = imageList1.Images[0];
+
             }
         }
 
@@ -1500,7 +1158,6 @@ namespace ProjectDrieDataVisualisatie
             {
                 _check = true;
                 comboBox1.Visible = true;
-                pictureBox2.Visible = true;
                 button2.Visible = true;
             }
             else if (_check && !string.IsNullOrEmpty(selectGemeenteComboBox.Text))
@@ -1510,15 +1167,12 @@ namespace ProjectDrieDataVisualisatie
                 _check3 = false;
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 comboBox1.Visible = false;
-                pictureBox2.Visible = false;
                 comboBox1.SelectedIndex = -1;
                 button2.Visible = false;
                 comboBox3.Visible = false;
-                pictureBox3.Visible = false;
                 comboBox3.SelectedIndex = -1;
                 button3.Visible = false;
                 comboBox4.Visible = false;
-                pictureBox4.Visible = false;
                 comboBox4.SelectedIndex = -1;
             }
             else if (_check)
@@ -1527,15 +1181,12 @@ namespace ProjectDrieDataVisualisatie
                 _check2 = false;
                 _check3 = false;
                 comboBox1.Visible = false;
-                pictureBox2.Visible = false;
                 comboBox1.SelectedIndex = -1;
                 button2.Visible = false;
                 comboBox3.Visible = false;
-                pictureBox3.Visible = false;
                 comboBox3.SelectedIndex = -1;
                 button3.Visible = false;
                 comboBox4.Visible = false;
-                pictureBox4.Visible = false;
                 comboBox4.SelectedIndex = -1;
             }
         }
@@ -1574,7 +1225,6 @@ namespace ProjectDrieDataVisualisatie
             {
                 _check2 = true;
                 comboBox3.Visible = true;
-                pictureBox3.Visible = true;
                 button3.Visible = true;
             }
             else if (_check2 && !string.IsNullOrEmpty(comboBox1.Text))
@@ -1584,11 +1234,9 @@ namespace ProjectDrieDataVisualisatie
                 Fillchart(_oldquery[0], selectGemeenteComboBox.Text, Convert.ToInt16(_oldquery[1]), Convert.ToInt16(_oldquery[2]), 0);
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 comboBox3.Visible = false;
-                pictureBox3.Visible = false;
                 comboBox3.SelectedIndex = -1;
                 button3.Visible = false;
                 comboBox4.Visible = false;
-                pictureBox4.Visible = false;
                 comboBox4.SelectedIndex = -1;
             }
             else if (_check2 && string.IsNullOrEmpty(comboBox1.Text))
@@ -1596,11 +1244,9 @@ namespace ProjectDrieDataVisualisatie
                 _check2 = false;
                 _check3 = false;
                 comboBox3.Visible = false;
-                pictureBox3.Visible = false;
                 comboBox3.SelectedIndex = -1;
                 button3.Visible = false;
                 comboBox4.Visible = false;
-                pictureBox4.Visible = false;
                 comboBox4.SelectedIndex = -1;
             }
         }
@@ -1638,7 +1284,6 @@ namespace ProjectDrieDataVisualisatie
             {
                 _check3 = true;
                 comboBox4.Visible = true;
-                pictureBox4.Visible = true;
             }
             else if (_check3 && !string.IsNullOrEmpty(comboBox3.Text))
             {
@@ -1647,14 +1292,12 @@ namespace ProjectDrieDataVisualisatie
                 Fillchart(_oldquery[3], comboBox1.Text, Convert.ToInt16(_oldquery[4]), Convert.ToInt16(_oldquery[5]), 1);
                 Fillchart(_oldquery[6], comboBox3.Text, Convert.ToInt16(_oldquery[7]), Convert.ToInt16(_oldquery[8]), 2);
                 comboBox4.Visible = false;
-                pictureBox4.Visible = false;
                 comboBox4.SelectedIndex = -1;
             }
             else if (_check3 && string.IsNullOrEmpty(comboBox3.Text))
             {
                 _check3 = false;
                 comboBox4.Visible = false;
-                pictureBox4.Visible = false;
                 comboBox4.SelectedIndex = -1;
             }
         }
