@@ -1114,7 +1114,18 @@ namespace ProjectDrieDataVisualisatie
             {
                 ImageOfDeath.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/133vhw.jpg");
                 ImageOfDeath.BringToFront();
+                while (true)
+                {
+                    MessageBox.Show("oh no");
+                    this.UseWaitCursor = true;
+                }
+                
             }
+            if (gemeenteTextBox.Text == "pepe" || gemeenteTextBox.Text == "dank pepe" || gemeenteTextBox.Text == "rare pepe")
+            {
+                ImageOfDeath.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/yHHL07C.jpg");
+                ImageOfDeath.BringToFront();
+                }
 
         }
 
