@@ -80,26 +80,16 @@ namespace ProjectDrieDataVisualisatie
 
         private void renderGraphsButton_Click(object sender, EventArgs e)
         {
-            foreach (string SelectedGemeente in gemeenteSelectionCheckbox.CheckedItems)
+            dataChart.Series.Clear();
+            foreach (string Gemeente in gemeenteSelectionCheckbox.CheckedItems)
             {
-                SelectedGemeentes.Add(SelectedGemeente);
-            }
-            foreach (string SelectedFilter in dataSelectionCheckBox.CheckedItems)
-            {
-                SelectedFilters.Add(SelectedFilter);
-            }
-            foreach (string Gemeente in SelectedGemeentes)
-            {
-                if (!dataChart.Series.IsUniqueName(Gemeente))
-                    dataChart.Series.Remove(dataChart.Series[Gemeente]);
-
                 dataChart.Series.Add(Gemeente);
                 using (connection = new SqlConnection(conString))
-                using (SqlDataAdapter adapter = new SqlDataAdapter(createQueryString(Gemeente, SelectedFilters), connection))
-                {
+                using (SqlDataAdapter adapter = new SqlDataAdapter(createQueryString(Gemeente, dataSelectionCheckBox.CheckedItems.OfType<string>().ToList()), connection))
+                { 
                     DataTable result = new DataTable();
                     adapter.Fill(result);
-                    foreach (string Filter in SelectedFilters)
+                    foreach (string Filter in dataSelectionCheckBox.CheckedItems)
                     {
                         dataChart.Series[Gemeente].Points.AddXY(Filter, result.Rows[0][Filter]);
                     }
