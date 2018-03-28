@@ -81,12 +81,7 @@ namespace ProjectDrieDataVisualisatie
             
         }
 
-        private void selectGemeenteComboBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void submitSeletedDataButton_Click(object sender, EventArgs e)
+        private void renderGraphsButton_Click(object sender, EventArgs e)
         {
             List<string> checkedItems = dataSelectionCheckBox.CheckedItems.OfType<string>().ToList();
             List<string> keys = new List<string>(SelectedData.Keys);
@@ -98,13 +93,10 @@ namespace ProjectDrieDataVisualisatie
             {
                 foreach (string key in keys)
                 {
-                        SelectedData[key] = checkedItems;
+                    SelectedData[key] = checkedItems;
                 }
             }
-        }
 
-        private void renderGraphsButton_Click(object sender, EventArgs e)
-        {
             if (dataChart.Series.Count > 0)
                 dataChart.Series.Clear();
 

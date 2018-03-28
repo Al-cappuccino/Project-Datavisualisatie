@@ -468,7 +468,6 @@
             this.selectGemeenteComboBox.Name = "selectGemeenteComboBox";
             this.selectGemeenteComboBox.Size = new System.Drawing.Size(197, 21);
             this.selectGemeenteComboBox.TabIndex = 14;
-            this.selectGemeenteComboBox.TextChanged += new System.EventHandler(this.selectGemeenteComboBox_TextChanged);
             // 
             // dataSelectionCheckBox
             // 
@@ -498,7 +497,6 @@
             this.submitSeletedDataButton.TabIndex = 16;
             this.submitSeletedDataButton.Text = "submit";
             this.submitSeletedDataButton.UseVisualStyleBackColor = true;
-            this.submitSeletedDataButton.Click += new System.EventHandler(this.submitSeletedDataButton_Click);
             // 
             // label1
             // 
