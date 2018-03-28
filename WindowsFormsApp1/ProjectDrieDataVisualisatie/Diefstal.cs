@@ -39,7 +39,10 @@ namespace ProjectDrieDataVisualisatie
 
         private void gemeenteTextbox_Click(object sender, EventArgs e)
         {
-            
+            if(gemeenteTextbox.Text == "Voer plaatsnaam in...")
+            {
+                gemeenteTextbox.Text = null;
+            }
         }
         private string createQueryString(string gemeente, List<string> dataRequest)
         {
@@ -94,6 +97,7 @@ namespace ProjectDrieDataVisualisatie
                 }
             }
         }
+        
     }
 
 }
