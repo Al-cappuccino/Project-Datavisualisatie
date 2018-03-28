@@ -31,8 +31,8 @@ namespace ProjectDrieDataVisualisatie
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Letsel));
             this.gemeenteTextBox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
@@ -467,9 +467,9 @@ namespace ProjectDrieDataVisualisatie
             this.gemeenteTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.gemeenteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gemeenteTextBox.ForeColor = System.Drawing.Color.White;
-            this.gemeenteTextBox.Location = new System.Drawing.Point(3, 3);
+            this.gemeenteTextBox.Location = new System.Drawing.Point(16, 13);
             this.gemeenteTextBox.Name = "gemeenteTextBox";
-            this.gemeenteTextBox.Size = new System.Drawing.Size(594, 49);
+            this.gemeenteTextBox.Size = new System.Drawing.Size(734, 49);
             this.gemeenteTextBox.TabIndex = 7;
             this.gemeenteTextBox.Text = "voer plaatsnaam in...";
             this.gemeenteTextBox.Click += new System.EventHandler(this.gemeenteTextBox_Click);
@@ -477,10 +477,10 @@ namespace ProjectDrieDataVisualisatie
             // 
             // submitGemeenteInputBtn
             // 
-            this.submitGemeenteInputBtn.Location = new System.Drawing.Point(612, 3);
+            this.submitGemeenteInputBtn.Location = new System.Drawing.Point(767, 13);
             this.submitGemeenteInputBtn.Margin = new System.Windows.Forms.Padding(2);
             this.submitGemeenteInputBtn.Name = "submitGemeenteInputBtn";
-            this.submitGemeenteInputBtn.Size = new System.Drawing.Size(96, 53);
+            this.submitGemeenteInputBtn.Size = new System.Drawing.Size(96, 49);
             this.submitGemeenteInputBtn.TabIndex = 8;
             this.submitGemeenteInputBtn.Text = "Ga";
             this.submitGemeenteInputBtn.UseVisualStyleBackColor = true;
@@ -489,7 +489,7 @@ namespace ProjectDrieDataVisualisatie
             // selectGemeenteComboBox
             // 
             this.selectGemeenteComboBox.FormattingEnabled = true;
-            this.selectGemeenteComboBox.Location = new System.Drawing.Point(16, 293);
+            this.selectGemeenteComboBox.Location = new System.Drawing.Point(18, 82);
             this.selectGemeenteComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.selectGemeenteComboBox.Name = "selectGemeenteComboBox";
             this.selectGemeenteComboBox.Size = new System.Drawing.Size(197, 21);
@@ -501,15 +501,15 @@ namespace ProjectDrieDataVisualisatie
             this.dataChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataChart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            chartArea2.AxisX.Interval = 1D;
-            chartArea2.AxisX.IntervalOffset = 1D;
-            chartArea2.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.dataChart.Legends.Add(legend2);
-            this.dataChart.Location = new System.Drawing.Point(16, 440);
+            chartArea4.AxisX.Interval = 1D;
+            chartArea4.AxisX.IntervalOffset = 1D;
+            chartArea4.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.dataChart.Legends.Add(legend4);
+            this.dataChart.Location = new System.Drawing.Point(16, 247);
             this.dataChart.Name = "dataChart";
-            this.dataChart.Size = new System.Drawing.Size(1092, 355);
+            this.dataChart.Size = new System.Drawing.Size(1092, 515);
             this.dataChart.TabIndex = 20;
             this.dataChart.Text = "chart1";
             // 
@@ -518,7 +518,7 @@ namespace ProjectDrieDataVisualisatie
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(16, 319);
+            this.checkBox1.Location = new System.Drawing.Point(388, 84);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(135, 17);
             this.checkBox1.TabIndex = 21;
@@ -531,7 +531,7 @@ namespace ProjectDrieDataVisualisatie
             this.checkBox2.AutoSize = true;
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(16, 342);
+            this.checkBox2.Location = new System.Drawing.Point(388, 107);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(88, 17);
             this.checkBox2.TabIndex = 22;
@@ -544,7 +544,7 @@ namespace ProjectDrieDataVisualisatie
             this.checkBox3.AutoSize = true;
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Location = new System.Drawing.Point(16, 365);
+            this.checkBox3.Location = new System.Drawing.Point(388, 130);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(106, 17);
             this.checkBox3.TabIndex = 23;
@@ -555,7 +555,7 @@ namespace ProjectDrieDataVisualisatie
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(319, 293);
+            this.comboBox1.Location = new System.Drawing.Point(18, 116);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(197, 21);
@@ -565,7 +565,7 @@ namespace ProjectDrieDataVisualisatie
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(218, 293);
+            this.button1.Location = new System.Drawing.Point(220, 82);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 21);
             this.button1.TabIndex = 29;
@@ -580,7 +580,7 @@ namespace ProjectDrieDataVisualisatie
             "kolomdiagram",
             "gestapelde kolom",
             "Piechart Beta"});
-            this.comboBox2.Location = new System.Drawing.Point(987, 401);
+            this.comboBox2.Location = new System.Drawing.Point(687, 220);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 30;
@@ -589,7 +589,7 @@ namespace ProjectDrieDataVisualisatie
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(898, 404);
+            this.label1.Location = new System.Drawing.Point(598, 223);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 31;
@@ -597,7 +597,7 @@ namespace ProjectDrieDataVisualisatie
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(521, 293);
+            this.button2.Location = new System.Drawing.Point(220, 116);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 21);
             this.button2.TabIndex = 32;
@@ -609,7 +609,7 @@ namespace ProjectDrieDataVisualisatie
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(622, 293);
+            this.comboBox3.Location = new System.Drawing.Point(18, 152);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(197, 21);
@@ -620,7 +620,7 @@ namespace ProjectDrieDataVisualisatie
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(925, 292);
+            this.comboBox4.Location = new System.Drawing.Point(18, 190);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(197, 21);
@@ -630,7 +630,7 @@ namespace ProjectDrieDataVisualisatie
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(824, 292);
+            this.button3.Location = new System.Drawing.Point(220, 151);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 21);
             this.button3.TabIndex = 34;
@@ -641,7 +641,7 @@ namespace ProjectDrieDataVisualisatie
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(16, 78);
+            this.pictureBox1.Location = new System.Drawing.Point(884, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(189, 187);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
