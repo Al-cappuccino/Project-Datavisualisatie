@@ -1110,6 +1110,11 @@ namespace ProjectDrieDataVisualisatie
 
         private void gemeenteTextBox_TextChanged(object sender, EventArgs e)
         {
+            if (gemeenteTextBox.Text == "delete system32" || gemeenteTextBox.Text == "deletesystem32" || gemeenteTextBox.Text == "deletesystem 32") 
+            {
+                ImageOfDeath.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/133vhw.jpg");
+                ImageOfDeath.BringToFront();
+            }
 
         }
 
@@ -1316,6 +1321,24 @@ namespace ProjectDrieDataVisualisatie
                 MessageBox.Show(@"Je kan niet twee dezelfde gemeenten of provincies met elkaar vergelijken.");
                 comboBox4.SelectedIndex = _selectindex[3];
             }
+        }
+
+        private void fu_Click(object sender, EventArgs e)
+        {
+            if (backgroundselect.Visible == false)
+            {
+                backgroundselect.Visible = true;
+            }
+
+            else if (backgroundselect.Visible == true)
+            {
+                backgroundselect.Visible = false;
+            }
+        }
+
+        private void backgroundselect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

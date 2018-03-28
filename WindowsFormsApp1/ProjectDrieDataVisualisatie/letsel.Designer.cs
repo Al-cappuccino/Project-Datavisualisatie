@@ -31,8 +31,8 @@ namespace ProjectDrieDataVisualisatie
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Letsel));
             this.gemeenteTextBox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
@@ -51,8 +51,14 @@ namespace ProjectDrieDataVisualisatie
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.fu = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.backgroundselect = new System.Windows.Forms.ComboBox();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.ImageOfDeath = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageOfDeath)).BeginInit();
             this.SuspendLayout();
             // 
             // gemeenteTextBox
@@ -177,7 +183,7 @@ namespace ProjectDrieDataVisualisatie
             "Gorinchem",
             "Gouda",
             "Grave",
-            "\'s-Gravenhage",
+            "Den Haag",
             "Groningen gemeente",
             "Grootegast",
             "Gulpen-Wittem",
@@ -207,7 +213,7 @@ namespace ProjectDrieDataVisualisatie
             "Helmond",
             "Hendrik-Ido-Ambacht",
             "Hengelo",
-            "\'s-Hertogenbosch",
+            "Den Bosch",
             "Heumen",
             "Heusden",
             "Hillegom",
@@ -467,9 +473,10 @@ namespace ProjectDrieDataVisualisatie
             this.gemeenteTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.gemeenteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gemeenteTextBox.ForeColor = System.Drawing.Color.White;
-            this.gemeenteTextBox.Location = new System.Drawing.Point(16, 13);
+            this.gemeenteTextBox.Location = new System.Drawing.Point(21, 16);
+            this.gemeenteTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gemeenteTextBox.Name = "gemeenteTextBox";
-            this.gemeenteTextBox.Size = new System.Drawing.Size(734, 49);
+            this.gemeenteTextBox.Size = new System.Drawing.Size(978, 60);
             this.gemeenteTextBox.TabIndex = 7;
             this.gemeenteTextBox.Text = "voer plaatsnaam in...";
             this.gemeenteTextBox.Click += new System.EventHandler(this.gemeenteTextBox_Click);
@@ -477,10 +484,10 @@ namespace ProjectDrieDataVisualisatie
             // 
             // submitGemeenteInputBtn
             // 
-            this.submitGemeenteInputBtn.Location = new System.Drawing.Point(767, 13);
-            this.submitGemeenteInputBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.submitGemeenteInputBtn.Location = new System.Drawing.Point(1023, 16);
+            this.submitGemeenteInputBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.submitGemeenteInputBtn.Name = "submitGemeenteInputBtn";
-            this.submitGemeenteInputBtn.Size = new System.Drawing.Size(96, 49);
+            this.submitGemeenteInputBtn.Size = new System.Drawing.Size(128, 60);
             this.submitGemeenteInputBtn.TabIndex = 8;
             this.submitGemeenteInputBtn.Text = "Ga";
             this.submitGemeenteInputBtn.UseVisualStyleBackColor = true;
@@ -489,10 +496,10 @@ namespace ProjectDrieDataVisualisatie
             // selectGemeenteComboBox
             // 
             this.selectGemeenteComboBox.FormattingEnabled = true;
-            this.selectGemeenteComboBox.Location = new System.Drawing.Point(18, 82);
-            this.selectGemeenteComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.selectGemeenteComboBox.Location = new System.Drawing.Point(24, 101);
+            this.selectGemeenteComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.selectGemeenteComboBox.Name = "selectGemeenteComboBox";
-            this.selectGemeenteComboBox.Size = new System.Drawing.Size(197, 21);
+            this.selectGemeenteComboBox.Size = new System.Drawing.Size(261, 24);
             this.selectGemeenteComboBox.TabIndex = 15;
             this.selectGemeenteComboBox.SelectedIndexChanged += new System.EventHandler(this.selectGemeenteComboBox_SelectedIndexChanged);
             // 
@@ -501,15 +508,16 @@ namespace ProjectDrieDataVisualisatie
             this.dataChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataChart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            chartArea4.AxisX.Interval = 1D;
-            chartArea4.AxisX.IntervalOffset = 1D;
-            chartArea4.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.dataChart.Legends.Add(legend4);
-            this.dataChart.Location = new System.Drawing.Point(16, 247);
+            chartArea2.AxisX.Interval = 1D;
+            chartArea2.AxisX.IntervalOffset = 1D;
+            chartArea2.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.dataChart.Legends.Add(legend2);
+            this.dataChart.Location = new System.Drawing.Point(21, 304);
+            this.dataChart.Margin = new System.Windows.Forms.Padding(4);
             this.dataChart.Name = "dataChart";
-            this.dataChart.Size = new System.Drawing.Size(1092, 515);
+            this.dataChart.Size = new System.Drawing.Size(1456, 634);
             this.dataChart.TabIndex = 20;
             this.dataChart.Text = "chart1";
             // 
@@ -518,9 +526,10 @@ namespace ProjectDrieDataVisualisatie
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(388, 84);
+            this.checkBox1.Location = new System.Drawing.Point(517, 103);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(135, 17);
+            this.checkBox1.Size = new System.Drawing.Size(174, 21);
             this.checkBox1.TabIndex = 21;
             this.checkBox1.Text = "HIC_geweldsmisdrijven";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -531,9 +540,10 @@ namespace ProjectDrieDataVisualisatie
             this.checkBox2.AutoSize = true;
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(388, 107);
+            this.checkBox2.Location = new System.Drawing.Point(517, 132);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(88, 17);
+            this.checkBox2.Size = new System.Drawing.Size(113, 21);
             this.checkBox2.TabIndex = 22;
             this.checkBox2.Text = "Mishandeling";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -544,9 +554,10 @@ namespace ProjectDrieDataVisualisatie
             this.checkBox3.AutoSize = true;
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Location = new System.Drawing.Point(388, 130);
+            this.checkBox3.Location = new System.Drawing.Point(517, 160);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(106, 17);
+            this.checkBox3.Size = new System.Drawing.Size(136, 21);
             this.checkBox3.TabIndex = 23;
             this.checkBox3.Text = "Openlijk_Geweld";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -555,19 +566,20 @@ namespace ProjectDrieDataVisualisatie
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(18, 116);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(24, 143);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(197, 21);
+            this.comboBox1.Size = new System.Drawing.Size(261, 24);
             this.comboBox1.TabIndex = 24;
             this.comboBox1.Visible = false;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(220, 82);
+            this.button1.Location = new System.Drawing.Point(293, 101);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 21);
+            this.button1.Size = new System.Drawing.Size(128, 26);
             this.button1.TabIndex = 29;
             this.button1.Text = "Vergelijken";
             this.button1.UseVisualStyleBackColor = true;
@@ -580,26 +592,29 @@ namespace ProjectDrieDataVisualisatie
             "kolomdiagram",
             "gestapelde kolom",
             "Piechart Beta"});
-            this.comboBox2.Location = new System.Drawing.Point(687, 220);
+            this.comboBox2.Location = new System.Drawing.Point(916, 271);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.Size = new System.Drawing.Size(160, 24);
             this.comboBox2.TabIndex = 30;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(598, 223);
+            this.label1.Location = new System.Drawing.Point(797, 274);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.Size = new System.Drawing.Size(111, 17);
             this.label1.TabIndex = 31;
             this.label1.Text = "Verander chart: ";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(220, 116);
+            this.button2.Location = new System.Drawing.Point(293, 143);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 21);
+            this.button2.Size = new System.Drawing.Size(128, 26);
             this.button2.TabIndex = 32;
             this.button2.Text = "Vergelijken";
             this.button2.UseVisualStyleBackColor = true;
@@ -609,10 +624,10 @@ namespace ProjectDrieDataVisualisatie
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(18, 152);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox3.Location = new System.Drawing.Point(24, 187);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(197, 21);
+            this.comboBox3.Size = new System.Drawing.Size(261, 24);
             this.comboBox3.TabIndex = 33;
             this.comboBox3.Visible = false;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
@@ -620,19 +635,20 @@ namespace ProjectDrieDataVisualisatie
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(18, 190);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox4.Location = new System.Drawing.Point(24, 234);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(197, 21);
+            this.comboBox4.Size = new System.Drawing.Size(261, 24);
             this.comboBox4.TabIndex = 35;
             this.comboBox4.Visible = false;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(220, 151);
+            this.button3.Location = new System.Drawing.Point(293, 186);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 21);
+            this.button3.Size = new System.Drawing.Size(128, 26);
             this.button3.TabIndex = 34;
             this.button3.Text = "Vergelijken";
             this.button3.UseVisualStyleBackColor = true;
@@ -641,9 +657,10 @@ namespace ProjectDrieDataVisualisatie
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(884, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(1179, 16);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 187);
+            this.pictureBox1.Size = new System.Drawing.Size(252, 230);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
@@ -666,10 +683,55 @@ namespace ProjectDrieDataVisualisatie
             this.imageList1.Images.SetKeyName(11, "Groningen12.png");
             this.imageList1.Images.SetKeyName(12, "Drenthe13.png");
             // 
+            // fu
+            // 
+            this.fu.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.fu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.fu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.fu.Location = new System.Drawing.Point(1179, 16);
+            this.fu.Margin = new System.Windows.Forms.Padding(0);
+            this.fu.Name = "fu";
+            this.fu.Size = new System.Drawing.Size(75, 23);
+            this.fu.TabIndex = 38;
+            this.fu.UseVisualStyleBackColor = false;
+            this.fu.Click += new System.EventHandler(this.fu_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // backgroundselect
+            // 
+            this.backgroundselect.FormattingEnabled = true;
+            this.backgroundselect.Items.AddRange(new object[] {
+            "Retro Pepe"});
+            this.backgroundselect.Location = new System.Drawing.Point(1179, 35);
+            this.backgroundselect.Name = "backgroundselect";
+            this.backgroundselect.Size = new System.Drawing.Size(75, 24);
+            this.backgroundselect.TabIndex = 39;
+            this.backgroundselect.Visible = false;
+            this.backgroundselect.SelectedIndexChanged += new System.EventHandler(this.backgroundselect_SelectedIndexChanged);
+            // 
+            // imageList2
+            // 
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // ImageOfDeath
+            // 
+            this.ImageOfDeath.Location = new System.Drawing.Point(0, 0);
+            this.ImageOfDeath.Name = "ImageOfDeath";
+            this.ImageOfDeath.Size = new System.Drawing.Size(1551, 982);
+            this.ImageOfDeath.TabIndex = 40;
+            this.ImageOfDeath.TabStop = false;
+            // 
             // Letsel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.backgroundselect);
+            this.Controls.Add(this.fu);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.button3);
@@ -686,11 +748,14 @@ namespace ProjectDrieDataVisualisatie
             this.Controls.Add(this.selectGemeenteComboBox);
             this.Controls.Add(this.submitGemeenteInputBtn);
             this.Controls.Add(this.gemeenteTextBox);
+            this.Controls.Add(this.ImageOfDeath);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Letsel";
-            this.Size = new System.Drawing.Size(1163, 798);
+            this.Size = new System.Drawing.Size(1551, 982);
             this.Load += new System.EventHandler(this.Letsel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageOfDeath)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -715,5 +780,10 @@ namespace ProjectDrieDataVisualisatie
         private Button button3;
         private PictureBox pictureBox1;
         private ImageList imageList1;
+        private Button fu;
+        private OpenFileDialog openFileDialog1;
+        private ComboBox backgroundselect;
+        private ImageList imageList2;
+        private PictureBox ImageOfDeath;
     }
 }

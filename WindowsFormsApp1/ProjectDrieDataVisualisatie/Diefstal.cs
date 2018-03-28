@@ -69,7 +69,7 @@ namespace ProjectDrieDataVisualisatie
             {
                 if (!gemeenteSelectionCheckbox.Items.Contains(gemeenteTextbox.Text))
                 {
-                    gemeenteSelectionCheckbox.Items.Add(gemeenteTextbox.Text);
+                
                 }
                 else
                     MessageBox.Show("Deze gemeente is al toegevoegd");
