@@ -1269,6 +1269,11 @@ namespace ProjectDrieDataVisualisatie
                 MessageBox.Show("Deze gemeente komt niet voor in onze database, excuses hiervoor");
                 gemeenteTextBox.Text = "";
             }
+            if (gemeenteTextBox.Text == "bergambacht" || gemeenteTextBox.Text == "bernisse" || gemeenteTextBox.Text == "boarnsterhim" || gemeenteTextBox.Text == "boskoop" || gemeenteTextBox.Text == "bussum" || gemeenteTextBox.Text == "de-friese-meren" || gemeenteTextBox.Text == "gaasterlan-sleat" || gemeenteTextBox.Text == "graft-de-rijp" || gemeenteTextBox.Text == "groesbeek" || gemeenteTextBox.Text == "lemsterland" || gemeenteTextBox.Text == "maasdonk" || gemeenteTextBox.Text == "meierijstad" || gemeenteTextBox.Text == "millingen-aan-de-rijn" || gemeenteTextBox.Text == "muiden" || gemeenteTextBox.Text == "naarden" || gemeenteTextBox.Text == "nederlek" || gemeenteTextBox.Text == "niet-te-koppelen-aan-gemeente" || gemeenteTextBox.Text == "ouderkerk" || gemeenteTextBox.Text == "rijnwoude" || gemeenteTextBox.Text == "schermer" || gemeenteTextBox.Text == "schiermonnikoog" || gemeenteTextBox.Text == "schoonhoven" || gemeenteTextBox.Text == "skarsterlan" || gemeenteTextBox.Text == "spijkenisse" || gemeenteTextBox.Text == "ubbergen" || gemeenteTextBox.Text == "vlist" || gemeenteTextBox.Text == "zeevang" || gemeenteTextBox.Text == "null")
+            {
+                MessageBox.Show("Deze gemeente heeft geen data in onze database, excuses hiervoor");
+                gemeenteTextBox.Text = "";
+            }
         }
 
 
