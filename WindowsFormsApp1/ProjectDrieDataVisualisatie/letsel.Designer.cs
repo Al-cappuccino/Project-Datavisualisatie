@@ -31,8 +31,8 @@ namespace ProjectDrieDataVisualisatie
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Letsel));
             this.gemeenteTextBox = new System.Windows.Forms.TextBox();
             this.submitGemeenteInputBtn = new System.Windows.Forms.Button();
@@ -54,12 +54,10 @@ namespace ProjectDrieDataVisualisatie
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.ImageOfDeath = new System.Windows.Forms.PictureBox();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageOfDeath)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // gemeenteTextBox
@@ -509,12 +507,12 @@ namespace ProjectDrieDataVisualisatie
             this.dataChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataChart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            chartArea8.AxisX.Interval = 1D;
-            chartArea8.AxisX.IntervalOffset = 1D;
-            chartArea8.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.dataChart.Legends.Add(legend8);
+            chartArea10.AxisX.Interval = 1D;
+            chartArea10.AxisX.IntervalOffset = 1D;
+            chartArea10.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.dataChart.Legends.Add(legend10);
             this.dataChart.Location = new System.Drawing.Point(21, 304);
             this.dataChart.Margin = new System.Windows.Forms.Padding(4);
             this.dataChart.Name = "dataChart";
@@ -697,21 +695,12 @@ namespace ProjectDrieDataVisualisatie
             // ImageOfDeath
             // 
             this.ImageOfDeath.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.ImageOfDeath.Location = new System.Drawing.Point(0, 0);
+            this.ImageOfDeath.Location = new System.Drawing.Point(0, 3);
             this.ImageOfDeath.Name = "ImageOfDeath";
-            this.ImageOfDeath.Size = new System.Drawing.Size(1551, 982);
+            this.ImageOfDeath.Size = new System.Drawing.Size(1551, 979);
             this.ImageOfDeath.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImageOfDeath.TabIndex = 40;
             this.ImageOfDeath.TabStop = false;
-            // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 4);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(1548, 1024);
-            this.axWindowsMediaPlayer1.TabIndex = 41;
             // 
             // timer1
             // 
@@ -738,7 +727,6 @@ namespace ProjectDrieDataVisualisatie
             this.Controls.Add(this.submitGemeenteInputBtn);
             this.Controls.Add(this.gemeenteTextBox);
             this.Controls.Add(this.ImageOfDeath);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Letsel";
             this.Size = new System.Drawing.Size(1551, 982);
@@ -746,7 +734,6 @@ namespace ProjectDrieDataVisualisatie
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageOfDeath)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -774,7 +761,6 @@ namespace ProjectDrieDataVisualisatie
         private OpenFileDialog openFileDialog1;
         private ImageList imageList2;
         private PictureBox ImageOfDeath;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private Timer timer1;
     }
 }

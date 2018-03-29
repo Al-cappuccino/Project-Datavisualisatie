@@ -1,4 +1,5 @@
 ﻿using System;
+using ProjectDrieDataVisualisatie.Properties;
 using System.Data;
 using System.Windows.Forms;
 using System.Configuration;
@@ -8,6 +9,8 @@ using System.Windows.Forms.DataVisualization.Charting;
 using System.Drawing;
 using System.Timers;
 using System.Threading;
+using System.Resources;
+using System.Media;
 
 namespace ProjectDrieDataVisualisatie
 {
@@ -434,6 +437,7 @@ namespace ProjectDrieDataVisualisatie
                     }
 
                 }
+                
                 else if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked == false)
                 {
                     if (selectGemeenteComboBox.Text == @"drenthe" || selectGemeenteComboBox.Text == @"noord-brabant" ||
@@ -1112,7 +1116,7 @@ namespace ProjectDrieDataVisualisatie
         {
             if (gemeenteTextBox.Text == "delete system32" || gemeenteTextBox.Text == "deletesystem32" || gemeenteTextBox.Text == "deletesystem 32")
             {
-                ImageOfDeath.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/133vhw.jpg");
+                ImageOfDeath.Image = Resources._133vhw;
                 ImageOfDeath.BringToFront();
                 while (true)
                 {
@@ -1123,27 +1127,30 @@ namespace ProjectDrieDataVisualisatie
             }
             else if (gemeenteTextBox.Text == "pepe" || gemeenteTextBox.Text == "dank pepe" || gemeenteTextBox.Text == "rare pepe")
             {
-                ImageOfDeath.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/yHHL07C.jpg");
+                ImageOfDeath.Image = Resources.yHHL07C;
                 ImageOfDeath.BringToFront();
             }
 
             else if (gemeenteTextBox.Text == "hillary" || gemeenteTextBox.Text == "trump" || gemeenteTextBox.Text == "donald trump" || gemeenteTextBox.Text == "bernie" || gemeenteTextBox.Text == "bernie sanders" || gemeenteTextBox.Text == "hillary clinton" || gemeenteTextBox.Text == "hitler" || gemeenteTextBox.Text == "adolf hitler" || gemeenteTextBox.Text == "stalin" || gemeenteTextBox.Text == "mao" || gemeenteTextBox.Text == "mark rutte" || gemeenteTextBox.Text == "rutte" || gemeenteTextBox.Text == "lenin" || gemeenteTextBox.Text == "trotsky" || gemeenteTextBox.Text == "spencer" || gemeenteTextBox.Text == "richard spencer" || gemeenteTextBox.Text == "roemer" || gemeenteTextBox.Text == "emile roemer" || gemeenteTextBox.Text == "pechtold" || gemeenteTextBox.Text == "alexander pechtold" || gemeenteTextBox.Text == "sargon of akkad" || gemeenteTextBox.Text == "thijs" || gemeenteTextBox.Text == "thijs van deurzen" || gemeenteTextBox.Text == "may" || gemeenteTextBox.Text == "theresa may" || gemeenteTextBox.Text == "lodewijk asscher" || gemeenteTextBox.Text == "wilders" || gemeenteTextBox.Text == "geert wilders" || gemeenteTextBox.Text == "corbyn" || gemeenteTextBox.Text == "jeremy corbyn" || gemeenteTextBox.Text == "Nathan" || gemeenteTextBox.Text == "nathan drijver" || gemeenteTextBox.Text == "rene" || gemeenteTextBox.Text == "rene van til" || gemeenteTextBox.Text == "dave" || gemeenteTextBox.Text == "dave kruithof" || gemeenteTextBox.Text == "floor" || gemeenteTextBox.Text == "floor vermaat" || gemeenteTextBox.Text == "ruud" || gemeenteTextBox.Text == "ruud tonissen")
             {
-                axWindowsMediaPlayer1.URL = "C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/Stop it.mp4";
-                pictureBox1.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/jordan.jpg");
+                SoundPlayer audio = new SoundPlayer(Resources.Stop_it);
+                audio.Play();
+                pictureBox1.Image = Resources.jordan;
                 MessageBox.Show("Dit is een persoon, geen gemeente");
                 gemeenteTextBox.Text = "";
             }
             else if (gemeenteTextBox.Text == "nobody stumps the trump")
             {
-                ImageOfDeath.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/IMG_5535.jpg");
+                ImageOfDeath.Image = Resources.IMG_5535;
                 dataChart.SendToBack();
-            }
-            else if (gemeenteTextBox.Text == "njathajn drjijvjer") 
-            {
-                axWindowsMediaPlayer1.URL = "C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/Stop it.mp4";
-                pictureBox1.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/nathan.png");
                 
+            }
+            else if (gemeenteTextBox.Text == "njathajn drjijvjer")
+            {
+                SoundPlayer audio = new SoundPlayer(Resources.Stop_it);
+                audio.Play();
+                pictureBox1.Image = Resources.nathan;
+
             }
             else if (gemeenteTextBox.Text == "duitsland")
             {
@@ -1151,7 +1158,7 @@ namespace ProjectDrieDataVisualisatie
                 gemeenteTextBox.Text = "";
             }
             else if (gemeenteTextBox.Text == "belgië")
-            {   
+            {
                 MessageBox.Show("Dit is niet in nederland. en nederland is geen onderdeel van het belgische rijk");
                 gemeenteTextBox.Text = "";
             }
@@ -1232,17 +1239,38 @@ namespace ProjectDrieDataVisualisatie
             }
             else if (gemeenteTextBox.Text == "niels" || gemeenteTextBox.Text == "niels van schaik")
             {
-                pictureBox1.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/niels.png");
-                axWindowsMediaPlayer1.URL = "C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/Stop it.mp4";
-
+                pictureBox1.Image = Resources.niels;
+                SoundPlayer audio = new SoundPlayer(Resources.Stop_it);
+                audio.Play();
             }
-            
+
             else if (gemeenteTextBox.Text == "fresh prince of bel-air")
             {
-                pictureBox1.Image = new Bitmap("C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/Fresh.png");
-                axWindowsMediaPlayer1.URL = "C:/Users/Gebruiker/Documents/GitHub/Project-Datavisualisatie/WindowsFormsApp1/ProjectDrieDataVisualisatie/Resources/FP.mp3";
+                pictureBox1.Image = Resources.Fresh;
+                SoundPlayer audio = new SoundPlayer(Resources.FP1);
+                audio.Play();
+            }
+            else if (gemeenteTextBox.Text == "comrade corbyn, leader of the motherland")
+            {
+                ImageOfDeath.Image = Resources.soviet;
+                ImageOfDeath.BringToFront();
+                SoundPlayer audio = new SoundPlayer(Resources.ussr1);
+                audio.Play();
+                gemeenteTextBox.BringToFront();
+            }
+            if (gemeenteTextBox.Text == "")
+            {
+                dataChart.BringToFront();
+                ImageOfDeath.SendToBack();
+            }
+            // functionele checks voor gemeentes die niet voorkomen in de database
+            if (gemeenteTextBox.Text == "nederlandse antillen")
+            {
+                MessageBox.Show("Deze gemeente komt niet voor in onze database, excuses hiervoor");
+                gemeenteTextBox.Text = "";
             }
         }
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {

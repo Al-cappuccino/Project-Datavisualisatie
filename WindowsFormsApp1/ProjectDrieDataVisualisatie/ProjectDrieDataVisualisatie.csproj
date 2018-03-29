@@ -104,6 +104,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Database1DataSet.xsc">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
@@ -137,6 +138,34 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\ussr.wav" />
+    <None Include="Resources\FP.wav" />
+    <None Include="Resources\Stop it.wav" />
+    <None Include="Resources\Zuid-Holland2.png" />
+    <None Include="Resources\Zeeland3.png" />
+    <None Include="Resources\yHHL07C.jpg" />
+    <None Include="Resources\Utrecht5.png" />
+    <None Include="Resources\ussr.mp3" />
+    <None Include="Resources\Stop it.mp4" />
+    <None Include="Resources\soviet.jpg" />
+    <None Include="Resources\Overijssel9.png" />
+    <None Include="Resources\Noord-Holland4.png" />
+    <None Include="Resources\Noord-Brabant10.png" />
+    <None Include="Resources\niels.png" />
+    <None Include="Resources\Nederland 1.png" />
+    <None Include="Resources\nathan.png" />
+    <None Include="Resources\Limburg8.png" />
+    <None Include="Resources\jordan.jpg" />
+    <None Include="Resources\IMG_5535.JPG" />
+    <None Include="Resources\Groningen12.png" />
+    <None Include="Resources\Gelderland7.png" />
+    <None Include="Resources\Friesland11.png" />
+    <None Include="Resources\Fresh.png" />
+    <None Include="Resources\FP.mp3" />
+    <None Include="Resources\Flevoland6.png" />
+    <None Include="Resources\Drenthe13.png" />
+    <None Include="Resources\corbyn.png" />
+    <None Include="Resources\133vhw.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
