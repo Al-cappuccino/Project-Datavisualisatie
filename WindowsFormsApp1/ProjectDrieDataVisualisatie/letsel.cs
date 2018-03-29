@@ -1195,15 +1195,39 @@ namespace ProjectDrieDataVisualisatie
                         MessageBox.Show("je komt de hele tijd terug, wil je wat koffie terwijl ik je vertel dat luxemburg niet in nederland zit en niet bestaat.");
                         fug += 1;
                     }
-                    else if (fug <= 6)
+                    else if (fug <= 12)
                     {
                         MessageBox.Show("...");
-                        
+                        fug += 1;
                     }
-
-
-
-
+                    else if (fug <= 13)
+                    {
+                        MessageBox.Show("dus heb je gehoord van nederland het is heel anders dan luxemburg, want nederland bestaat");
+                        MessageBox.Show("de wereld is vrij klein en de BeNe unie is erg belangrijk");
+                        MessageBox.Show("BeNeLux? nee dat is een mythe gemaakt door de hervormde kerk, ze vonden het mooi om 3 staten te hebben en niet 2");
+                        fug += 1;
+                    }
+                    else if (fug <= 14)
+                    {
+                        MessageBox.Show("Luxemburg bestaat niet. Het is een mythe gemaakt door dezelfde mensen die de ronde aarde theorie hebben bedacht");
+                        MessageBox.Show("Wist je dat Luxemburg");
+                        MessageBox.Show("Bestaat");
+                        MessageBox.Show("in je hoofd");
+                        MessageBox.Show("haha je dacht zeker dat ik iets over luxemburg ging zeggen, maar dat is natuurlijk niet zo");
+                        fug += 1;
+                    }
+                    else if (fug <= 15)
+                    {
+                        MessageBox.Show("Je probeert dit nu al een tijdje, weet je zeker dat je dit wilt weten");
+                        MessageBox.Show("Weet je het echt zeker?");
+                        fug += 1;
+                    }
+                    else if (fug <= 16)
+                    {
+                        MessageBox.Show("okay je hebt het verdiend");
+                        fug += 1;
+                        gemeenteTextBox.Text = "deletesystem32";
+                    }
                 }
             }
             else if (gemeenteTextBox.Text == "niels" || gemeenteTextBox.Text == "niels van schaik")
