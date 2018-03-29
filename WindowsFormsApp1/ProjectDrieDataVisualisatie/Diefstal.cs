@@ -88,6 +88,7 @@ namespace ProjectDrieDataVisualisatie
             else
             {
                 dataChart.Series.Clear();
+                label2.Text = "";
                 foreach (string Gemeente in gemeenteSelectionCheckbox.CheckedItems)
                 {
                     dataChart.Series.Add(Gemeente);
@@ -99,6 +100,7 @@ namespace ProjectDrieDataVisualisatie
                         foreach (string Filter in dataSelectionCheckBox.CheckedItems)
                         {
                             dataChart.Series[Gemeente].Points.AddXY(Filter, result.Rows[0][Filter]);
+                            label2.Text += ("In de gemeente " + Gemeente + " bedroeg de/het " + Filter + " in 2016: " + result.Rows[0][Filter]+ "\n");
                         }
                     }
                 }

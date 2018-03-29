@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.gemeenteTextbox = new System.Windows.Forms.TextBox();
             this.addGemeenteButton = new System.Windows.Forms.Button();
             this.dataSelectionCheckBox = new System.Windows.Forms.CheckedListBox();
@@ -37,6 +37,7 @@
             this.renderGraphsButton = new System.Windows.Forms.Button();
             this.dataChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gemeenteSelectionCheckbox = new System.Windows.Forms.CheckedListBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -499,10 +500,10 @@
             // 
             // dataChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.dataChart.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.dataChart.Legends.Add(legend5);
             this.dataChart.Location = new System.Drawing.Point(302, 256);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(674, 300);
@@ -517,10 +518,21 @@
             this.gemeenteSelectionCheckbox.Size = new System.Drawing.Size(197, 169);
             this.gemeenteSelectionCheckbox.TabIndex = 20;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(299, 582);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 21;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Diefstal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.gemeenteSelectionCheckbox);
             this.Controls.Add(this.dataChart);
             this.Controls.Add(this.renderGraphsButton);
@@ -545,5 +557,6 @@
         private System.Windows.Forms.Button renderGraphsButton;
         private System.Windows.Forms.DataVisualization.Charting.Chart dataChart;
         private System.Windows.Forms.CheckedListBox gemeenteSelectionCheckbox;
+        private System.Windows.Forms.Label label2;
     }
 }
