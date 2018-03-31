@@ -11,6 +11,8 @@ using System.Timers;
 using System.Threading;
 using System.Resources;
 using System.Media;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace ProjectDrieDataVisualisatie
 {
@@ -28,6 +30,10 @@ namespace ProjectDrieDataVisualisatie
         private string[] _oldquery = new string[12];
         private int[] _selectindex = new int[4];
         private int fug = 0;
+        
+        private int SC_count;
+        private int SC_counter;
+
         public static Letsel Instance => _instance ?? (_instance = new Letsel());
 
         public Letsel()
@@ -43,7 +49,30 @@ namespace ProjectDrieDataVisualisatie
             comboBox4.Items.Add("Nederland");
             comboBox2.SelectedIndex = 0;
 
+            string path = @"";
+            MessageBox.Show(path);
+            
+            MessageBox.Show(path);
+            if (!File.Exists(path + "Screenshot.txt"))
+            {
+                // Create a file to write to.
+                using (StreamWriter sw = File.CreateText(path + "Screenshot.txt"))
+                {
+                    sw.WriteLine(0);
+                }
+            }
+            else
+            {
+                using (System.IO.StreamReader file =
+                new System.IO.StreamReader(path + "Screenshot.txt", true))
+                {
+                    SC_count = file.Read();
+                    MessageBox.Show(SC_count.ToString());
+                }
+            }
+            
             pictureBox1.Image = imageList1.Images[0];
+
         }
 
         private void gemeenteTextBox_Click(object sender, EventArgs e)
@@ -1486,6 +1515,29 @@ namespace ProjectDrieDataVisualisatie
         private void backgroundselect_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Bitmap memoryImage;
+            memoryImage = new Bitmap(1100, 770);
+            Size s = new Size(memoryImage.Width, memoryImage.Height);
+
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+            Point location = this.PointToScreen(Point.Empty); ;
+            memoryGraphics.CopyFromScreen(location, new Point(0,0), s);
+                
+            string str = "";
+                
+            str = @"Screenshot" + SC_count + ".png";
+                
+            memoryImage.Save(str);
+            string path = @"";
+            SC_count += 1;
+            using (StreamWriter sw = File.CreateText(path + "Screenshot.txt"))
+            {
+                sw.WriteLine(SC_count);
+            }
         }
     }
 }
