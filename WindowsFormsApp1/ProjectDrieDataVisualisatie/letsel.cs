@@ -50,9 +50,7 @@ namespace ProjectDrieDataVisualisatie
             comboBox2.SelectedIndex = 0;
 
             string path = @"";
-            MessageBox.Show(path);
             
-            MessageBox.Show(path);
             if (!File.Exists(path + "Screenshot.txt"))
             {
                 // Create a file to write to.
@@ -67,7 +65,6 @@ namespace ProjectDrieDataVisualisatie
                 new System.IO.StreamReader(path + "Screenshot.txt", true))
                 {
                     SC_count = file.Read();
-                    MessageBox.Show(SC_count.ToString());
                 }
             }
             
@@ -1538,6 +1535,7 @@ namespace ProjectDrieDataVisualisatie
             {
                 sw.WriteLine(SC_count);
             }
+            MessageBox.Show("Afbeelding opgeslagen in 'Debug'");
         }
     }
 }
