@@ -88,5 +88,15 @@ namespace ProjectDrieDataVisualisatie
             ActivePanel2.Visible = false;
             ActivePanel3.Visible = false;
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
