@@ -75,7 +75,7 @@ namespace ProjectDrieDataVisualisatie
                     MessageBox.Show("Deze gemeente is al toegevoegd");
             }
             else
-                MessageBox.Show("Voer een geldige gemeente in");
+                MessageBox.Show("Voer een geldige gemeente in, of ben je misschien de hoofdletter vergeten?");
 
         }
 
