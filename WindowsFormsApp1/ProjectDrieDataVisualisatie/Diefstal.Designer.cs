@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.gemeenteTextbox = new System.Windows.Forms.TextBox();
             this.addGemeenteButton = new System.Windows.Forms.Button();
             this.dataSelectionCheckBox = new System.Windows.Forms.CheckedListBox();
@@ -481,12 +481,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(484, 163);
+            this.label1.Location = new System.Drawing.Point(1124, 707);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // renderGraphsButton
             // 
@@ -500,10 +501,10 @@
             // 
             // dataChart
             // 
-            chartArea5.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.dataChart.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.dataChart.Legends.Add(legend1);
             this.dataChart.Location = new System.Drawing.Point(302, 256);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(674, 300);
