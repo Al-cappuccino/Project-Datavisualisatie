@@ -113,5 +113,13 @@ namespace ProjectDrieDataVisualisatie
                 }
             }
         }
+
+        private void gemeenteTextbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                addGemeenteButton_Click(this, new EventArgs());
+            }
+        }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.gemeenteTextbox = new System.Windows.Forms.TextBox();
             this.addGemeenteButton = new System.Windows.Forms.Button();
             this.dataSelectionCheckBox = new System.Windows.Forms.CheckedListBox();
@@ -449,6 +449,7 @@
             this.gemeenteTextbox.TabIndex = 6;
             this.gemeenteTextbox.Text = "Voer plaatsnaam in...";
             this.gemeenteTextbox.Click += new System.EventHandler(this.gemeenteTextbox_Click);
+            this.gemeenteTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gemeenteTextbox_KeyDown);
             // 
             // addGemeenteButton
             // 
@@ -503,10 +504,10 @@
             // 
             // dataChart
             // 
-            chartArea4.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.dataChart.Legends.Add(legend4);
+            chartArea5.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.dataChart.Legends.Add(legend5);
             this.dataChart.Location = new System.Drawing.Point(302, 117);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(675, 439);
