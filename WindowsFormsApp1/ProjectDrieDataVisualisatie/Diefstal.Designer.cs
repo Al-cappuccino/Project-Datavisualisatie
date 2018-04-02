@@ -169,7 +169,7 @@
             "Gorinchem",
             "Gouda",
             "Grave",
-            "\'s-Gravenhage",
+            "s-Gravenhage",
             "Groningen",
             "Grootegast",
             "Gulpen-Wittem",
