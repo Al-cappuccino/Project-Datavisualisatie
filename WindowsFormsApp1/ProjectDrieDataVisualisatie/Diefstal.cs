@@ -84,6 +84,7 @@ namespace ProjectDrieDataVisualisatie
             if (dataSelectionCheckBox.CheckedItems.Count == 0)
             {
                 dataChart.Series.Clear();
+                label2.Text = "";
             }
             else
             {
@@ -159,6 +160,22 @@ namespace ProjectDrieDataVisualisatie
             control.SetItemCheckState(e.Index, e.NewValue);
             control.ItemCheck += dataSelectionCheckBox_ItemCheck;
             renderGraphsButton_Click(this, new EventArgs());
+        }
+
+        private void switchButton_Click(object sender, EventArgs e)
+        {
+            if (dataChart.Visible == true)
+            {
+                switchButton.Text = "Geef als grafiek weer";
+                dataChart.Visible = false;
+                label2.Visible = true;
+            }
+            else if (dataChart.Visible == false)
+            {
+                switchButton.Text = "Geef als tekst weer";
+                dataChart.Visible = true;
+                label2.Visible = false;
+            }
         }
     }
 }
