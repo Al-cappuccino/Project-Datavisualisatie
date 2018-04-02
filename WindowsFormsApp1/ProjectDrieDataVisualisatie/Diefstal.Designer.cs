@@ -584,6 +584,7 @@
             this.informationLabel.Name = "informationLabel";
             this.informationLabel.Size = new System.Drawing.Size(2, 26);
             this.informationLabel.TabIndex = 25;
+            this.informationLabel.Visible = false;
             // 
             // Diefstal
             // 
