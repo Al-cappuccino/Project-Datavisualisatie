@@ -77,20 +77,17 @@ namespace ProjectDrieDataVisualisatie
 
         private void addGemeenteButton_Click(object sender, EventArgs e)
         {
-            if (!gemeenteTextBox.AutoCompleteCustomSource.Contains(gemeenteTextBox.Text))
+            for (int a = 0; a < comboBox1.Items.Count; a++)
             {
-                
-                for (int a = 0; a < comboBox1.Items.Count; a++)
+                if (gemeenteTextBox.Text == comboBox1.Items[a].ToString())
                 {
-                    if (gemeenteTextBox.Text == comboBox1.Items[a].ToString())
-                    {
-                        MessageBox.Show(comboBox1.Items[a].ToString() + "staat al in het dropdownmenu");
-                        gemeenteTextBox.Text = "";
-                    }
-
+                    MessageBox.Show(comboBox1.Items[a].ToString() + "staat al in het dropdownmenu");
+                    gemeenteTextBox.Text = "";
                 }
+
             }
-            if (!string.IsNullOrEmpty(gemeenteTextBox.Text) && gemeenteTextBox.Text != "voer plaatsnaam in...")
+
+            if (!string.IsNullOrEmpty(gemeenteTextBox.Text) && gemeenteTextBox.Text != "voer plaatsnaam in..." && gemeenteTextBox.AutoCompleteCustomSource.Contains(gemeenteTextBox.Text))
             {
                 _gemeentenaam = gemeenteTextBox.Text;
                 selectGemeenteComboBox.Items.Add(_gemeentenaam);
@@ -98,6 +95,11 @@ namespace ProjectDrieDataVisualisatie
                 comboBox1.Items.Add(_gemeentenaam);
                 comboBox3.Items.Add(_gemeentenaam);
                 comboBox4.Items.Add(_gemeentenaam);
+            }
+            if (!gemeenteTextBox.AutoCompleteCustomSource.Contains(gemeenteTextBox.Text))
+            {
+                MessageBox.Show("Dit is geen gemeente.");
+                gemeenteTextBox.Text = "";
             }
         }
 
