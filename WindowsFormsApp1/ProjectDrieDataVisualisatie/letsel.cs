@@ -29,10 +29,8 @@ namespace ProjectDrieDataVisualisatie
         private int _columnNum;
         private string[] _oldquery = new string[12];
         private int[] _selectindex = new int[4];
-        private int fug = 0;
 
         private int SC_count;
-        private int SC_counter;
 
         public static Letsel Instance => _instance ?? (_instance = new Letsel());
 
@@ -79,16 +77,19 @@ namespace ProjectDrieDataVisualisatie
 
         private void addGemeenteButton_Click(object sender, EventArgs e)
         {
-            for (int a = 0; a < comboBox1.Items.Count; a++)
+            if (!gemeenteTextBox.AutoCompleteCustomSource.Contains(gemeenteTextBox.Text))
             {
-                if (gemeenteTextBox.Text == comboBox1.Items[a].ToString())
+                
+                for (int a = 0; a < comboBox1.Items.Count; a++)
                 {
-                    MessageBox.Show(comboBox1.Items[a].ToString() + "staat al in het dropdownmenu");
-                    gemeenteTextBox.Text = "";
+                    if (gemeenteTextBox.Text == comboBox1.Items[a].ToString())
+                    {
+                        MessageBox.Show(comboBox1.Items[a].ToString() + "staat al in het dropdownmenu");
+                        gemeenteTextBox.Text = "";
+                    }
+
                 }
-
             }
-
             if (!string.IsNullOrEmpty(gemeenteTextBox.Text) && gemeenteTextBox.Text != "voer plaatsnaam in...")
             {
                 _gemeentenaam = gemeenteTextBox.Text;
