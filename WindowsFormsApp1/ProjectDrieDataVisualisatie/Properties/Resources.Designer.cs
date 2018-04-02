@@ -63,26 +63,6 @@ namespace ProjectDrieDataVisualisatie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _133vhw {
-            get {
-                object obj = ResourceManager.GetObject("_133vhw", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap corbyn {
-            get {
-                object obj = ResourceManager.GetObject("corbyn", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Drenthe13 {
             get {
                 object obj = ResourceManager.GetObject("Drenthe13", resourceCulture);
@@ -96,35 +76,6 @@ namespace ProjectDrieDataVisualisatie.Properties {
         internal static System.Drawing.Bitmap Flevoland6 {
             get {
                 object obj = ResourceManager.GetObject("Flevoland6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] FP {
-            get {
-                object obj = ResourceManager.GetObject("FP", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream FP1 {
-            get {
-                return ResourceManager.GetStream("FP1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Fresh {
-            get {
-                object obj = ResourceManager.GetObject("Fresh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -162,26 +113,6 @@ namespace ProjectDrieDataVisualisatie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IMG_5535 {
-            get {
-                object obj = ResourceManager.GetObject("IMG_5535", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap jordan {
-            get {
-                object obj = ResourceManager.GetObject("jordan", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Limburg8 {
             get {
                 object obj = ResourceManager.GetObject("Limburg8", resourceCulture);
@@ -192,29 +123,9 @@ namespace ProjectDrieDataVisualisatie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nathan {
-            get {
-                object obj = ResourceManager.GetObject("nathan", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Nederland_1 {
             get {
                 object obj = ResourceManager.GetObject("Nederland_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap niels {
-            get {
-                object obj = ResourceManager.GetObject("niels", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -252,57 +163,9 @@ namespace ProjectDrieDataVisualisatie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap soviet {
-            get {
-                object obj = ResourceManager.GetObject("soviet", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Stop_it {
-            get {
-                return ResourceManager.GetStream("Stop_it", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] ussr {
-            get {
-                object obj = ResourceManager.GetObject("ussr", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ussr1 {
-            get {
-                return ResourceManager.GetStream("ussr1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Utrecht5 {
             get {
                 object obj = ResourceManager.GetObject("Utrecht5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap yHHL07C {
-            get {
-                object obj = ResourceManager.GetObject("yHHL07C", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

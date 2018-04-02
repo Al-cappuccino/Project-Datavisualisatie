@@ -118,23 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="corbyn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\corbyn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Drenthe13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Drenthe13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Flevoland6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Flevoland6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FP.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="FP1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FP.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Fresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Friesland11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Friesland11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,23 +133,11 @@
   <data name="Groningen12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Groningen12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IMG_5535" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_5535.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="jordan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jordan.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Limburg8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Limburg8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nathan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nathan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Nederland_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nederland 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="niels" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\niels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Noord_Brabant10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Noord-Brabant10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,31 +148,13 @@
   <data name="Overijssel9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Overijssel9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soviet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\soviet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Stop_it" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Stop it.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ussr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ussr.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ussr1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ussr.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Utrecht5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Utrecht5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="yHHL07C" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\yHHL07C.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zeeland3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Zeeland3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zuid_Holland2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Zuid-Holland2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_133vhw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\133vhw.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
