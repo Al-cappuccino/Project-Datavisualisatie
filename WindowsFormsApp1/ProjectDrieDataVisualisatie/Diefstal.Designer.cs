@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Diefstal));
             this.gemeenteTextbox = new System.Windows.Forms.TextBox();
             this.addGemeenteButton = new System.Windows.Forms.Button();
@@ -508,10 +508,10 @@
             // 
             // dataChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.dataChart.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.dataChart.Legends.Add(legend3);
             this.dataChart.Location = new System.Drawing.Point(302, 117);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(675, 439);
@@ -576,13 +576,13 @@
             // informationLabel
             // 
             this.informationLabel.AutoSize = true;
-            this.informationLabel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.informationLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.informationLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.informationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.informationLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.informationLabel.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.informationLabel.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.informationLabel.Location = new System.Drawing.Point(222, 205);
             this.informationLabel.Name = "informationLabel";
-            this.informationLabel.Size = new System.Drawing.Size(2, 26);
+            this.informationLabel.Size = new System.Drawing.Size(2, 25);
             this.informationLabel.TabIndex = 25;
             this.informationLabel.Visible = false;
             // 

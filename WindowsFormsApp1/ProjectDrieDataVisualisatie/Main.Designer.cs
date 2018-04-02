@@ -101,11 +101,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.MenuText;
             this.label2.Location = new System.Drawing.Point(28, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 39);
+            this.label2.Size = new System.Drawing.Size(121, 42);
             this.label2.TabIndex = 3;
             this.label2.Text = "TDFNR";
             // 
@@ -122,7 +122,7 @@
             this.homeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.homeButton.FlatAppearance.BorderSize = 0;
             this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeButton.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
             this.homeButton.Location = new System.Drawing.Point(0, 105);
@@ -140,7 +140,7 @@
             this.DiefstalButton.FlatAppearance.BorderSize = 0;
             this.DiefstalButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.DiefstalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DiefstalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiefstalButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiefstalButton.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.DiefstalButton.Image = ((System.Drawing.Image)(resources.GetObject("DiefstalButton.Image")));
             this.DiefstalButton.Location = new System.Drawing.Point(0, 517);
@@ -159,7 +159,7 @@
             this.LetselButton.FlatAppearance.BorderSize = 0;
             this.LetselButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.LetselButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LetselButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LetselButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LetselButton.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.LetselButton.Image = ((System.Drawing.Image)(resources.GetObject("LetselButton.Image")));
             this.LetselButton.Location = new System.Drawing.Point(0, 305);
@@ -203,12 +203,12 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.MenuText;
             this.textBox1.Location = new System.Drawing.Point(95, 10);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(871, 73);
+            this.textBox1.Size = new System.Drawing.Size(871, 79);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Welkom bij TDFNR!";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -217,12 +217,12 @@
             // 
             this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox9.Location = new System.Drawing.Point(215, 540);
             this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(723, 37);
+            this.textBox9.Size = new System.Drawing.Size(779, 40);
             this.textBox9.TabIndex = 8;
             this.textBox9.Text = "filters om te kiezen welke data je wilt verkrijgen.";
             // 
@@ -230,12 +230,12 @@
             // 
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox6.Location = new System.Drawing.Point(171, 499);
             this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(767, 37);
+            this.textBox6.Size = new System.Drawing.Size(870, 40);
             this.textBox6.TabIndex = 5;
             this.textBox6.Text = "en vul een gemeente in. Kies daarna een of meerdere";
             // 
@@ -243,12 +243,12 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox5.Location = new System.Drawing.Point(159, 458);
             this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(835, 37);
+            this.textBox5.Size = new System.Drawing.Size(900, 40);
             this.textBox5.TabIndex = 4;
             this.textBox5.Text = "Om data te visualiseren ga dan naar Letsel of Diefstal";
             // 
@@ -256,12 +256,12 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox4.Location = new System.Drawing.Point(385, 362);
             this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(335, 37);
+            this.textBox4.Size = new System.Drawing.Size(373, 40);
             this.textBox4.TabIndex = 3;
             this.textBox4.Text = "Floor, Nathan en Rene.";
             // 
@@ -269,12 +269,12 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox3.Location = new System.Drawing.Point(138, 321);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(819, 37);
+            this.textBox3.Size = new System.Drawing.Size(871, 40);
             this.textBox3.TabIndex = 2;
             this.textBox3.Text = "data wordt gevisualiseerd. TDFNR staat voor Thijs, Dave, ";
             // 
@@ -282,12 +282,12 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox2.Location = new System.Drawing.Point(171, 280);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(740, 37);
+            this.textBox2.Size = new System.Drawing.Size(823, 40);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "TDNFR is een programma waarin misdaad en letsel ";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
