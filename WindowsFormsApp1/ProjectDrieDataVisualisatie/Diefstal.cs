@@ -83,7 +83,7 @@ namespace ProjectDrieDataVisualisatie
         {
             if (dataSelectionCheckBox.CheckedItems.Count == 0)
             {
-                MessageBox.Show("Kies een geldig filter");
+                dataChart.Series.Clear();
             }
             else
             {
@@ -137,6 +137,23 @@ namespace ProjectDrieDataVisualisatie
         {
             informationLabel.Text = "";
         }
-        
+
+        private void gemeenteSelectionCheckbox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            var control = (CheckedListBox)sender;
+            control.ItemCheck -= gemeenteSelectionCheckbox_ItemCheck;
+            control.SetItemCheckState(e.Index, e.NewValue);
+            control.ItemCheck += gemeenteSelectionCheckbox_ItemCheck;
+            renderGraphsButton_Click(this, new EventArgs());
+        }
+
+        private void dataSelectionCheckBox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            var control = (CheckedListBox)sender;
+            control.ItemCheck -= dataSelectionCheckBox_ItemCheck;
+            control.SetItemCheckState(e.Index, e.NewValue);
+            control.ItemCheck += dataSelectionCheckBox_ItemCheck;
+            renderGraphsButton_Click(this, new EventArgs());
+        }
     }
 }

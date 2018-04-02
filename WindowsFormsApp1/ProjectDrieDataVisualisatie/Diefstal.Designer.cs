@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Diefstal));
             this.gemeenteTextbox = new System.Windows.Forms.TextBox();
             this.addGemeenteButton = new System.Windows.Forms.Button();
@@ -483,6 +483,7 @@
             this.dataSelectionCheckBox.Name = "dataSelectionCheckBox";
             this.dataSelectionCheckBox.Size = new System.Drawing.Size(197, 184);
             this.dataSelectionCheckBox.TabIndex = 15;
+            this.dataSelectionCheckBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.dataSelectionCheckBox_ItemCheck);
             // 
             // label1
             // 
@@ -507,10 +508,10 @@
             // 
             // dataChart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.dataChart.Legends.Add(legend3);
+            chartArea5.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.dataChart.Legends.Add(legend5);
             this.dataChart.Location = new System.Drawing.Point(302, 117);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(675, 439);
@@ -524,6 +525,7 @@
             this.gemeenteSelectionCheckbox.Name = "gemeenteSelectionCheckbox";
             this.gemeenteSelectionCheckbox.Size = new System.Drawing.Size(197, 169);
             this.gemeenteSelectionCheckbox.TabIndex = 20;
+            this.gemeenteSelectionCheckbox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.gemeenteSelectionCheckbox_ItemCheck);
             // 
             // label2
             // 
