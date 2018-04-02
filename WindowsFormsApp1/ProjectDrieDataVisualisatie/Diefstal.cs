@@ -121,5 +121,22 @@ namespace ProjectDrieDataVisualisatie
                 addGemeenteButton_Click(this, new EventArgs());
             }
         }
+
+        private void helpButton_MouseHover(object sender, EventArgs e)
+        {
+            informationLabel.Text = "Stapsgewijs uitleg:" + "\n" +
+                "Stap 1: Voer een gemeente in waarvan u informatie zoekt." + "\n" +
+                "Stap 2: Druk daarna op 'Enter' of klik op de 'Voeg Toe' knop." + "\n" +
+                "Stap 3: Voeg, naar uw voorkeur, meerdere gemeentes toe." + "\n" +
+                "Stap 4: Vink de gemeente(s) aan die u wilt plotten in een grafiek." + "\n" +
+                "Stap 5: Kies een of meerdere filters die u wilt bekijken in de grafiek." + "\n" +
+                "Stap 6: Klik zodra u gereed bent op de knop 'Plot Grafiek'.";
+        }
+
+        private void helpButton_MouseLeave(object sender, EventArgs e)
+        {
+            informationLabel.Text = "";
+        }
+        
     }
 }

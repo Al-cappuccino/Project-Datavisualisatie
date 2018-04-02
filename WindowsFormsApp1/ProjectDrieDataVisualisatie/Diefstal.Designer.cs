@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Diefstal));
             this.gemeenteTextbox = new System.Windows.Forms.TextBox();
             this.addGemeenteButton = new System.Windows.Forms.Button();
             this.dataSelectionCheckBox = new System.Windows.Forms.CheckedListBox();
@@ -40,6 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.helpButton = new System.Windows.Forms.Button();
+            this.informationLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -504,10 +507,10 @@
             // 
             // dataChart
             // 
-            chartArea5.Name = "ChartArea1";
-            this.dataChart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.dataChart.Legends.Add(legend5);
+            chartArea3.Name = "ChartArea1";
+            this.dataChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.dataChart.Legends.Add(legend3);
             this.dataChart.Location = new System.Drawing.Point(302, 117);
             this.dataChart.Name = "dataChart";
             this.dataChart.Size = new System.Drawing.Size(675, 439);
@@ -552,10 +555,40 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Filters";
             // 
+            // helpButton
+            // 
+            this.helpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.helpButton.FlatAppearance.BorderSize = 0;
+            this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpButton.ForeColor = System.Drawing.Color.White;
+            this.helpButton.Image = ((System.Drawing.Image)(resources.GetObject("helpButton.Image")));
+            this.helpButton.Location = new System.Drawing.Point(999, 1);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(103, 96);
+            this.helpButton.TabIndex = 24;
+            this.helpButton.UseVisualStyleBackColor = false;
+            this.helpButton.MouseLeave += new System.EventHandler(this.helpButton_MouseLeave);
+            this.helpButton.MouseHover += new System.EventHandler(this.helpButton_MouseHover);
+            // 
+            // informationLabel
+            // 
+            this.informationLabel.AutoSize = true;
+            this.informationLabel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.informationLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.informationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.informationLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.informationLabel.Location = new System.Drawing.Point(222, 205);
+            this.informationLabel.Name = "informationLabel";
+            this.informationLabel.Size = new System.Drawing.Size(2, 26);
+            this.informationLabel.TabIndex = 25;
+            // 
             // Diefstal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.informationLabel);
+            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -586,5 +619,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button helpButton;
+        private System.Windows.Forms.Label informationLabel;
     }
 }
