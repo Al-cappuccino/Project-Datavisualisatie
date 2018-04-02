@@ -100,6 +100,7 @@ namespace ProjectDrieDataVisualisatie
                         foreach (string Filter in dataSelectionCheckBox.CheckedItems)
                         {
                             dataChart.Series[Gemeente].Points.AddXY(Filter, result.Rows[0][Filter]);
+                            dataChart.ChartAreas[0].RecalculateAxesScale();
                             if (Filter == "AantalInwoners")
                             {
                                 label2.Text += ("In de gemeente " + Gemeente + " bedroeg het " + Filter + " in 2016: " + result.Rows[0][Filter] + "\n");
